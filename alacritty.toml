@@ -1,10 +1,11 @@
 # Window configuration
 [window]
-padding = { x = 8, y = 8 }
+padding = { x = 20, y = 20 }
 dynamic_padding = true
-decorations = "buttonless"  # Ensures buttons are visible but keeps a minimal look
+decorations = "none"
 startup_mode = "Windowed"
 opacity = 0.95
+blur = true
 
 # Scrolling settings
 [scrolling]
@@ -17,7 +18,7 @@ normal = { family = "JetBrains Mono", style = "Regular" }
 bold = { family = "JetBrains Mono", style = "Bold" }
 italic = { family = "JetBrains Mono", style = "Italic" }
 bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
-size = 12.0
+size = 12
 
 # Color scheme (Darker Tokyo Night theme)
 [colors.primary]
@@ -47,7 +48,7 @@ white = "#c0caf5"
 # Cursor settings
 [cursor]
 style = { shape = "underline", blinking = "On" }
-blink_interval = 750
+blink_interval = 350
 unfocused_hollow = false
 
 # Mouse settings
@@ -66,9 +67,8 @@ mods = "Control|Shift"
 action = "Copy"
 
 # Shell settings
-[shell]
-program = "powershell.exe"  # Sets PowerShell as the default shell
-args = ["-NoLogo"]  # Minimizes the shell startup output for a cleaner look
+[terminal]
+shell = { program = "powershell.exe", args = ["-NoLogo"] }
 
 # Selection settings
 [selection]
