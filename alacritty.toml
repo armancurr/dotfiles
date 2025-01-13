@@ -68,7 +68,7 @@ action = "Copy"
 
 # Shell settings
 [terminal]
-shell = { program = "powershell.exe", args = ["-NoLogo"] }
+shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-i"] }
 
 # Selection settings
 [selection]
