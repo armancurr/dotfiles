@@ -20,13 +20,13 @@ italic = { family = "JetBrains Mono", style = "Italic" }
 bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
 size = 12
 
-# Color scheme (Darker Tokyo Night theme)
+# Color scheme (Ultra Dark Tokyo Night theme)
 [colors.primary]
-background = "#1a1b26"
+background = "#0a0b10"
 foreground = "#c0caf5"
 
 [colors.normal]
-black = "#1b1d2b"
+black = "#0c0d14"
 red = "#f7768e"
 green = "#9ece6a"
 yellow = "#e0af68"
@@ -36,7 +36,7 @@ cyan = "#449dab"
 white = "#c0caf5"
 
 [colors.bright]
-black = "#32344a"
+black = "#1a1c2a"
 red = "#f7768e"
 green = "#9ece6a"
 yellow = "#e0af68"
