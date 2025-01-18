@@ -48,7 +48,7 @@ return {
   -- Mouse settings
   hide_mouse_cursor_when_typing = true,
   -- Shell settings
-  default_prog = { "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i" },
+  default_prog = { "C:\\Windows\\System32\\wsl.exe", "--login" },
   -- Key bindings
   keys = {
     { key = "C", mods = "CTRL", action = wezterm.action.CopyTo("Clipboard") },
