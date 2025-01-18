@@ -68,7 +68,8 @@ action = "Paste"
 
 # Shell settings
 [terminal]
-shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-i"] }
+shell = { program = "C:\\Windows\\System32\\wsl.exe", args = [] }
+
 
 # Selection settings
 [selection]
