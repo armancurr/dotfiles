@@ -1,6 +1,7 @@
 # Window configuration
 [window]
-padding = { x = 30, y = 10 }
+title = ""
+padding = { x = 20, y = 20 }
 dynamic_padding = true
 decorations = "none"
 startup_mode = "Windowed"
@@ -55,16 +56,15 @@ unfocused_hollow = false
 [mouse]
 hide_when_typing = true
 
-# Key bindings
-[[keyboard.bindings]]
-key = "V"
-mods = "Control|Shift"
-action = "Paste"
-
 [[keyboard.bindings]]
 key = "C"
-mods = "Control|Shift"
+mods = "Control"
 action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control"
+action = "Paste"
 
 # Shell settings
 [terminal]
