@@ -1,27 +1,47 @@
-# Window configuration
+[env]
+TERM = "xterm-256color"
+
 [window]
-title = ""
-padding = { x = 20, y = 20 }
-dynamic_padding = true
-decorations = "none"
-startup_mode = "Windowed"
-opacity = 0.95
-blur = true
+opacity = 0.90
 
-# Scrolling settings
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 20
+y = 20
+
+[window.class]
+instance = "Terminal"
+general = "Terminal"
+
 [scrolling]
-history = 10000
-multiplier = 3
+history = 3500
 
-# Font configuration
 [font]
-normal = { family = "JetBrains Mono", style = "Regular" }
-bold = { family = "JetBrains Mono", style = "Bold" }
-italic = { family = "JetBrains Mono", style = "Italic" }
-bold_italic = { family = "JetBrains Mono", style = "Bold Italic" }
-size = 12
+size = 12.0
 
-# Color scheme (Ultra Dark Tokyo Night theme)
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrains Mono"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 1
+
 [colors.primary]
 background = "#0a0b10"
 foreground = "#c0caf5"
@@ -46,32 +66,12 @@ magenta = "#ad8ee6"
 cyan = "#449dab"
 white = "#c0caf5"
 
-# Cursor settings
 [cursor]
-style = { shape = "underline", blinking = "On" }
-blink_interval = 350
+style = { shape = "Underline", blinking = "On" }
+blink_interval = 500
+blink_timeout = 0
 unfocused_hollow = false
 
-# Mouse settings
-[mouse]
-hide_when_typing = true
-
-[[keyboard.bindings]]
-key = "C"
-mods = "Control"
-action = "Copy"
-
-[[keyboard.bindings]]
-key = "V"
-mods = "Control"
-action = "Paste"
-
-# Shell settings
-[terminal]
-shell = { program = "C:\\Windows\\System32\\wsl.exe", args = [] }
-
-
-# Selection settings
-[selection]
-semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
-save_to_clipboard = true
+[terminal.shell]
+program = "C:\\Windows\\System32\\wsl.exe"
+args = ["zsh"]
