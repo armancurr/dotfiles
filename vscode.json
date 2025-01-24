@@ -6,7 +6,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "code-runner.clearPreviousOutput": true,
     "editor.links": false,
-    "editor.fontFamily": "'JetBrains Mono', 'SF Mono', Consolas",
+    "editor.fontFamily": "'JetBrains Mono', 'Space Mono', 'Fira Code'",
     "editor.fontLigatures": true,
     "window.title": " ",
     "editor.hover.enabled": false,
@@ -15,7 +15,7 @@
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "terminal.integrated.fontFamily": "'JetBrains Mono', 'SF Mono', Consolas",
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'Space Mono', 'Fira Code'",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
@@ -31,14 +31,18 @@
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorStyleInactive": "none",
     "editor.cursorStyle": "underline",
-    "files.autoSave": "afterDelay",
-    "workbench.colorTheme": "Tokyo Night Dark Enhanced",
     "workbench.productIconTheme": "fluent-icons",
+    "files.autoSave": "afterDelay",
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Tokyo Night Dark Enhanced",
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
         "markdown": false,
         "scminput": false
     },
-    "window.menuBarVisibility": "compact"
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
+    "redhat.telemetry.enabled": true,
+    "editor.lightbulb.enabled": false
 }
