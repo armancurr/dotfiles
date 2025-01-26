@@ -1,18 +1,22 @@
 // ==UserScript==
 // @name         Zen Themes CSS
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Apply custom CSS to all sites except monkeytype.com
+// @version      0.2
+// @description  Apply custom CSS to all sites except monkeytype.com and perplexity.ai
 // @match        http://*/*
 // @match        https://*/*
 // @exclude      http://monkeytype.com/*
 // @exclude      https://monkeytype.com/*
+// @exclude      http://perplexity.ai/*
+// @exclude      https://perplexity.ai/*
 // @grant        none
 // ==/UserScript==
 (function() {
    'use strict';
-   // Check if we're not on monkeytype.com
-   if (window.location.hostname !== 'monkeytype.com') {
+
+   // Check if we're not on excluded sites
+   const excludedHosts = ['monkeytype.com', 'perplexity.ai'];
+   if (!excludedHosts.includes(window.location.hostname)) {
        // Create a style element
        var style = document.createElement('style');
        style.type = 'text/css';
