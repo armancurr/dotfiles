@@ -6,7 +6,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "code-runner.clearPreviousOutput": true,
     "editor.links": false,
-    "editor.fontFamily": "'JetBrains Mono', 'Space Mono', 'Fira Code'",
+    "editor.fontFamily": "'Geist Mono', 'JetBrains Mono', 'Space Mono', 'Fira Code'",
     "editor.fontLigatures": true,
     "window.title": " ",
     "editor.hover.enabled": false,
@@ -15,7 +15,7 @@
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "terminal.integrated.fontFamily": "'JetBrains Mono', 'Space Mono', 'Fira Code'",
+    "terminal.integrated.fontFamily": "'Geist Mono', 'JetBrains Mono', 'Space Mono', 'Fira Code'",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
@@ -34,8 +34,7 @@
     "workbench.productIconTheme": "fluent-icons",
     "files.autoSave": "afterDelay",
     "window.menuBarVisibility": "compact",
-    "workbench.colorTheme": "Tokyo Night Dark Enhanced",
-    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "workbench.iconTheme": "origamid-next-icons",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
@@ -44,5 +43,7 @@
     },
     "chat.editing.alwaysSaveWithGeneratedChanges": true,
     "redhat.telemetry.enabled": true,
-    "editor.lightbulb.enabled": false
+    "editor.lightbulb.enabled": "off",
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Vercel (Dark)",
 }
