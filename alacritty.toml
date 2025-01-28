@@ -2,7 +2,7 @@
 TERM = "xterm-256color"
 
 [window]
-opacity = 0.90
+opacity = 0.85
 
 [window.dimensions]
 columns = 0
@@ -23,19 +23,19 @@ history = 3500
 size = 12.0
 
 [font.normal]
-family = "JetBrains Mono"
+family = "Geist Mono"
 style = "Regular"
 
 [font.bold]
-family = "JetBrains Mono"
+family = "Geist Mono"
 style = "Bold"
 
 [font.italic]
-family = "JetBrains Mono"
+family = "Geist Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "JetBrains Mono"
+family = "Geist Mono"
 style = "Bold Italic"
 
 [font.offset]
@@ -43,28 +43,28 @@ x = 0
 y = 1
 
 [colors.primary]
-background = "#0a0b10"
-foreground = "#c0caf5"
+background = "#0A0A0A"
+foreground = "#EDEDED"
 
 [colors.normal]
-black = "#0c0d14"
-red = "#f7768e"
-green = "#9ece6a"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#ad8ee6"
-cyan = "#449dab"
-white = "#c0caf5"
+black = "#000000"
+red = "#F75F8F"
+green = "#62C073"
+yellow = "#FF9907"
+blue = "#52A8FF"
+magenta = "#C472FB"
+cyan = "#1DA9B0"
+white = "#A1A1A1"
 
 [colors.bright]
-black = "#1a1c2a"
-red = "#f7768e"
-green = "#9ece6a"
-yellow = "#e0af68"
-blue = "#7aa2f7"
-magenta = "#ad8ee6"
-cyan = "#449dab"
-white = "#c0caf5"
+black = "#676767"
+red = "#F75F8F"
+green = "#62C073"
+yellow = "#FF9907"
+blue = "#52A8FF"
+magenta = "#C472FB"
+cyan = "#1DA9B0"
+white = "#EDEDED"
 
 [cursor]
 style = { shape = "Underline", blinking = "On" }
@@ -73,5 +73,5 @@ blink_timeout = 0
 unfocused_hollow = false
 
 [terminal.shell]
-program = "C:\\Windows\\System32\\wsl.exe"
-args = ["zsh"]
+program = "C:\\Program Files\\Git\\bin\\bash.exe"
+args = ["--login", "-i"]
