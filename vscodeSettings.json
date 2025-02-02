@@ -10,7 +10,6 @@
     "editor.fontLigatures": true,
     "window.title": " ",
     "editor.hover.enabled": false,
-    "liveServer.settings.donotShowInfoMsg": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 16,
@@ -33,10 +32,8 @@
     "editor.cursorStyle": "underline",
     "workbench.productIconTheme": "fluent-icons",
     "files.autoSave": "afterDelay",
-    "window.menuBarVisibility": "compact",
-    "workbench.iconTheme": "origamid-next-icons",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false
@@ -44,6 +41,9 @@
     "chat.editing.alwaysSaveWithGeneratedChanges": true,
     "redhat.telemetry.enabled": true,
     "editor.lightbulb.enabled": "off",
-    "workbench.sideBar.location": "right",
+    "workbench.editor.enablePreview": true,
+    "window.menuBarVisibility": "compact",
+    "workbench.iconTheme": "symbols",
     "workbench.colorTheme": "Vercel (Dark)",
+    "window.zoomLevel": 0.5
 }
