@@ -15,6 +15,7 @@
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.fontFamily": "'Geist Mono', 'JetBrains Mono'",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
@@ -44,6 +45,7 @@
     "workbench.editor.enablePreview": true,
     "window.menuBarVisibility": "compact",
     "workbench.iconTheme": "symbols",
+    "window.zoomLevel": 0.7,
     "workbench.colorTheme": "Vercel (Dark)",
-    "window.zoomLevel": 0.5
+    "diffEditor.hideUnchangedRegions.enabled": true
 }
