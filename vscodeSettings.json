@@ -45,7 +45,7 @@
     "workbench.editor.enablePreview": true,
     "window.menuBarVisibility": "compact",
     "workbench.iconTheme": "symbols",
-    "window.zoomLevel": 0.7,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Vercel (Dark)",
     "diffEditor.hideUnchangedRegions.enabled": true
 }
