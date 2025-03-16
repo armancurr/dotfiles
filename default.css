@@ -5,3 +5,7 @@ body, html {
 code, pre, .monospace {
     font-family: "Geist Mono", monospace !important;
 }
+
+.markdown-body {
+    font-family: "SF Pro Display", sans-serif !important;
+}
