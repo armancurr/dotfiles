@@ -1,5 +1,27 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 * {
-  font-family: "SF Pro Display" !important;
+    font-family: "SF Pro Display" !important;
+}
+
+#sidebar, .sidebar, #sidebar-box, .sidebar-box {
+    background-color: black !important;
+}
+
+:root {
+    --toolbar-bgcolor: black !important;
+    --lwt-accent-color: black !important;
+    --lwt-sidebar-background-color: black !important;
+}
+
+body, .background, #main-window, #browser {
+    background-color: black !important;
+}
+
+.tab-background, .tabbrowser-tab {
+    background-color: black !important;
+}
+
+#zen-backdrop, .zen-background, #zen-mode {
+    background-color: black !important;
 }
