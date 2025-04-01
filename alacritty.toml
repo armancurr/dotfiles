@@ -23,11 +23,11 @@ history = 3500
 size = 15.0
 
 [font.normal]
-family = "Geist Mono"
+family = "SF Mono"
 style = "Regular"
 
 [font.italic]
-family = "Geist Mono"
+family = "SF Mono"
 style = "Italic"
 
 [font.offset]
