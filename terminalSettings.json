@@ -1,55 +1,84 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [
+    "actions":
+    [
         {
-            "command": {
+            "command":
+            {
                 "action": "copy",
                 "singleLine": false
             },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
+            "id": "User.copy.644BA8F2"
         },
         {
             "command": "paste",
-            "id": "User.paste",
-            "keys": "ctrl+v"
+            "id": "User.paste"
         },
         {
-            "command": "find",
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": {
+            "command":
+            {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
         }
     ],
     "alwaysShowTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "newTabMenu": [
+    "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+    "keybindings":
+    [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu":
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
+    "profiles":
+    {
+        "defaults":
+        {
             "backgroundImage": null,
             "colorScheme": "Vercel Dark",
-            "font": {
-                "face": "JetBrains Mono"
+            "font":
+            {
+                "face": "Geist Mono"
             },
-            "opacity": 80,
+            "opacity": 100,
             "useAcrylic": true
         },
-        "list": [
+        "list":
+        [
+            {
+                "commandline": "\"C:\\Program Files\\Git\\bin\\bash.exe\" --login -i",
+                "guid": "{2ae9b1ed-252e-5f60-bd83-983a5413b8f4}",
+                "hidden": false,
+                "name": "Git Bash"
+            },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -60,32 +89,39 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
-    "schemes": [
+    "schemes":
+    [
         {
-            "name": "Vercel Dark",
-            "background": "#0A0A0A",
-            "foreground": "#EDEDED",
+            "background": "#000000",
             "black": "#000000",
-            "brightBlack": "#676767",
             "blue": "#52A8FF",
+            "brightBlack": "#676767",
             "brightBlue": "#52A8FF",
-            "cyan": "#1DA9B0",
             "brightCyan": "#1DA9B0",
-            "green": "#62C073",
             "brightGreen": "#62C073",
-            "purple": "#C472FB",
             "brightPurple": "#C472FB",
-            "red": "#F75F8F",
             "brightRed": "#F75F8F",
-            "white": "#A1A1A1",
             "brightWhite": "#EDEDED",
-            "yellow": "#FF9907",
             "brightYellow": "#FF9907",
             "cursorColor": "#EDEDED",
-            "selectionBackground": "#333333"
+            "cyan": "#1DA9B0",
+            "foreground": "#EDEDED",
+            "green": "#62C073",
+            "name": "Vercel Dark",
+            "purple": "#C472FB",
+            "red": "#F75F8F",
+            "selectionBackground": "#333333",
+            "white": "#A1A1A1",
+            "yellow": "#FF9907"
         }
     ],
     "showTabsInTitlebar": false,
