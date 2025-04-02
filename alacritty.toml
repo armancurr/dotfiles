@@ -3,6 +3,7 @@ TERM = "xterm-256color"
 
 [window]
 opacity = 1
+blur = true
 
 [window.dimensions]
 columns = 0
@@ -20,14 +21,14 @@ general = "Terminal"
 history = 3500
 
 [font]
-size = 15.0
+size = 14.0
 
 [font.normal]
-family = "SF Mono"
+family = "Geist Mono"
 style = "Regular"
 
 [font.italic]
-family = "SF Mono"
+family = "Geist Mono"
 style = "Italic"
 
 [font.offset]
@@ -36,27 +37,27 @@ y = 1
 
 [colors.primary]
 background = "#000000"
-foreground = "#EDEDED"
+foreground = "#FFFFFF"
 
 [colors.normal]
 black = "#000000"
-red = "#F75F8F"
-green = "#62C073"
-yellow = "#FF9907"
-blue = "#52A8FF"
-magenta = "#C472FB"
-cyan = "#1DA9B0"
-white = "#A1A1A1"
+red = "#FF0000"
+green = "#5FE05F"
+yellow = "#F7DF1E"
+blue = "#0070F3"
+magenta = "#BD00FF"
+cyan = "#00C7B7"
+white = "#EEEEEE"
 
 [colors.bright]
-black = "#676767"
-red = "#F75F8F"
-green = "#62C073"
-yellow = "#FF9907"
-blue = "#52A8FF"
-magenta = "#C472FB"
-cyan = "#1DA9B0"
-white = "#EDEDED"
+black = "#666666"
+red = "#FF4B4B"
+green = "#7BF77B"
+yellow = "#FFFF5F"
+blue = "#4B9CFF"
+magenta = "#D56AFF"
+cyan = "#5CE1E6"
+white = "#FFFFFF"
 
 [cursor]
 style = { shape = "Underline", blinking = "On" }
@@ -65,5 +66,5 @@ blink_timeout = 0
 unfocused_hollow = false
 
 [terminal.shell]
-program = "wsl.exe"
-args = ["--distribution", "Debian", "--"]
+program = "C:\\Program Files\\Git\\bin\\bash.exe"
+args = ["--login", "-i"]
