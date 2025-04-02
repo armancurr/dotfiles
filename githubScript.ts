@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         GitHub JetBrains Mono Font
+// @name         GitHub Geist Mono Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes code font on GitHub to JetBrains Mono
+// @description  Changes code font on GitHub to Geist Mono
 // @author       You
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
@@ -15,16 +15,16 @@
 
     const fontLink = document.createElement('link');
     fontLink.rel = 'stylesheet';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&display=swap';
     document.head.appendChild(fontLink);
 
-    function applyJetBrainsMono() {
+    function applyGeistMono() {
         const customCSS = document.createElement('style');
         customCSS.textContent = `
             /* Code blocks and inline code */
-            .highlight pre, 
-            pre, 
-            code, 
+            .highlight pre,
+            pre,
+            code,
             .blob-code-inner,
             .CodeMirror-code,
             .CodeMirror pre,
@@ -51,32 +51,29 @@
             .react-code-line-contents,
             .react-file-line,
             .react-blob-print-hide {
-                font-family: 'JetBrains Mono', monospace !important;
+                font-family: 'Geist Mono', monospace !important;
                 font-feature-settings: 'liga' 0 !important;
             }
-            
             /* Ensure all editor views use the font */
             .react-code-view .react-code-line * {
-                font-family: 'JetBrains Mono', monospace !important;
+                font-family: 'Geist Mono', monospace !important;
             }
-            
             /* GitHub's newer code view */
             .react-blob-view-header-sticky {
-                --h-code-font: 'JetBrains Mono', monospace !important;
+                --h-code-font: 'Geist Mono', monospace !important;
             }
-            
             /* GitHub's CSS variables */
             :root {
-                --mono-font: 'JetBrains Mono', monospace !important;
+                --mono-font: 'Geist Mono', monospace !important;
             }
         `;
         document.head.appendChild(customCSS);
     }
 
-    applyJetBrainsMono();
+    applyGeistMono();
 
     const observer = new MutationObserver(function() {
-        applyJetBrainsMono();
+        applyGeistMono();
     });
 
     observer.observe(document.body, {
@@ -85,6 +82,6 @@
     });
 
     window.addEventListener('load', function() {
-        setTimeout(applyJetBrainsMono, 1000);
+        setTimeout(applyGeistMono, 1000);
     });
 })();
