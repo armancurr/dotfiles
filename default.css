@@ -1,11 +1,15 @@
 body, html {
-    font-family: "Atkinson Hyperlegible Next", sans-serif !important;
+    font-family: "Atkinson Hyperlegible Next",
+        sans-serif !important;
 }
 
-code, pre, .monospace {
-    font-family: "Lilex Nerd Font Mono", monospace !important;
+code, pre,
+.monospace {
+    font-family: "Lilex Nerd Font Mono",
+        monospace !important;
 }
 
 .markdown-body {
-    font-family: "Atkinson Hyperlegible Next", sans-serif !important;
+    font-family: "Atkinson Hyperlegible Next",
+        sans-serif !important;
 }
