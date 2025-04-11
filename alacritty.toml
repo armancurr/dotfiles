@@ -24,11 +24,11 @@ history = 3500
 size = 14.0
 
 [font.normal]
-family = "Geist Mono"
+family = "Lilex Nerd Font Mono"
 style = "Regular"
 
 [font.italic]
-family = "Geist Mono"
+family = "Lilex Nerd Font Mono"
 style = "Italic"
 
 [font.offset]
