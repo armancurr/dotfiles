@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         LinkedIn Atkinson Hyperlegible Next Font
+// @name         LinkedIn Funnel Sans Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes all fonts on LinkedIn to Atkinson Hyperlegible Next
+// @description  Changes all fonts on LinkedIn to Funnel Sans
 // @author       You
 // @match        https://*.linkedin.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
@@ -14,12 +14,10 @@
 
   const fontLink = document.createElement("link");
   fontLink.rel = "stylesheet";
-  // Adjust the link below if you have a different source for Atkinson Hyperlegible Next.
-  fontLink.href =
-    "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap";
+  fontLink.href = "https://fonts.cdnfonts.com/css/funnel-sans";
   document.head.appendChild(fontLink);
 
-  function applyAtkinsonHyperlegibleNext() {
+  function applyFunnelSans() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       html, body, div, span, applet, object, iframe,
@@ -35,17 +33,19 @@
       figure, figcaption, footer, header, hgroup,
       menu, nav, output, ruby, section, summary,
       time, mark, audio, video, input, textarea, button {
-          font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-family: 'Funnel Sans', -apple-system,
+          BlinkMacSystemFont, sans-serif !important;
       }
 
       :root {
-          --artdeco-reset-typography-font-family-sans: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont,
-          sans-serif !important;
-          --global-primary-font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont,
-          sans-serif !important;
-          --artdeco-typography-font-family-stack: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont,
-          sans-serif !important;
-          --font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        --artdeco-reset-typography-font-family-sans: 'Funnel Sans',
+          -apple-system, BlinkMacSystemFont, sans-serif !important;
+        --global-primary-font-family: 'Funnel Sans',
+          -apple-system, BlinkMacSystemFont, sans-serif !important;
+        --artdeco-typography-font-family-stack: 'Funnel Sans',
+          -apple-system, BlinkMacSystemFont, sans-serif !important;
+        --font-family: 'Funnel Sans', -apple-system,
+          BlinkMacSystemFont, sans-serif !important;
       }
 
       .artdeco-button,
@@ -60,34 +60,34 @@
       .scaffold-layout__main,
       .app-aware-link,
       .artdeco-card {
-          font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-family: 'Funnel Sans', -apple-system,
+          BlinkMacSystemFont, sans-serif !important;
       }
 
       .msg-form__contenteditable,
       .msg-s-event-listitem__body {
-          font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-family: 'Funnel Sans', -apple-system,
+          BlinkMacSystemFont, sans-serif !important;
       }
 
       input,
       .search-global-typeahead__input {
-          font-family: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        font-family: 'Funnel Sans', -apple-system,
+          BlinkMacSystemFont, sans-serif !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyAtkinsonHyperlegibleNext();
+  applyFunnelSans();
 
-  const observer = new MutationObserver(function () {
-    applyAtkinsonHyperlegibleNext();
-  });
-
+  const observer = new MutationObserver(applyFunnelSans);
   observer.observe(document.body, {
     childList: true,
     subtree: true,
   });
 
-  window.addEventListener("load", function () {
-    setTimeout(applyAtkinsonHyperlegibleNext, 1000);
+  window.addEventListener("load", () => {
+    setTimeout(applyFunnelSans, 1000);
   });
 })();
