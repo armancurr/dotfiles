@@ -5,34 +5,39 @@ test -f ~/.bashrc && . ~/.bashrc
 PS1='\w > '
 
 # NPM Aliases
+alias nn='npm init'
 alias ni='npm install'
 alias nu='npm uninstall'
 alias ns='npm start'
 alias nr='npm run dev'
-alias nb='npm run build'
 
-# Git Aliases
-alias ga='git add .'
-alias gc='git commit -m'
-alias gp='git push'
-alias gs='git status'
-alias gco='git checkout'
-alias gb='git branch'
-alias gpl='git pull'
+# PNPM Aliases
+alias pi='pnpm install'
+alias pu='pnpm remove'
+alias ps='pnpm start'
+alias pr='pnpm run dev'
 
-# System Aliases
-alias cls='clear'
-alias .='cd ..'
-alias ..='cd ../..'
-
-#BUN Aliases
+# BUN Aliases
 alias bn='bun init'
 alias bi='bun install'
 alias ba='bun add'
 alias bu='bun uninstall'
 alias bd='bun dev'
 alias bs='bun start'
-alias br='bun run build'
+alias bunx='bun x'
+
+# Git Aliases
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gs='git status'
+alias gb='git branch'
+
+# System Aliases
+alias cls='clear'
+alias .='cd ..'
+alias ..='cd ../..'
+alias pr='bunx prettier --write .'
 
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
