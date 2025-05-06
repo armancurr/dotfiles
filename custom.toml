@@ -4,6 +4,7 @@ TERM = "xterm-256color"
 [window]
 opacity = 1
 blur = true
+decorations = "None"
 
 [window.dimensions]
 columns = 0
