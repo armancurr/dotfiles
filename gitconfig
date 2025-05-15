@@ -1,0 +1,76 @@
+[user]
+  name = Arman
+  email = contact.armankar@gmail.com
+  signingkey = AE4D7C02B391F6DA
+
+[core]
+  compresion = 9
+  whitespace = error
+  preloadindex = true
+
+[advice]
+  addEmptyPathspecs = false
+  pushNonFastForward = false
+  statusHints = false
+
+[url "https://github.com/vereoman/"]
+  insteadOf = "vm"
+
+[url "https://gitlab.com/"]
+  insteadOf = "gh"
+
+[init]
+  defaultBranch = main
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
+[diff]
+  context = 3
+  renames = copies
+  interHunkContext = 10
+
+[pager]
+  diff = diff-so-fancy | $pager
+
+[diff-so-fancy]
+  markEmptyLines = false
+
+[color "diff"]
+  meta = black bold
+  frag = magenta bold
+  contexgt = white
+  whitespace = yellow reverse
+  old = red
+
+[commit]
+  gpgsign = true
+  
+[interactive]
+  diffFilter = diff-so-fancy --patch
+  singleKey = true
+
+[push]
+  autoSetupRemote = true
+  default = current
+  followTags = true
+
+[pull]
+  default = current
+  rebase = true
+
+[rebase]
+  autoStash = true
+  missingCommitsCheck = warn
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -taggerdate
+
+[pager]
+  branch = false
+  tag = false
