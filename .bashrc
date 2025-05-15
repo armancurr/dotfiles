@@ -2,42 +2,49 @@
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 
-PS1='\w > '
+PS1="\w > "
 
 # NPM Aliases
-alias nn='npm init'
-alias ni='npm install'
-alias nu='npm uninstall'
-alias ns='npm start'
-alias nr='npm run dev'
+alias nn="npm init"
+alias ni="npm install"
+alias nu="npm uninstall"
+alias ns="npm start"
+alias nr="npm run dev"
 
 # PNPM Aliases
-alias pi='pnpm install'
-alias pu='pnpm remove'
-alias ps='pnpm start'
-alias pr='pnpm run dev'
+alias pi="pnpm install"
+alias pu="pnpm remove"
+alias ps="pnpm start"
+alias pr="pnpm run dev"
 
 # BUN Aliases
-alias bn='bun init'
-alias bi='bun install'
-alias ba='bun add'
-alias bu='bun uninstall'
-alias bd='bun dev'
-alias bs='bun start'
-alias bunx='bun x'
+alias bn="bun init"
+alias bi="bun install"
+alias ba="bun add"
+alias bu="bun uninstall"
+alias bd="bun dev"
+alias bs="bun start"
+alias bunx="bun x"
+alias bx="bun x shadcn@latest"
 
 # Git Aliases
-alias ga='git add .'
-alias gc='git commit -m'
-alias gp='git push'
-alias gs='git status'
-alias gb='git branch'
+alias gs="git status --short"
+alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gu="git pull"
+alias gl="git log -all --graph"
+alias gb="git branch"
+alias gco="git checkout"
+alias gi="git init"
+alias gcl="git clone"
 
 # System Aliases
-alias cls='clear'
-alias .='cd ..'
-alias ..='cd ../..'
-alias pr='bunx prettier --write .'
+alias cls="clear"
+alias .="cd .."
+alias ..="cd ../.."
+alias pr="bunx prettier --write ."
 
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
