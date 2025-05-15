@@ -1,7 +1,6 @@
 [user]
   name = Arman
   email = contact.armankar@gmail.com
-  signingkey = AE4D7C02B391F6DA
 
 [core]
   compresion = 9
@@ -16,7 +15,7 @@
 [url "https://github.com/vereoman/"]
   insteadOf = "vm"
 
-[url "https://gitlab.com/"]
+[url "https://github.com/"]
   insteadOf = "gh"
 
 [init]
@@ -44,9 +43,6 @@
   contexgt = white
   whitespace = yellow reverse
   old = red
-
-[commit]
-  gpgsign = true
   
 [interactive]
   diffFilter = diff-so-fancy --patch
