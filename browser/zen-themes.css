@@ -2,22 +2,27 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 * {
-    font-family: "Funnel Sans" !important;
+    font-family: "Geist" !important;
 }
 
 /* Global font faces */
 body, html {
-    font-family: "Funnel Sans",
+    font-family: "Geist",
         sans-serif !important;
 }
 
 code, pre,
 .monospace {
-    font-family: "Lilex Nerd Font Mono",
+    font-family: "Geist Mono",
         monospace !important;
 }
 
 .markdown-body {
-    font-family: "Funnel Sans",
-        sans-serif !important;
+    font-family: "Geist", sans-serif !important;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body .monospace {
+    font-family: "Geist Mono", monospace !important;
 }
