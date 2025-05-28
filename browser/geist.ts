@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         GitHub Lilex Nerd Font Mono
+// @name         GitHub Geist Mono Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes code font on GitHub to Lilex Nerd Font Mono (including code editing)
+// @description  Changes code font on GitHub to Geist Mono (including code editing)
 // @author       You
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
@@ -13,16 +13,14 @@
 (function () {
   "use strict";
 
-  // If you have a web-hosted stylesheet for Lilex Nerd Font Mono,
-  // update the href below and uncomment the lines.
-  // If you rely on a local installation of the font, you can remove these lines.
+  // Add Geist Mono web font from Vercel CDN
   const fontLink = document.createElement("link");
   fontLink.rel = "stylesheet";
-  // Update with the proper URL if available:
-  // fontLink.href = "https://your-hosted-source-for-lilex-nerd-font-mono.css";
-  // document.head.appendChild(fontLink);
+  fontLink.href =
+    "https://cdn.jsdelivr.net/npm/@geist-fonts/mono@latest/stylesheet.min.css";
+  document.head.appendChild(fontLink);
 
-  function applyLilexFont() {
+  function applyGeistMonoFont() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       /* Code blocks and inline code */
@@ -55,23 +53,23 @@
       .react-code-line-contents,
       .react-file-line,
       .react-blob-print-hide {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
           font-feature-settings: 'liga' 0 !important;
       }
 
       /* Ensure all editor views use the font */
       .react-code-view .react-code-line * {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
       }
 
       /* GitHub's newer code view */
       .react-blob-view-header-sticky {
-          --h-code-font: 'Lilex Nerd Font Mono', monospace !important;
+          --h-code-font: 'Geist Mono', monospace !important;
       }
 
       /* GitHub's CSS variables */
       :root {
-          --mono-font: 'Lilex Nerd Font Mono', monospace !important;
+          --mono-font: 'Geist Mono', monospace !important;
       }
 
       /* Code editing elements */
@@ -93,20 +91,20 @@
       .commit-create-textarea,
       .edit-file-textarea,
       div[contenteditable="true"] {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
       }
 
       /* Editor in-place edit mode */
       .js-file-line-container [role="textbox"],
       .js-blob-code [role="textbox"],
       .blob-code-content [role="textbox"] {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyLilexFont();
+  applyGeistMonoFont();
 
   const observer = new MutationObserver(function (mutations) {
     let shouldUpdate = false;
@@ -117,7 +115,7 @@
       }
     }
     if (shouldUpdate) {
-      applyLilexFont();
+      applyGeistMonoFont();
     }
   });
 
@@ -127,19 +125,19 @@
   });
 
   window.addEventListener("load", function () {
-    setTimeout(applyLilexFont, 1000);
+    setTimeout(applyGeistMonoFont, 1000);
   });
 
   document.addEventListener("pjax:end", function () {
-    setTimeout(applyLilexFont, 200);
+    setTimeout(applyGeistMonoFont, 200);
   });
 })();
 
 // ==UserScript==
-// @name         LeetCode Lilex Nerd Font Mono
+// @name         LeetCode Geist Mono Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes code font on LeetCode to Lilex Nerd Font Mono
+// @description  Changes code font on LeetCode to Geist Mono
 // @author       You
 // @match        https://*.leetcode.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.com
@@ -149,15 +147,14 @@
 (function () {
   "use strict";
 
-  // If you have a web-hosted stylesheet for Lilex Nerd Font Mono, uncomment and
-  // update the code below. Otherwise, if you rely on a local installation, you
-  // can remove or comment out this section.
-  // const fontLink = document.createElement("link");
-  // fontLink.rel = "stylesheet";
-  // fontLink.href = "https://your-hosted-source-for-lilex-nerd-font-mono.css";
-  // document.head.appendChild(fontLink);
+  // Add Geist Mono web font from Vercel CDN
+  const fontLink = document.createElement("link");
+  fontLink.rel = "stylesheet";
+  fontLink.href =
+    "https://cdn.jsdelivr.net/npm/@geist-fonts/mono@latest/stylesheet.min.css";
+  document.head.appendChild(fontLink);
 
-  function applyLilexNerdFontMono() {
+  function applyGeistMonoFont() {
     const codeElements = [
       ".monaco-editor",
       ".CodeMirror",
@@ -174,30 +171,30 @@
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       ${codeElements.join(", ")} {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
           font-feature-settings: 'liga' 0 !important;
       }
       .monaco-editor .view-lines span {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
       }
       .content__1Y2H code {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
       }
 
       /* Additional LeetCode-specific selectors for the Monaco editor */
       .view-line span,
       .mtk1, .mtk2, .mtk3, .mtk4, .mtk5, .mtk6, .mtk7, .mtk8, .mtk9,
       .monaco-scrollable-element {
-          font-family: 'Lilex Nerd Font Mono', monospace !important;
+          font-family: 'Geist Mono', monospace !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyLilexNerdFontMono();
+  applyGeistMonoFont();
 
   const observer = new MutationObserver(function () {
-    applyLilexNerdFontMono();
+    applyGeistMonoFont();
   });
 
   observer.observe(document.body, {
@@ -206,15 +203,15 @@
   });
 
   window.addEventListener("load", function () {
-    setTimeout(applyLilexNerdFontMono, 1000);
+    setTimeout(applyGeistMonoFont, 1000);
   });
 })();
 
 // ==UserScript==
-// @name         LinkedIn Funnel Sans Font
+// @name         LinkedIn Geist Sans Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes all fonts on LinkedIn to Funnel Sans
+// @description  Changes all fonts on LinkedIn to Geist Sans
 // @author       You
 // @match        https://*.linkedin.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
@@ -226,10 +223,11 @@
 
   const fontLink = document.createElement("link");
   fontLink.rel = "stylesheet";
-  fontLink.href = "https://fonts.cdnfonts.com/css/funnel-sans";
+  fontLink.href =
+    "https://cdn.jsdelivr.net/npm/@geist-fonts/sans@latest/stylesheet.min.css";
   document.head.appendChild(fontLink);
 
-  function applyFunnelSans() {
+  function applyGeistSans() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       html, body, div, span, applet, object, iframe,
@@ -245,18 +243,18 @@
       figure, figcaption, footer, header, hgroup,
       menu, nav, output, ruby, section, summary,
       time, mark, audio, video, input, textarea, button {
-        font-family: 'Funnel Sans', -apple-system,
+        font-family: 'Geist Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       :root {
-        --artdeco-reset-typography-font-family-sans: 'Funnel Sans',
+        --artdeco-reset-typography-font-family-sans: 'Geist Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --global-primary-font-family: 'Funnel Sans',
+        --global-primary-font-family: 'Geist Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --artdeco-typography-font-family-stack: 'Funnel Sans',
+        --artdeco-typography-font-family-stack: 'Geist Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --font-family: 'Funnel Sans', -apple-system,
+        --font-family: 'Geist Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
@@ -272,35 +270,34 @@
       .scaffold-layout__main,
       .app-aware-link,
       .artdeco-card {
-        font-family: 'Funnel Sans', -apple-system,
+        font-family: 'Geist Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       .msg-form__contenteditable,
       .msg-s-event-listitem__body {
-        font-family: 'Funnel Sans', -apple-system,
+        font-family: 'Geist Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       input,
       .search-global-typeahead__input {
-        font-family: 'Funnel Sans', -apple-system,
+        font-family: 'Geist Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyFunnelSans();
+  applyGeistSans();
 
-  const observer = new MutationObserver(applyFunnelSans);
+  const observer = new MutationObserver(applyGeistSans);
   observer.observe(document.body, {
     childList: true,
     subtree: true,
   });
 
   window.addEventListener("load", () => {
-    setTimeout(applyFunnelSans, 1000);
+    setTimeout(applyGeistSans, 1000);
   });
 })();
-
