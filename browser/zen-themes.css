@@ -2,27 +2,27 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 * {
-    font-family: "Geist" !important;
+    font-family: "IBM Plex Sans" !important;
 }
 
 /* Global font faces */
 body, html {
-    font-family: "Geist",
+    font-family: "IBM Plex Sans",
         sans-serif !important;
 }
 
 code, pre,
 .monospace {
-    font-family: "Geist Mono",
+    font-family: "BlexMono Nerd Font",
         monospace !important;
 }
 
 .markdown-body {
-    font-family: "Geist", sans-serif !important;
+    font-family: "IBM Plex Sanss", sans-serif !important;
 }
 
 .markdown-body code,
 .markdown-body pre,
 .markdown-body .monospace {
-    font-family: "Geist Mono", monospace !important;
+    font-family: "BlexMono Nerd Font", monospace !important;
 }
