@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         GitHub Geist Mono Font
+// @name         GitHub BlexMono Nerd Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes code font on GitHub to Geist Mono (including code editing)
+// @description  Changes code font on GitHub to BlexMono Nerd Font (including code editing)
 // @author       You
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
@@ -13,14 +13,7 @@
 (function () {
   "use strict";
 
-  // Add Geist Mono web font from Vercel CDN
-  const fontLink = document.createElement("link");
-  fontLink.rel = "stylesheet";
-  fontLink.href =
-    "https://cdn.jsdelivr.net/npm/@geist-fonts/mono@latest/stylesheet.min.css";
-  document.head.appendChild(fontLink);
-
-  function applyGeistMonoFont() {
+  function applyBlexMonoFont() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       /* Code blocks and inline code */
@@ -53,23 +46,23 @@
       .react-code-line-contents,
       .react-file-line,
       .react-blob-print-hide {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
           font-feature-settings: 'liga' 0 !important;
       }
 
       /* Ensure all editor views use the font */
       .react-code-view .react-code-line * {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
       }
 
       /* GitHub's newer code view */
       .react-blob-view-header-sticky {
-          --h-code-font: 'Geist Mono', monospace !important;
+          --h-code-font: 'BlexMono Nerd Font', monospace !important;
       }
 
       /* GitHub's CSS variables */
       :root {
-          --mono-font: 'Geist Mono', monospace !important;
+          --mono-font: 'BlexMono Nerd Font', monospace !important;
       }
 
       /* Code editing elements */
@@ -91,20 +84,20 @@
       .commit-create-textarea,
       .edit-file-textarea,
       div[contenteditable="true"] {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
       }
 
       /* Editor in-place edit mode */
       .js-file-line-container [role="textbox"],
       .js-blob-code [role="textbox"],
       .blob-code-content [role="textbox"] {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyGeistMonoFont();
+  applyBlexMonoFont();
 
   const observer = new MutationObserver(function (mutations) {
     let shouldUpdate = false;
@@ -115,7 +108,7 @@
       }
     }
     if (shouldUpdate) {
-      applyGeistMonoFont();
+      applyBlexMonoFont();
     }
   });
 
@@ -125,19 +118,19 @@
   });
 
   window.addEventListener("load", function () {
-    setTimeout(applyGeistMonoFont, 1000);
+    setTimeout(applyBlexMonoFont, 1000);
   });
 
   document.addEventListener("pjax:end", function () {
-    setTimeout(applyGeistMonoFont, 200);
+    setTimeout(applyBlexMonoFont, 200);
   });
 })();
 
 // ==UserScript==
-// @name         LeetCode Geist Mono Font
+// @name         LeetCode BlexMono Nerd Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes code font on LeetCode to Geist Mono
+// @description  Changes code font on LeetCode to BlexMono Nerd Font
 // @author       You
 // @match        https://*.leetcode.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.com
@@ -147,14 +140,7 @@
 (function () {
   "use strict";
 
-  // Add Geist Mono web font from Vercel CDN
-  const fontLink = document.createElement("link");
-  fontLink.rel = "stylesheet";
-  fontLink.href =
-    "https://cdn.jsdelivr.net/npm/@geist-fonts/mono@latest/stylesheet.min.css";
-  document.head.appendChild(fontLink);
-
-  function applyGeistMonoFont() {
+  function applyBlexMonoFont() {
     const codeElements = [
       ".monaco-editor",
       ".CodeMirror",
@@ -165,53 +151,53 @@
       ".monaco-editor .view-lines",
       ".monaco-editor .view-line",
       ".cm-s-leetcode",
-      ".mtk1"
+      ".mtk1",
     ];
 
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       ${codeElements.join(", ")} {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
           font-feature-settings: 'liga' 0 !important;
       }
       .monaco-editor .view-lines span {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
       }
       .content__1Y2H code {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
       }
 
       /* Additional LeetCode-specific selectors for the Monaco editor */
       .view-line span,
       .mtk1, .mtk2, .mtk3, .mtk4, .mtk5, .mtk6, .mtk7, .mtk8, .mtk9,
       .monaco-scrollable-element {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: 'BlexMono Nerd Font', monospace !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyGeistMonoFont();
+  applyBlexMonoFont();
 
   const observer = new MutationObserver(function () {
-    applyGeistMonoFont();
+    applyBlexMonoFont();
   });
 
   observer.observe(document.body, {
     childList: true,
-    subtree: true
+    subtree: true,
   });
 
   window.addEventListener("load", function () {
-    setTimeout(applyGeistMonoFont, 1000);
+    setTimeout(applyBlexMonoFont, 1000);
   });
 })();
 
 // ==UserScript==
-// @name         LinkedIn Geist Sans Font
+// @name         LinkedIn IBM Plex Sans Font
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Changes all fonts on LinkedIn to Geist Sans
+// @description  Changes all fonts on LinkedIn to IBM Plex Sans
 // @author       You
 // @match        https://*.linkedin.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
@@ -221,13 +207,7 @@
 (function () {
   "use strict";
 
-  const fontLink = document.createElement("link");
-  fontLink.rel = "stylesheet";
-  fontLink.href =
-    "https://cdn.jsdelivr.net/npm/@geist-fonts/sans@latest/stylesheet.min.css";
-  document.head.appendChild(fontLink);
-
-  function applyGeistSans() {
+  function applyIBMPlexSans() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       html, body, div, span, applet, object, iframe,
@@ -243,18 +223,18 @@
       figure, figcaption, footer, header, hgroup,
       menu, nav, output, ruby, section, summary,
       time, mark, audio, video, input, textarea, button {
-        font-family: 'Geist Sans', -apple-system,
+        font-family: 'IBM Plex Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       :root {
-        --artdeco-reset-typography-font-family-sans: 'Geist Sans',
+        --artdeco-reset-typography-font-family-sans: 'IBM Plex Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --global-primary-font-family: 'Geist Sans',
+        --global-primary-font-family: 'IBM Plex Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --artdeco-typography-font-family-stack: 'Geist Sans',
+        --artdeco-typography-font-family-stack: 'IBM Plex Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --font-family: 'Geist Sans', -apple-system,
+        --font-family: 'IBM Plex Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
@@ -270,34 +250,34 @@
       .scaffold-layout__main,
       .app-aware-link,
       .artdeco-card {
-        font-family: 'Geist Sans', -apple-system,
+        font-family: 'IBM Plex Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       .msg-form__contenteditable,
       .msg-s-event-listitem__body {
-        font-family: 'Geist Sans', -apple-system,
+        font-family: 'IBM Plex Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       input,
       .search-global-typeahead__input {
-        font-family: 'Geist Sans', -apple-system,
+        font-family: 'IBM Plex Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyGeistSans();
+  applyIBMPlexSans();
 
-  const observer = new MutationObserver(applyGeistSans);
+  const observer = new MutationObserver(applyIBMPlexSans);
   observer.observe(document.body, {
     childList: true,
     subtree: true,
   });
 
   window.addEventListener("load", () => {
-    setTimeout(applyGeistSans, 1000);
+    setTimeout(applyIBMPlexSans, 1000);
   });
 })();
