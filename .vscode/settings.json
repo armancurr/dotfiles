@@ -4,14 +4,14 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "code-runner.clearPreviousOutput": true,
     "editor.links": false,
-    "editor.fontFamily": "'Geist Mono', 'Lilex Nerd Font Mono', 'JetBrains Mono', monospace",
+    "editor.fontFamily": "'JetBrains Mono', 'Lilex Nerd Font Mono', monospace",
     "editor.fontLigatures": true,
     "window.title": " ",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 16,
-    "terminal.integrated.fontFamily": "'Geist Mono', 'Lilex Nerd Font Mono', 'JetBrains Mono', monospace",
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'Lilex Nerd Font Mono', monospace",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "git.autofetch": true,
     "git.enableSmartCommit": true,
@@ -61,5 +61,6 @@
     "workbench.iconTheme": "symbols",
     "workbench.panel.showLabels": false,
     "window.menuBarVisibility": "compact",
-    "workbench.colorTheme": "Vercel (Dark)"
+    "workbench.colorTheme": "Vercel (Dark)",
+    "editor.wordWrap": "on"
 }
