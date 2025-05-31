@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         GitHub BlexMono Nerd Font
+// @name         GitHub JetBrains Mono Nerd Font
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Changes code font on GitHub to BlexMono Nerd Font (including code editing)
+// @version      1.1
+// @description  Changes code font on GitHub to JetBrains Mono (including code editing)
 // @author       You
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
@@ -13,7 +13,7 @@
 (function () {
   "use strict";
 
-  function applyBlexMonoFont() {
+  function applyJetBrainsMonoFont() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       /* Code blocks and inline code */
@@ -46,23 +46,23 @@
       .react-code-line-contents,
       .react-file-line,
       .react-blob-print-hide {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
           font-feature-settings: 'liga' 0 !important;
       }
 
       /* Ensure all editor views use the font */
       .react-code-view .react-code-line * {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
       }
 
       /* GitHub's newer code view */
       .react-blob-view-header-sticky {
-          --h-code-font: 'BlexMono Nerd Font', monospace !important;
+          --h-code-font: 'JetBrains Mono', monospace !important;
       }
 
       /* GitHub's CSS variables */
       :root {
-          --mono-font: 'BlexMono Nerd Font', monospace !important;
+          --mono-font: 'JetBrains Mono', monospace !important;
       }
 
       /* Code editing elements */
@@ -84,20 +84,20 @@
       .commit-create-textarea,
       .edit-file-textarea,
       div[contenteditable="true"] {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
       }
 
       /* Editor in-place edit mode */
       .js-file-line-container [role="textbox"],
       .js-blob-code [role="textbox"],
       .blob-code-content [role="textbox"] {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyBlexMonoFont();
+  applyJetBrainsMonoFont();
 
   const observer = new MutationObserver(function (mutations) {
     let shouldUpdate = false;
@@ -108,7 +108,7 @@
       }
     }
     if (shouldUpdate) {
-      applyBlexMonoFont();
+      applyJetBrainsMonoFont();
     }
   });
 
@@ -118,19 +118,19 @@
   });
 
   window.addEventListener("load", function () {
-    setTimeout(applyBlexMonoFont, 1000);
+    setTimeout(applyJetBrainsMonoFont, 1000);
   });
 
   document.addEventListener("pjax:end", function () {
-    setTimeout(applyBlexMonoFont, 200);
+    setTimeout(applyJetBrainsMonoFont, 200);
   });
 })();
 
 // ==UserScript==
-// @name         LeetCode BlexMono Nerd Font
+// @name         LeetCode JetBrains Mono Nerd Font
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Changes code font on LeetCode to BlexMono Nerd Font
+// @version      1.1
+// @description  Changes code font on LeetCode to JetBrains Mono
 // @author       You
 // @match        https://*.leetcode.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.com
@@ -140,7 +140,7 @@
 (function () {
   "use strict";
 
-  function applyBlexMonoFont() {
+  function applyJetBrainsMonoFont() {
     const codeElements = [
       ".monaco-editor",
       ".CodeMirror",
@@ -157,30 +157,30 @@
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       ${codeElements.join(", ")} {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
           font-feature-settings: 'liga' 0 !important;
       }
       .monaco-editor .view-lines span {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
       }
       .content__1Y2H code {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
       }
 
       /* Additional LeetCode-specific selectors for the Monaco editor */
       .view-line span,
       .mtk1, .mtk2, .mtk3, .mtk4, .mtk5, .mtk6, .mtk7, .mtk8, .mtk9,
       .monaco-scrollable-element {
-          font-family: 'BlexMono Nerd Font', monospace !important;
+          font-family: 'JetBrains Mono', monospace !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyBlexMonoFont();
+  applyJetBrainsMonoFont();
 
   const observer = new MutationObserver(function () {
-    applyBlexMonoFont();
+    applyJetBrainsMonoFont();
   });
 
   observer.observe(document.body, {
@@ -189,15 +189,15 @@
   });
 
   window.addEventListener("load", function () {
-    setTimeout(applyBlexMonoFont, 1000);
+    setTimeout(applyJetBrainsMonoFont, 1000);
   });
 })();
 
 // ==UserScript==
-// @name         LinkedIn IBM Plex Sans Font
+// @name         LinkedIn Funnel Sans Font
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Changes all fonts on LinkedIn to IBM Plex Sans
+// @version      1.1
+// @description  Changes all fonts on LinkedIn to Funnel Sans
 // @author       You
 // @match        https://*.linkedin.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
@@ -207,7 +207,7 @@
 (function () {
   "use strict";
 
-  function applyIBMPlexSans() {
+  function applyFunnelSans() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       html, body, div, span, applet, object, iframe,
@@ -223,18 +223,18 @@
       figure, figcaption, footer, header, hgroup,
       menu, nav, output, ruby, section, summary,
       time, mark, audio, video, input, textarea, button {
-        font-family: 'IBM Plex Sans', -apple-system,
+        font-family: 'Funnel Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       :root {
-        --artdeco-reset-typography-font-family-sans: 'IBM Plex Sans',
+        --artdeco-reset-typography-font-family-sans: 'Funnel Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --global-primary-font-family: 'IBM Plex Sans',
+        --global-primary-font-family: 'Funnel Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --artdeco-typography-font-family-stack: 'IBM Plex Sans',
+        --artdeco-typography-font-family-stack: 'Funnel Sans',
           -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --font-family: 'IBM Plex Sans', -apple-system,
+        --font-family: 'Funnel Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
@@ -250,34 +250,34 @@
       .scaffold-layout__main,
       .app-aware-link,
       .artdeco-card {
-        font-family: 'IBM Plex Sans', -apple-system,
+        font-family: 'Funnel Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       .msg-form__contenteditable,
       .msg-s-event-listitem__body {
-        font-family: 'IBM Plex Sans', -apple-system,
+        font-family: 'Funnel Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
 
       input,
       .search-global-typeahead__input {
-        font-family: 'IBM Plex Sans', -apple-system,
+        font-family: 'Funnel Sans', -apple-system,
           BlinkMacSystemFont, sans-serif !important;
       }
     `;
     document.head.appendChild(customCSS);
   }
 
-  applyIBMPlexSans();
+  applyFunnelSans();
 
-  const observer = new MutationObserver(applyIBMPlexSans);
+  const observer = new MutationObserver(applyFunnelSans);
   observer.observe(document.body, {
     childList: true,
     subtree: true,
   });
 
   window.addEventListener("load", () => {
-    setTimeout(applyIBMPlexSans, 1000);
+    setTimeout(applyFunnelSans, 1000);
   });
 })();
