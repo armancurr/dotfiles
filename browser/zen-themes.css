@@ -13,7 +13,7 @@ body, html {
 
 code, pre,
 .monospace {
-    font-family: "JetBrains Mono",
+    font-family: "Geist Mono",
         monospace !important;
 }
 
@@ -24,5 +24,5 @@ code, pre,
 .markdown-body code,
 .markdown-body pre,
 .markdown-body .monospace {
-    font-family: "JetBrains Mono", monospace !important;
+    font-family: "Geist Mono", monospace !important;
 }
