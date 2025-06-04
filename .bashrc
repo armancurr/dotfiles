@@ -2,7 +2,31 @@
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 
-PS1="\w > "
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Original color definitions (can be kept or removed if not used elsewhere)
+RED="\[\033[0;31m\]"
+GREEN="\[\033[0;32m\]"
+BLUE="\[\033[0;34m\]"
+PURPLE="\[\033[0;35m\]"
+CYAN="\[\033[0;36m\]"
+WHITE="\[\033[1;37m\]"
+# RESET is defined again below with the CS colors, ensure consistency or use one.
+
+# CodeSandbox Theme Inspired Colors
+RAW_CS_FOREGROUND="\033[38;2;229;229;229m"
+RAW_CS_GIT_BRANCH_COLOR="\033[38;2;191;208;132m"
+RAW_RESET="\033[0m"
+
+CS_FOREGROUND="\[\033[38;2;229;229;229m\]"
+CS_PATH_COLOR="\[\033[38;2;163;144;255m\]"
+CS_GIT_BRANCH_COLOR="\[\033[38;2;191;208;132m\]"
+RESET="\[\033[0m\]" # This RESET will be used by PS1
+
+# Modified PS1: Replaced final $ with ❯
+PS1="${CS_FOREGROUND}${CS_PATH_COLOR}\w${CS_GIT_BRANCH_COLOR}\$(parse_git_branch)${RESET}${CS_FOREGROUND} ❯ ${RESET}"
 
 # NPM Aliases
 alias nn="npm init"
@@ -46,6 +70,10 @@ alias .="cd .."
 alias ..="cd ../.."
 alias pr="bunx prettier --write ."
 
+# This final sourcing of .bashrc can be problematic if .bashrc *also* sets PS1,
+# as it might override the PS1 set above.
+# If your PS1 settings are primarily in this file (.bash_profile),
+# and .bashrc doesn't set PS1, this is fine.
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
 fi
