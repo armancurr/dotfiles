@@ -1,0 +1,116 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+opacity = 1.0 # Assuming full opacity from your example, adjust if needed
+blur = true
+decorations = "Full"
+dynamic_padding = true
+title = "Terminal"
+dynamic_title = true
+startup_mode = "Windowed"
+level = "Normal" # Added for completeness, adjust if you had a different setting
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 20
+y = 20
+
+[window.class]
+instance = "Terminal"
+general = "Terminal"
+
+[scrolling]
+history = 10000
+multiplier = 5
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "GeistMono NF"
+style = "Regular"
+
+[font.bold]
+family = "GeistMono NF"
+style = "Bold"
+
+[font.italic]
+family = "GeistMono NF"
+style = "Italic"
+
+[font.offset]
+x = 0
+y = 1
+
+# CodeSandbox Theme Colors
+[colors.primary]
+background = "#151515" # CodeSandbox background
+foreground = "#e5e5e5" # CodeSandbox foreground
+bright_foreground = "#ffffff" # CodeSandbox variable.other (pure white)
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "#e5e5e5" # CodeSandbox foreground (or #AD9CFF for focus color)
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "#F7CC66" # CodeSandbox warningForeground (yellow)
+
+[colors.selection]
+text = "CellBackground"
+background = "#6f6f6f" # CodeSandbox selection.background
+
+[colors.normal]
+black = "#0F0E0E"   # CodeSandbox input.background (darker black)
+red = "#f48771"     # CodeSandbox errorForeground
+green = "#BFD084"   # CodeSandbox string
+yellow = "#F7CC66"  # CodeSandbox warningForeground
+blue = "#7AD9FB"    # CodeSandbox constant / support.type.ts
+magenta = "#A390FF" # CodeSandbox keyword / function.defaultLibrary
+cyan = "#b3e8b4"    # CodeSandbox keyword.operator (light green/cyan)
+white = "#c5c5c5"   # CodeSandbox button.secondaryForeground (dimmer white)
+
+[colors.bright]
+black = "#6f6f6f"   # CodeSandbox comment / selection.background (grey)
+red = "#ED6C6C"     # CodeSandbox gitDecoration.conflictingResourceForeground
+green = "#CDF861"   # CodeSandbox meta.function-call (lime green)
+yellow = "#F7DF1E"  # From your original Alacritty yellow, also in CS search
+blue = "#AD9CFF"    # CodeSandbox focusBorder (purple-blue)
+magenta = "#CABEFF" # CodeSandbox entity.name.type.module
+cyan = "#7AD9FB"    # Using normal blue as bright cyan for vibrancy
+white = "#ffffff"   # CodeSandbox variable.other (pure white)
+
+[colors.search]
+matches = { foreground = "#151515", background = "#F7CC66" } # CS background on CS warningYellow
+focused_match = { foreground = "#151515", background = "#f48771" } # CS background on CS errorRed
+
+[colors.hints]
+start = { foreground = "#151515", background = "#CDF861" } # CS background on CS brightGreen
+end = { foreground = "#151515", background = "#A390FF" } # CS background on CS magenta
+
+[colors.line_indicator]
+foreground = "None" # Or choose a subtle color from CS theme if desired
+background = "None" # Or choose a subtle color from CS theme if desired
+
+[colors.footer_bar]
+foreground = "#151515" # CS background
+background = "#6f6f6f" # CS grey/comment
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+blink_interval = 500
+blink_timeout = 0 # Set to 0 to blink indefinitely when focused
+unfocused_hollow = false
+thickness = 0.2
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[terminal.shell] # This is specific to your Windows Git Bash setup
+program = "C:\\Program Files\\Git\\bin\\bash.exe"
+args = ["--login", "-i"]
