@@ -1,31 +1,30 @@
-# Load existing profile and bashrc if they exist
 test -f ~/.profile && . ~/.profile
 test -f ~/.bashrc && . ~/.bashrc
 
-# --- Helper Functions ---
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 update_prompt() {
-    GIT_BRANCH_PROMPT=$(parse_git_branch)
+    local C_BLUE="\[\033[38;2;98;166;255m\]"
+    local C_GREEN="\[\033[38;2;88;199;96m\]"
+    local C_PINK="\[\033[38;2;240;91;141m\]"
+    local C_WHITE="\[\033[38;2;255;255;255m\]"
+    local C_RESET="\[\033[0m\]"
+
+    local git_info=""
+    if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        local branch_name=$(git rev-parse --abbrev-ref HEAD)
+        local git_prefix="${C_WHITE}git:"
+        local branch_color=$C_GREEN
+
+        if [[ -n "$(git status --porcelain)" ]]; then
+            branch_color=$C_PINK
+        fi
+        git_info="${C_GREEN}git:(${branch_color}${branch_name}${C_GREEN})"
+    fi
+
+    PS1=" ${C_GREEN}➔ ${C_BLUE}\W ${git_info}${C_RESET} ${C_WHITE}➔ ${C_RESET}"
 }
 
-# --- Set PROMPT_COMMAND ---
 PROMPT_COMMAND=update_prompt
 
-# --- Vercel Theme Color Palette ---
-C_FOREGROUND="\[\033[38;2;237;237;237m\]"
-C_PATH="\[\033[38;2;98;166;255m\]"
-C_GIT="\[\033[38;2;88;199;96m\]"
-C_RESET="\[\033[0m\]"
-
-# --- Custom Prompt (PS1) ---
-PS1="${C_PATH}\w${C_GIT}\${GIT_BRANCH_PROMPT}${C_RESET} ${C_FOREGROUND}» ${C_RESET}"
-
-# --- Command Aliases ---
-
-# BUN Aliases
 alias bn="bun init"
 alias bi="bun install"
 alias ba="bun add"
@@ -36,7 +35,6 @@ alias bb="bun run build"
 alias bunx="bun x"
 alias bxs="bun x shadcn@latest"
 
-# NPM Aliases
 alias nn="npm init"
 alias ni="npm install"
 alias na="npm install"
@@ -46,7 +44,6 @@ alias nd="npm run dev"
 alias nb="npm run build"
 alias nxs="npx shadcn-ui@latest add"
 
-# PNPM Aliases
 alias pn="pnpm init"
 alias pi="pnpm install"
 alias pa="pnpm add"
@@ -57,7 +54,6 @@ alias pb="pnpm build"
 alias px="pnpm dlx"
 alias pxs="pnpm dlx shadcn-ui@latest add"
 
-# Git Aliases
 alias gs="git status --short"
 alias gd="git diff"
 alias ga="git add"
@@ -70,7 +66,6 @@ alias gco="git checkout"
 alias gi="git init"
 alias gcl="git clone"
 
-# System & Utility Aliases
 alias cls="clear"
 alias ..="cd .."
 alias ...="cd ../.."
