@@ -346,3 +346,50 @@
   // way to detect when the editor is re-rendered.
   // For example, if LeetCode uses React Router, you might need a different event.
 })();
+
+// ==UserScript==
+// @name         Keybr Font Override Advanced
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Advanced font override for keybr.com
+// @author       You
+// @match        https://www.keybr.com/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Add fonts
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&family=Geist+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    function applyFonts() {
+        const allElements = document.querySelectorAll('*');
+        allElements.forEach(el => {
+            const computed = window.getComputedStyle(el);
+            if (computed.fontFamily.includes('monospace') ||
+                el.tagName === 'PRE' ||
+                el.tagName === 'CODE' ||
+                el.classList.toString().includes('typing') ||
+                el.classList.toString().includes('lesson')) {
+                el.style.setProperty('font-family', '"Geist Mono", monospace', 'important');
+            } else {
+                el.style.setProperty('font-family', '"Funnel Sans", sans-serif', 'important');
+            }
+        });
+    }
+
+    // Apply immediately and on changes
+    setTimeout(applyFonts, 1000);
+
+    const observer = new MutationObserver(applyFonts);
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class', 'style']
+    });
+})();
