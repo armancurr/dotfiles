@@ -1,69 +1,125 @@
 // ==UserScript==
-// @name         Cursor.com Font Customizer (Funnel Sans & Geist Mono)
+// @name         Universal Font Overrider (Funnel Sans & Geist Mono)
 // @namespace    http://tampermonkey.net/
-// @version      0.3
-// @description  Sets sans-serif font to "Funnel Sans" and monospace font to "Geist Mono" on www.cursor.com. Ensure fonts are installed locally.
-// @author       T3 Chat
+// @version      1.1
+// @description  Forcefully sets sans-serif font to "Funnel Sans" and monospace to "Geist Mono" across specified websites. Handles dynamic content, iframes, and shadow DOM.
+// @author       T3 Chat & You
 // @match        https://www.cursor.com/*
+// @match        https://www.google.com/*
+// @match        https://*.linkedin.com/*
+// @match        https://mail.google.com/*
+// @match        https://mail.proton.me/*
+// @match        https://cloudinary.com/*
+// @match        https://0.email/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
 
 (function () {
-  "use strict";
+	"use strict";
 
-  const css = `
-    /*
-     * IMPORTANT:
-     * You MUST have "Funnel Sans" and "Geist Mono" installed on your system
-     * for this script to work as intended.
-     */
+	// --- FONT DEFINITIONS ---
+	const SANS_FONT_STACK = `"Funnel Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+	const MONO_FONT_STACK = `"Geist Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
 
-    /* General Sans-Serif Override */
-    body, button, input, select, optgroup, textarea,
-    h1, h2, h3, h4, h5, h6, p, a, li, span, div,
-    label, legend, caption, th, td,
-    .font-sans, /* Common utility class */
-    [class*="sans"], /* Elements with "sans" in their class */
-    [style*="font-family"]:not([style*="monospace"]):not([style*="mono"]):not([style*="Courier"]):not([style*="Consolas"]) /* Catch inline styles, try not to override mono */
-    {
-        font-family: "Funnel Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+	// --- MASTER CSS STYLES ---
+	const masterCss = `
+    /* Strategy 1: Override common CSS variables */
+    :root {
+      --font-sans: ${SANS_FONT_STACK} !important;
+      --font-mono: ${MONO_FONT_STACK} !important;
+      --cursor-font-family-sans: ${SANS_FONT_STACK} !important;
+      --cursor-font-family-mono: ${MONO_FONT_STACK} !important;
+      --artdeco-reset-typography-font-family-sans: ${SANS_FONT_STACK} !important;
+      --global-primary-font-family: ${SANS_FONT_STACK} !important;
     }
 
-    /* Monospace Override - targeting common elements and potential editor classes */
-    pre, code, kbd, samp,
-    textarea[class*="mono"], /* Textareas styled as mono */
-    .monaco-editor, .monaco-mouse-cursor-text, /* VS Code based editor classes (Cursor uses this) */
-    .CodeMirror, /* CodeMirror editor classes */
-    .ace_editor, /* Ace editor classes */
-    .jetbrains-mono, .source-code-pro, /* Font specific classes sometimes used */
-    .font-mono, /* Common utility class */
-    [class*="mono"], /* Elements with "mono" in their class */
-    [style*="font-family: monospace"],
-    [style*="font-family: mono"],
-    [style*="font-family: Courier"],
-    [style*="font-family: Consolas"]
-    {
-        font-family: "Geist Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+    /* Strategy 2: Universal override for all elements */
+    * {
+      font-family: ${SANS_FONT_STACK} !important;
     }
 
     /*
-     * If cursor.com uses CSS Custom Properties (variables) for fonts,
-     * overriding them would be cleaner. You'd need to inspect their CSS
-     * to find the variable names. Example:
-     * :root {
-     *   --cursor-font-family-sans: "Funnel Sans", sans-serif !important;
-     *   --cursor-font-family-mono: "Geist Mono", monospace !important;
-     * }
+     * Strategy 3: Specific overrides for monospaced elements.
+     * NOTE: The generic 'textarea' selector has been removed to prevent
+     * issues like the one on the Google search bar.
      */
+    pre, code, kbd, samp, tt,
+    .font-mono, [class*="mono"],
+    .monaco-editor, .monaco-mouse-cursor-text, .cm-editor, .cm-content,
+    textarea[class*="mono"], textarea[class*="code"], /* This is the fix */
+    [class*="code"], .monospace, .monospace-type {
+      font-family: ${MONO_FONT_STACK} !important;
+    }
   `;
 
-  GM_addStyle(css);
+	// --- DYNAMIC INJECTION LOGIC ---
 
-  // Optional: Log to console to confirm script execution
-  console.log(
-    "Cursor.com Font Customizer: Applied Funnel Sans & Geist Mono styles.",
-  );
+	GM_addStyle(masterCss);
+
+	const injectStylesInto = (rootNode) => {
+		if (rootNode) {
+			const styleElement = document.createElement("style");
+			styleElement.textContent = masterCss;
+			rootNode.appendChild(styleElement);
+		}
+	};
+
+	const processNode = (node) => {
+		if (node.nodeType !== Node.ELEMENT_NODE) return;
+
+		const elementsToScan = [node, ...node.querySelectorAll("*")];
+		elementsToScan.forEach((el) => {
+			// Handle iframes
+			if (el.tagName === "IFRAME") {
+				el.addEventListener(
+					"load",
+					() => {
+						try {
+							injectStylesInto(el.contentDocument.head);
+						} catch (e) {
+							/* ignore cross-origin */
+						}
+					},
+					{ once: true },
+				);
+			}
+			// Handle shadow DOM
+			if (el.shadowRoot) {
+				injectStylesInto(el.shadowRoot);
+			}
+		});
+	};
+
+	const observer = new MutationObserver((mutations) => {
+		for (const mutation of mutations) {
+			for (const addedNode of mutation.addedNodes) {
+				processNode(addedNode);
+			}
+		}
+	});
+
+	const startObserver = () => {
+		if (document.body) {
+			observer.observe(document.body, {
+				childList: true,
+				subtree: true,
+			});
+			console.log(
+				"Universal Font Overrider: Observer is active on",
+				window.location.hostname,
+			);
+		}
+	};
+
+	if (
+		document.readyState === "interactive" ||
+		document.readyState === "complete"
+	) {
+		startObserver();
+	} else {
+		document.addEventListener("DOMContentLoaded", startObserver, { once: true });
+	}
 })();
 
 // ==UserScript==
@@ -289,93 +345,4 @@
   // If font changes revert, you might need to listen to other events or use a more robust
   // way to detect when the editor is re-rendered.
   // For example, if LeetCode uses React Router, you might need a different event.
-})();
-
-// ==UserScript==
-// @name         LinkedIn Funnel Sans Font
-// @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  Changes all fonts on LinkedIn to Funnel Sans
-// @author       You
-// @match        https://*.linkedin.com/*
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=linkedin.com
-// @grant        none
-// ==/UserScript==
-
-(function () {
-  "use strict";
-
-  function applyFunnelSans() {
-    const customCSS = document.createElement("style");
-    customCSS.textContent = `
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed,
-      figure, figcaption, footer, header, hgroup,
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video, input, textarea, button {
-        font-family: 'Funnel Sans', -apple-system,
-          BlinkMacSystemFont, sans-serif !important;
-      }
-
-      :root {
-        --artdeco-reset-typography-font-family-sans: 'Funnel Sans',
-          -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --global-primary-font-family: 'Funnel Sans',
-          -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --artdeco-typography-font-family-stack: 'Funnel Sans',
-          -apple-system, BlinkMacSystemFont, sans-serif !important;
-        --font-family: 'Funnel Sans', -apple-system,
-          BlinkMacSystemFont, sans-serif !important;
-      }
-
-      .artdeco-button,
-      .feed-shared-text,
-      .feed-shared-text-view,
-      .feed-shared-actor__title,
-      .feed-shared-actor__description,
-      .t-16,
-      .t-14,
-      .t-12,
-      .t-bold,
-      .scaffold-layout__main,
-      .app-aware-link,
-      .artdeco-card {
-        font-family: 'Funnel Sans', -apple-system,
-          BlinkMacSystemFont, sans-serif !important;
-      }
-
-      .msg-form__contenteditable,
-      .msg-s-event-listitem__body {
-        font-family: 'Funnel Sans', -apple-system,
-          BlinkMacSystemFont, sans-serif !important;
-      }
-
-      input,
-      .search-global-typeahead__input {
-        font-family: 'Funnel Sans', -apple-system,
-          BlinkMacSystemFont, sans-serif !important;
-      }
-    `;
-    document.head.appendChild(customCSS);
-  }
-
-  applyFunnelSans();
-
-  const observer = new MutationObserver(applyFunnelSans);
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
-
-  window.addEventListener("load", () => {
-    setTimeout(applyFunnelSans, 1000);
-  });
 })();
