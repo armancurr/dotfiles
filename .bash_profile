@@ -12,7 +12,7 @@ update_prompt() {
     if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
         local branch_name=$(git rev-parse --abbrev-ref HEAD)
         local git_prefix="${C_WHITE}git:"
-        local branch_color=$C_GREEN
+        local branch_color=$C_PINK
 
         if [[ -n "$(git status --porcelain)" ]]; then
             branch_color=$C_PINK
@@ -20,7 +20,7 @@ update_prompt() {
         git_info="${C_GREEN}git:(${branch_color}${branch_name}${C_GREEN})"
     fi
 
-    PS1=" ${C_GREEN}➔ ${C_BLUE}\W ${git_info}${C_RESET} ${C_WHITE}➔ ${C_RESET}"
+    PS1=" ${C_GREEN}➔ ${C_BLUE} \W ${git_info}${C_RESET}${C_WHITE} ➔  ${C_RESET}"
 }
 
 PROMPT_COMMAND=update_prompt
