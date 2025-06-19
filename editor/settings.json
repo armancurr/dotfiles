@@ -19,8 +19,6 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.wordWrap": "on",
   "workbench.activityBar.location": "bottom",
-  "workbench.colorTheme": "Vercel (Dark)",
-  "workbench.iconTheme": "symbols",
   "workbench.layoutControl.enabled": false,
   "workbench.panel.showLabels": false,
   "workbench.productIconTheme": "fluent-icons",
@@ -60,5 +58,7 @@
   "cursor.cpp.disabledLanguages": ["markdown", "scminput"],
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
   "files.autoSave": "afterDelay",
-  "window.menuBarVisibility": "compact"
+  "window.menuBarVisibility": "compact",
+  "workbench.colorTheme": "Vercel (Dark)",
+  "workbench.iconTheme": "symbols"
 }
