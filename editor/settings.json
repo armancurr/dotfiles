@@ -3,7 +3,7 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "underline",
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'GeistMono NF', 'JetBrains Mono', 'Lilex Nerd Font Mono', monospace",
+  "editor.fontFamily": "'Geist Mono', 'JetBrains Mono', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.hover.enabled": false,
@@ -27,7 +27,7 @@
   "window.newWindowProfile": "Default",
   "window.title": " ",
   "window.zoomLevel": 1,
-  "custom-ui-style.font.sansSerif": "Funnel Sans, sans-serif",
+  "custom-ui-style.font.sansSerif": "Geist, sans-serif",
   "terminal.integrated.accessibleViewPreserveCursorPosition": true,
   "terminal.integrated.allowedLinkSchemes": [
     "file",
@@ -42,7 +42,7 @@
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.cursorStyleInactive": "none",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.fontFamily": "'GeistMono NF', 'JetBrains Mono', 'Lilex Nerd Font Mono', monospace",
+  "terminal.integrated.fontFamily": "'Geist Mono', 'JetBrains Mono', monospace",
   "terminal.integrated.fontSize": 16,
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -58,7 +58,7 @@
   "cursor.cpp.disabledLanguages": ["markdown", "scminput"],
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
   "files.autoSave": "afterDelay",
-  "window.menuBarVisibility": "compact",
   "workbench.colorTheme": "Vercel (Dark)",
-  "workbench.iconTheme": "symbols"
+  "workbench.iconTheme": "symbols",
+  "window.menuBarVisibility": "compact"
 }
