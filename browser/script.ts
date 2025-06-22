@@ -1,16 +1,20 @@
 // ==UserScript==
-// @name         Universal Font Overrider (Funnel Sans & Geist Mono)
+// @name         Universal Font Overrider
 // @namespace    http://tampermonkey.net/
 // @version      1.1
-// @description  Forcefully sets sans-serif font to "Funnel Sans" and monospace to "Geist Mono" across specified websites. Handles dynamic content, iframes, and shadow DOM.
+// @description  Forcefully sets sans-serif font to "Geist" and monospace to "Geist Mono" across specified websites. Handles dynamic content, iframes, and shadow DOM.
 // @author       T3 Chat & You
 // @match        https://www.cursor.com/*
 // @match        https://www.google.com/*
+// @match        https://www.youtube.com/*
+// @match        https://www.npmjs.com/*
 // @match        https://*.linkedin.com/*
+// @match        https://x.com/*
 // @match        https://mail.google.com/*
 // @match        https://mail.proton.me/*
 // @match        https://cloudinary.com/*
 // @match        https://0.email/*
+// @match        https://www.reddit.com/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
@@ -18,11 +22,9 @@
 (function () {
 	"use strict";
 
-	// --- FONT DEFINITIONS ---
-	const SANS_FONT_STACK = `"Funnel Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+	const SANS_FONT_STACK = `Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
 	const MONO_FONT_STACK = `"Geist Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
 
-	// --- MASTER CSS STYLES ---
 	const masterCss = `
     /* Strategy 1: Override common CSS variables */
     :root {
@@ -53,8 +55,6 @@
     }
   `;
 
-	// --- DYNAMIC INJECTION LOGIC ---
-
 	GM_addStyle(masterCss);
 
 	const injectStylesInto = (rootNode) => {
@@ -70,7 +70,6 @@
 
 		const elementsToScan = [node, ...node.querySelectorAll("*")];
 		elementsToScan.forEach((el) => {
-			// Handle iframes
 			if (el.tagName === "IFRAME") {
 				el.addEventListener(
 					"load",
@@ -78,13 +77,11 @@
 						try {
 							injectStylesInto(el.contentDocument.head);
 						} catch (e) {
-							/* ignore cross-origin */
 						}
 					},
 					{ once: true },
 				);
 			}
-			// Handle shadow DOM
 			if (el.shadowRoot) {
 				injectStylesInto(el.shadowRoot);
 			}
