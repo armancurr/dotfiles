@@ -1,20 +1,24 @@
-body, html {
-    font-family: Geist,
-        sans-serif !important;
+body,
+html {
+  font-family: Geist,
+  sans-serif !important;
 }
 
-code, pre,
+code,
+pre,
 .monospace {
-    font-family: "Geist Mono",
-        monospace !important;
+  font-family: "Geist Mono",
+  monospace !important;
 }
 
 .markdown-body {
-    font-family: Geist, sans-serif !important;
+  font-family: Geist,
+  sans-serif !important;
 }
 
 .markdown-body code,
 .markdown-body pre,
 .markdown-body .monospace {
-    font-family: "Geist Mono", monospace !important;
+  font-family: "Geist Mono",
+  monospace !important;
 }
