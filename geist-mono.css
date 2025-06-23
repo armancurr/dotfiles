@@ -1,5 +1,5 @@
 body, html {
-    font-family: "Geist",
+    font-family: Geist,
         sans-serif !important;
 }
 
@@ -10,7 +10,7 @@ code, pre,
 }
 
 .markdown-body {
-    font-family: "Geist", sans-serif !important;
+    font-family: Geist, sans-serif !important;
 }
 
 .markdown-body code,
