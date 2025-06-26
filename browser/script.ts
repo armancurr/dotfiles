@@ -1,13 +1,12 @@
 // ==UserScript==
 // @name         Universal Font Overrider
 // @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  Forcefully sets sans-serif font to "Geist" and monospace to "Geist Mono" across specified websites. Handles dynamic content, iframes, and shadow DOM.
+// @version      1.3
+// @description  Forcefully sets fonts across specified websites to SF Pro Display and SF Mono. Handles dynamic content, iframes, and shadow DOM.
 // @author       T3 Chat & You
 // @match        https://www.cursor.com/*
 // @match        https://www.google.com/*
 // @match        https://www.youtube.com/*
-// @match        https://www.npmjs.com/*
 // @match        https://*.linkedin.com/*
 // @match        https://x.com/*
 // @match        https://mail.google.com/*
@@ -20,13 +19,14 @@
 // ==/UserScript==
 
 (function () {
-	"use strict";
+  "use strict";
 
-	const SANS_FONT_STACK = `Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
-	const MONO_FONT_STACK = `"Geist Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
+  const SANS_FONT_STACK =
+    `"SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+  const MONO_FONT_STACK =
+    `"SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
 
-	const masterCss = `
-    /* Strategy 1: Override common CSS variables */
+  const masterCss = `
     :root {
       --font-sans: ${SANS_FONT_STACK} !important;
       --font-mono: ${MONO_FONT_STACK} !important;
@@ -36,94 +36,85 @@
       --global-primary-font-family: ${SANS_FONT_STACK} !important;
     }
 
-    /* Strategy 2: Universal override for all elements */
     * {
       font-family: ${SANS_FONT_STACK} !important;
     }
 
-    /*
-     * Strategy 3: Specific overrides for monospaced elements.
-     * NOTE: The generic 'textarea' selector has been removed to prevent
-     * issues like the one on the Google search bar.
-     */
     pre, code, kbd, samp, tt,
     .font-mono, [class*="mono"],
     .monaco-editor, .monaco-mouse-cursor-text, .cm-editor, .cm-content,
-    textarea[class*="mono"], textarea[class*="code"], /* This is the fix */
+    textarea[class*="mono"], textarea[class*="code"],
     [class*="code"], .monospace, .monospace-type {
       font-family: ${MONO_FONT_STACK} !important;
     }
   `;
 
-	GM_addStyle(masterCss);
+  const injectStylesInto = (rootNode) => {
+    if (rootNode) {
+      const styleElement = document.createElement("style");
+      styleElement.textContent = masterCss;
+      rootNode.appendChild(styleElement);
+    }
+  };
 
-	const injectStylesInto = (rootNode) => {
-		if (rootNode) {
-			const styleElement = document.createElement("style");
-			styleElement.textContent = masterCss;
-			rootNode.appendChild(styleElement);
-		}
-	};
+  const processNode = (node) => {
+    if (node.nodeType !== Node.ELEMENT_NODE) return;
 
-	const processNode = (node) => {
-		if (node.nodeType !== Node.ELEMENT_NODE) return;
+    const elementsToScan = [node, ...node.querySelectorAll("*")];
+    elementsToScan.forEach((el) => {
+      if (el.tagName === "IFRAME") {
+        el.addEventListener(
+          "load",
+          () => {
+            try {
+              injectStylesInto(el.contentDocument.head);
+            } catch (e) {}
+          },
+          { once: true },
+        );
+      }
+      if (el.shadowRoot) {
+        injectStylesInto(el.shadowRoot);
+      }
+    });
+  };
 
-		const elementsToScan = [node, ...node.querySelectorAll("*")];
-		elementsToScan.forEach((el) => {
-			if (el.tagName === "IFRAME") {
-				el.addEventListener(
-					"load",
-					() => {
-						try {
-							injectStylesInto(el.contentDocument.head);
-						} catch (e) {
-						}
-					},
-					{ once: true },
-				);
-			}
-			if (el.shadowRoot) {
-				injectStylesInto(el.shadowRoot);
-			}
-		});
-	};
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      for (const addedNode of mutation.addedNodes) {
+        processNode(addedNode);
+      }
+    }
+  });
 
-	const observer = new MutationObserver((mutations) => {
-		for (const mutation of mutations) {
-			for (const addedNode of mutation.addedNodes) {
-				processNode(addedNode);
-			}
-		}
-	});
+  const startObserver = () => {
+    if (document.body) {
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+      console.log(
+        "Universal Font Overrider: Observer is active on",
+        window.location.hostname,
+      );
+    }
+  };
 
-	const startObserver = () => {
-		if (document.body) {
-			observer.observe(document.body, {
-				childList: true,
-				subtree: true,
-			});
-			console.log(
-				"Universal Font Overrider: Observer is active on",
-				window.location.hostname,
-			);
-		}
-	};
-
-	if (
-		document.readyState === "interactive" ||
-		document.readyState === "complete"
-	) {
-		startObserver();
-	} else {
-		document.addEventListener("DOMContentLoaded", startObserver, { once: true });
-	}
+  if (
+    document.readyState === "interactive" ||
+    document.readyState === "complete"
+  ) {
+    startObserver();
+  } else {
+    document.addEventListener("DOMContentLoaded", startObserver, { once: true });
+  }
 })();
 
 // ==UserScript==
-// @name         GitHub Geist Mono Nerd Font
+// @name         GitHub SF Mono Nerd Font
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Changes code font on GitHub to Geist Mono (including code editing)
+// @version      1.3
+// @description  Changes code font on GitHub to SF Mono (including code editing) using font stacks
 // @author       You (Modified by T3 Chat)
 // @match        https://github.com/*
 // @match        https://gist.github.com/*
@@ -134,10 +125,12 @@
 (function () {
   "use strict";
 
-  function applyGeistMonoFont() {
+  const SF_MONO_STACK =
+    `"SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
+
+  function applySFMonoFont() {
     const customCSS = document.createElement("style");
     customCSS.textContent = `
-      /* Code blocks and inline code */
       .highlight pre,
       pre,
       code,
@@ -167,26 +160,22 @@
       .react-code-line-contents,
       .react-file-line,
       .react-blob-print-hide {
-          font-family: 'Geist Mono', monospace !important;
-          font-feature-settings: 'liga' 0 !important; /* Consider if Geist Mono needs ligatures enabled or disabled */
+          font-family: ${SF_MONO_STACK} !important;
+          font-feature-settings: 'liga' 0 !important;
       }
 
-      /* Ensure all editor views use the font */
       .react-code-view .react-code-line * {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
 
-      /* GitHub's newer code view */
       .react-blob-view-header-sticky {
-          --h-code-font: 'Geist Mono', monospace !important;
+          --h-code-font: ${SF_MONO_STACK} !important;
       }
 
-      /* GitHub's CSS variables */
       :root {
-          --mono-font: 'Geist Mono', monospace !important;
+          --mono-font: ${SF_MONO_STACK} !important;
       }
 
-      /* Code editing elements */
       .CodeMirror,
       .CodeMirror-lines,
       .CodeMirror textarea,
@@ -205,31 +194,28 @@
       .commit-create-textarea,
       .edit-file-textarea,
       div[contenteditable="true"] {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
 
-      /* Editor in-place edit mode */
       .js-file-line-container [role="textbox"],
       .js-blob-code [role="textbox"],
       .blob-code-content [role="textbox"] {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
     `;
-    // Remove existing style if it exists to prevent multiple appends
-    const existingStyle = document.getElementById("geist-mono-github-style");
+
+    const existingStyle = document.getElementById("sf-mono-github-style");
     if (existingStyle) {
       existingStyle.remove();
     }
-    customCSS.id = "geist-mono-github-style";
+    customCSS.id = "sf-mono-github-style";
     document.head.appendChild(customCSS);
   }
 
-  applyGeistMonoFont();
+  applySFMonoFont();
 
-  // Re-apply on DOM changes, common for SPAs like GitHub
   const observer = new MutationObserver(function (mutations) {
-    // More targeted check could be added here if performance becomes an issue
-    applyGeistMonoFont();
+    applySFMonoFont();
   });
 
   observer.observe(document.body, {
@@ -237,21 +223,20 @@
     subtree: true,
   });
 
-  // Re-apply after full page load and PJAX navigation
   window.addEventListener("load", function () {
-    setTimeout(applyGeistMonoFont, 500); // Delay to ensure page elements are ready
+    setTimeout(applySFMonoFont, 500);
   });
 
   document.addEventListener("pjax:end", function () {
-    setTimeout(applyGeistMonoFont, 200); // PJAX navigation is usually faster
+    setTimeout(applySFMonoFont, 200);
   });
 })();
 
 // ==UserScript==
-// @name         LeetCode Geist Mono Nerd Font
+// @name         LeetCode SF Mono Nerd Font
 // @namespace    http://tampermonkey.net/
-// @version      1.2
-// @description  Changes code font on LeetCode to Geist Mono
+// @version      1.3
+// @description  Changes code font on LeetCode to SF Mono using a font stack for better compatibility.
 // @author       You (Modified by T3 Chat)
 // @match        https://*.leetcode.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=leetcode.com
@@ -261,71 +246,66 @@
 (function () {
   "use strict";
 
-  function applyGeistMonoFont() {
+  const SF_MONO_STACK =
+    `"SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
+
+  function applySFMonoFont() {
     const codeElements = [
-      ".monaco-editor", // Base Monaco editor container
-      ".CodeMirror", // Base CodeMirror container
-      "code", // Inline code and generic code blocks
-      "pre", // Preformatted text blocks
-      ".CodeMirror-code", // CodeMirror inner code area
-      ".monaco-editor-background", // Monaco editor background
-      ".monaco-editor .view-lines", // Monaco editor lines container
-      ".monaco-editor .view-line", // Individual line in Monaco
-      ".cm-s-leetcode", // LeetCode's CodeMirror theme
-      ".mtk1", // Common token class in Monaco
-      // Add other specific LeetCode editor classes if needed
+      ".monaco-editor",
+      ".CodeMirror",
+      "code",
+      "pre",
+      ".CodeMirror-code",
+      ".monaco-editor-background",
+      ".monaco-editor .view-lines",
+      ".monaco-editor .view-line",
+      ".cm-s-leetcode",
+      ".mtk1",
     ];
 
     const customCSS = document.createElement("style");
     customCSS.textContent = `
       ${codeElements.join(",\n      ")} {
-          font-family: 'Geist Mono', monospace !important;
-          font-feature-settings: 'liga' 0 !important; /* Adjust if Geist Mono handles ligatures differently or if you prefer them */
+          font-family: ${SF_MONO_STACK} !important;
+          font-feature-settings: 'liga' 0 !important;
       }
 
-      /* Ensure spans within Monaco editor lines also get the font */
       .monaco-editor .view-lines span,
       .monaco-editor .view-line span {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
 
-      /* Specific selector for code blocks within LeetCode content areas */
-      .content__1Y2H code, /* Example of a LeetCode specific class, might change */
-      .description__24sA code /* Another example for problem descriptions */
+      .content__1Y2H code,
+      .description__24sA code
       {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
 
-      /* Additional LeetCode-specific selectors for the Monaco editor parts */
-      .view-line span, /* Catch-all for spans within a view line */
-      .mtk1, .mtk2, .mtk3, .mtk4, .mtk5, .mtk6, .mtk7, .mtk8, .mtk9, /* Monaco token classes */
-      .monaco-scrollable-element .lines-content .view-line /* More specific path to view lines */
+      .view-line span,
+      .mtk1, .mtk2, .mtk3, .mtk4, .mtk5, .mtk6, .mtk7, .mtk8, .mtk9,
+      .monaco-scrollable-element .lines-content .view-line
       {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
 
-      /* Target textareas that might be used for code input */
       textarea.ace_text-input,
       textarea.inputarea {
-          font-family: 'Geist Mono', monospace !important;
+          font-family: ${SF_MONO_STACK} !important;
       }
     `;
 
-    // Remove existing style if it exists to prevent multiple appends
-    const existingStyle = document.getElementById("geist-mono-leetcode-style");
+    const existingStyle = document.getElementById("sf-mono-leetcode-style");
     if (existingStyle) {
       existingStyle.remove();
     }
-    customCSS.id = "geist-mono-leetcode-style";
+    customCSS.id = "sf-mono-leetcode-style";
     document.head.appendChild(customCSS);
   }
 
-  applyGeistMonoFont();
+  applySFMonoFont();
 
-  // Re-apply on DOM changes, as LeetCode dynamically loads content
   const observer = new MutationObserver(function (mutations) {
-    // A more sophisticated check could be to see if relevant editor nodes were added
-    applyGeistMonoFont();
+    applySFMonoFont();
   });
 
   observer.observe(document.body, {
@@ -333,60 +313,54 @@
     subtree: true,
   });
 
-  // Re-apply after full page load
   window.addEventListener("load", function () {
-    setTimeout(applyGeistMonoFont, 1000); // Longer delay for LeetCode as it can be heavy
+    setTimeout(applySFMonoFont, 1000);
   });
-
-  // LeetCode might use client-side routing or dynamic content loading without full page reloads.
-  // If font changes revert, you might need to listen to other events or use a more robust
-  // way to detect when the editor is re-rendered.
-  // For example, if LeetCode uses React Router, you might need a different event.
 })();
 
 // ==UserScript==
 // @name         Keybr Font Override Advanced
 // @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Advanced font override for keybr.com
+// @version      0.3
+// @description  Advanced font override for keybr.com using local font stacks.
 // @author       You
 // @match        https://www.keybr.com/*
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  "use strict";
 
-    // Add fonts
-    const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&family=Geist+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
+  const SF_PRO_DISPLAY_STACK =
+    `"SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+  const SF_MONO_STACK =
+    `"SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
 
-    function applyFonts() {
-        const allElements = document.querySelectorAll('*');
-        allElements.forEach(el => {
-            const computed = window.getComputedStyle(el);
-            if (computed.fontFamily.includes('monospace') ||
-                el.tagName === 'PRE' ||
-                el.tagName === 'CODE' ||
-                el.classList.toString().includes('typing') ||
-                el.classList.toString().includes('lesson')) {
-                el.style.setProperty('font-family', '"Geist Mono", monospace', 'important');
-            } else {
-                el.style.setProperty('font-family', '"Funnel Sans", sans-serif', 'important');
-            }
-        });
-    }
-
-    // Apply immediately and on changes
-    setTimeout(applyFonts, 1000);
-
-    const observer = new MutationObserver(applyFonts);
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-        attributeFilter: ['class', 'style']
+  function applyFonts() {
+    const allElements = document.querySelectorAll("*");
+    allElements.forEach((el) => {
+      const computed = window.getComputedStyle(el);
+      if (
+        computed.fontFamily.includes("monospace") ||
+        el.tagName === "PRE" ||
+        el.tagName === "CODE" ||
+        el.classList.toString().includes("typing") ||
+        el.classList.toString().includes("lesson")
+      ) {
+        el.style.setProperty("font-family", SF_MONO_STACK, "important");
+      } else {
+        el.style.setProperty("font-family", SF_PRO_DISPLAY_STACK, "important");
+      }
     });
+  }
+
+  setTimeout(applyFonts, 1000);
+
+  const observer = new MutationObserver(applyFonts);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ["class", "style"],
+  });
 })();
