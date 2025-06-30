@@ -19,48 +19,49 @@ history = 10000
 size = 14.0
 
 [font.normal]
-family = "Geist Mono"
-style = "Regular"
+family = "GeistMono NF"
+style = "Medium"
 
 [font.bold]
-family = "Geist Mono"
+family = "GeistMono NF"
 style = "Bold"
 
 [font.italic]
-family = "Geist Mono"
+family = "GeistMono NF"
 style = "Italic"
 
+# Vercel Dark theme colors
 [colors.primary]
-background = "#000000"
-foreground = "#ffffff"
+background = "#000000"  # Pure black background
+foreground = "#ededed"  # Light gray text (matches theme primary text)
 
 [colors.cursor]
-text = "#000000"
-cursor = "#ffffff"
+text = "#000000"        # Black cursor text
+cursor = "#ededed"      # Light gray cursor (matches foreground)
 
 [colors.selection]
-text = "#ffffff"
-background = "#333333"
+text = "#ededed"        # Light gray selection text
+background = "#333333"  # Dark gray selection background (matches theme selection)
 
 [colors.normal]
-black = "#000000"
-red = "#ff6b6b"
-green = "#51cf66"
-yellow = "#ffd43b"
-blue = "#339af0"
-magenta = "#da77f2"
-cyan = "#22b8cf"
-white = "#ffffff"
+black = "#000000"       # Pure black
+red = "#f05b8d"         # Vercel pink/red (keywords, errors)
+green = "#58c760"       # Vercel green (strings, success)
+yellow = "#f99902"      # Vercel yellow/orange (warnings, modified)
+blue = "#62a6ff"        # Vercel blue (links, constants, variables)
+magenta = "#b675f1"     # Vercel purple (functions, attributes)
+cyan = "#14cbb7"        # Vercel cyan (from terminal colors)
+white = "#a1a1a1"       # Medium gray (secondary text)
 
 [colors.bright]
-black = "#666666"
-red = "#ff8787"
-green = "#69db7c"
-yellow = "#ffe066"
-blue = "#4dabf7"
-magenta = "#e599f7"
-cyan = "#3bc9db"
-white = "#ffffff"
+black = "#676767"       # Bright black (matches terminal.ansiBrightBlack)
+red = "#f56464"         # Bright red (matches terminal.ansiBrightRed)
+green = "#58c760"       # Bright green (same as normal, matches terminal)
+yellow = "#f99902"      # Bright yellow (same as normal, matches terminal)
+blue = "#62a6ff"        # Bright blue (same as normal, matches terminal)
+magenta = "#b675f1"     # Bright magenta (same as normal, matches terminal)
+cyan = "#14cbb7"        # Bright cyan (same as normal, matches terminal)
+white = "#ededed"       # Bright white (primary text color)
 
 [cursor]
 style = { shape = "Underline", blinking = "On" }
