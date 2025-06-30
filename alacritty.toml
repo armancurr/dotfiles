@@ -19,15 +19,15 @@ history = 10000
 size = 14.0
 
 [font.normal]
-family = "GeistMono NF"
+family = "Geist Mono"
 style = "Medium"
 
 [font.bold]
-family = "GeistMono NF"
+family = "Geist Mono"
 style = "Bold"
 
 [font.italic]
-family = "GeistMono NF"
+family = "Geist Mono"
 style = "Italic"
 
 # Vercel Dark theme colors
