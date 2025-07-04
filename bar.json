@@ -1,16 +1,12 @@
-{
-  "Taskbar.TaskbarFrame > Grid#RootGrid": {
-    "Margin": "0,0,0,8",
-    "CornerRadius": "6",
-    "Padding": "3,2,4,3"
-  },
-  "Grid#SystemTrayFrameGrid": {
-    "Height": "75",
-    "CornerRadius": "12",
-    "Margin": "0,-12,-2,0",
-    "Padding": "8,8,8,8"
-  },
-  "Taskbar.TaskListButton": {
-    "Margin": "1,0,1,0"
-  }
-}
+```txt
+Taskbar.TaskbarFrame > Grid#RootGrid
+Margin=0,0,0,8
+CornerRadius=6
+Padding=2,2,4,2
+
+Grid#SystemTrayFrameGrid
+Height=65
+CornerRadius=12
+Margin=0,-12,-6,0
+Padding=6,6,6,6
+```
