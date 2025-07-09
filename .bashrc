@@ -4,13 +4,12 @@ case $- in
 esac
 
 update_prompt() {
-    # Vercel Dark theme colors
-    local VERCEL_BLUE="\[\033[38;2;98;166;255m\]"      # #62a6ff - for main prompt and directory
-    local VERCEL_GREEN="\[\033[38;2;88;199;96m\]"      # #58c760 - for clean git branch
-    local VERCEL_YELLOW="\[\033[38;2;249;153;2m\]"     # #f99902 - for dirty git branch
-    local VERCEL_WHITE="\[\033[38;2;237;237;237m\]"    # #ededed - for primary text
-    local VERCEL_GRAY="\[\033[38;2;161;161;161m\]"     # #a1a1a1 - for secondary text
-    local VERCEL_PINK="\[\033[38;2;240;91;141m\]"      # #f05b8d - for git prefix
+    local VERCEL_BLUE="\[\033[38;2;98;166;255m\]"
+    local VERCEL_GREEN="\[\033[38;2;88;199;96m\]"
+    local VERCEL_YELLOW="\[\033[38;2;249;153;2m\]"
+    local VERCEL_WHITE="\[\033[38;2;237;237;237m\]" 
+    local VERCEL_GRAY="\[\033[38;2;161;161;161m\]"
+    local VERCEL_PINK="\[\033[38;2;240;91;141m\]"
     local C_RESET="\[\033[0m\]"
 
     local git_info=""
@@ -25,10 +24,19 @@ update_prompt() {
         git_info=" ${git_prefix}(${branch_color}${branch_name}${VERCEL_PINK})"
     fi
 
-    PS1="${VERCEL_BLUE}➔ ${VERCEL_BLUE}\W${git_info} ${VERCEL_WHITE}➔ ${C_RESET}"
+    PS1="${VERCEL_BLUE}\W${git_info} ${VERCEL_WHITE}➔ ${C_RESET}"
 }
 
 PROMPT_COMMAND=update_prompt
+
+# Persistent history settings
+# export HISTFILESIZE=10000
+# export HISTSIZE=10000
+# export HISTCONTROL=ignoredups:erasedups
+# shopt -s histappend
+
+# Save history after each command
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias bn="bun init"
 alias bi="bun install"
@@ -40,7 +48,16 @@ alias bb="bun run build"
 alias bunx="bun x"
 alias bxs="bun x shadcn@latest"
 
-alias gs="git status"
+alias nn="npm init"
+alias ni="npm install"
+alias na="npm install"
+alias nu="npm uninstall"
+alias ns="npm start"
+alias nd="npm run dev"
+alias nb="npm run build"
+alias nxs="npx shadcn-ui@latest add"
+
+alias gs="git status --short"
 alias gd="git diff"
 alias ga="git add"
 alias gc="git commit -m"
@@ -59,3 +76,14 @@ alias pwrite="bunx prettier --write ."
 
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(zoxide init bash)"
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
