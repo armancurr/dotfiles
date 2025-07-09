@@ -7,7 +7,7 @@ decorations = "Full"
 opacity = 0.9
 blur = true
 startup_mode = "Windowed"
-title = " "
+title = "Alacritty"
 dynamic_title = false
 decorations_theme_variant = "Dark"
 
@@ -25,35 +25,35 @@ builtin_box_drawing = true
 
 [colors.primary]
 background = '#0a0a0a'
-foreground = '#ededed'
+foreground = '#f0f0f0'
 
 [colors.cursor]
-cursor = '#ededed'
+cursor = '#FFFFFF'
 text = '#0a0a0a'
 
 [colors.selection]
-text = '#ededed'
-background = '#333333'
+text = '#f0f0f0'
+background = '#262626'
 
 [colors.normal]
-black = '#000000'
-red = '#f56464'
-green = '#58c760'
-yellow = '#f99902'
-blue = '#62a6ff'
-magenta = '#b675f1'
-cyan = '#14cbb7'
-white = '#a1a1a1'
+black = '#424242'
+red = '#F44747'
+green = '#999999'
+yellow = '#E2C08D'
+blue = '#A9A9A9'
+magenta = '#D3D3D3'
+cyan = '#DCDCDC'
+white = '#D4D4D4'
 
 [colors.bright]
-black = '#676767'
-red = '#f56464'
-green = '#58c760'
-yellow = '#f99902'
-blue = '#62a6ff'
-magenta = '#b675f1'
-cyan = '#14cbb7'
-white = '#ededed'
+black = '#424242'
+red = '#F44747'
+green = '#999999'
+yellow = '#E2C08D'
+blue = '#A9A9A9'
+magenta = '#D3D3D3'
+cyan = '#DCDCDC'
+white = '#D4D4D4'
 
 [bell]
 animation = "EaseOut"

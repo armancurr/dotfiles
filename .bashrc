@@ -4,27 +4,27 @@ case $- in
 esac
 
 update_prompt() {
-    local VERCEL_BLUE="\[\033[38;2;98;166;255m\]"
-    local VERCEL_GREEN="\[\033[38;2;88;199;96m\]"
-    local VERCEL_YELLOW="\[\033[38;2;249;153;2m\]"
-    local VERCEL_WHITE="\[\033[38;2;237;237;237m\]" 
-    local VERCEL_GRAY="\[\033[38;2;161;161;161m\]"
-    local VERCEL_PINK="\[\033[38;2;240;91;141m\]"
+    local DIR_COLOR="\[\033[38;2;212;212;212m\]"
+    local GIT_PREFIX_COLOR="\[\033[38;2;99;99;99m\]"
+    local GIT_BRANCH_CLEAN_COLOR="\[\033[38;2;240;240;240m\]"
+    local GIT_BRANCH_DIRTY_COLOR="\[\033[38;2;169;169;169m\]"
+    local PROMPT_SYMBOL_COLOR="\[\033[38;2;212;212;212m\]"
+    local PARENTHESES_COLOR="\[\033[38;2;99;99;99m\]"
     local C_RESET="\[\033[0m\]"
 
     local git_info=""
     if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
         local branch_name=$(git rev-parse --abbrev-ref HEAD)
-        local git_prefix="${VERCEL_PINK}git:"
-        local branch_color=$VERCEL_GREEN
+        local git_prefix="${GIT_PREFIX_COLOR}git:"
+        local branch_color=$GIT_BRANCH_CLEAN_COLOR
 
         if [[ -n "$(git status --porcelain)" ]]; then
-            branch_color=$VERCEL_YELLOW
+            branch_color=$GIT_BRANCH_DIRTY_COLOR
         fi
-        git_info=" ${git_prefix}(${branch_color}${branch_name}${VERCEL_PINK})"
+        git_info=" ${git_prefix}${PARENTHESES_COLOR}(${branch_color}${branch_name}${PARENTHESES_COLOR})"
     fi
 
-    PS1="${VERCEL_BLUE}\W${git_info} ${VERCEL_WHITE}➔ ${C_RESET}"
+    PS1="${DIR_COLOR}\W${git_info} ${PROMPT_SYMBOL_COLOR}➔ ${C_RESET}"
 }
 
 PROMPT_COMMAND=update_prompt
