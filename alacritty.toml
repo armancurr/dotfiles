@@ -4,7 +4,7 @@ position = { x = 349, y = 169 }
 padding = { x = 20, y = 20 }
 dynamic_padding = true
 decorations = "Full"
-opacity = 0.9
+opacity = 1
 blur = true
 startup_mode = "Windowed"
 title = "Alacritty"

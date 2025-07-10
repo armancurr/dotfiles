@@ -29,13 +29,11 @@ update_prompt() {
 
 PROMPT_COMMAND=update_prompt
 
-# Persistent history settings
 # export HISTFILESIZE=10000
 # export HISTSIZE=10000
 # export HISTCONTROL=ignoredups:erasedups
 # shopt -s histappend
 
-# Save history after each command
 # export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias bn="bun init"
@@ -87,3 +85,15 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# andexec() {
+#     local line
+#     while IFS= read -r line; do
+#         line="${line// and / && }"
+#         eval "$line"
+#     done
+# }
