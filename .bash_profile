@@ -1,10 +1,9 @@
 if [ -f /etc/profile ]; then
-    . /etc/profile
+  . /etc/profile
 fi
 
 if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
+  . ~/.bashrc
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
-eval "$(zoxide init bash)"

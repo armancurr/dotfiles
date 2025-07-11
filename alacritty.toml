@@ -1,13 +1,13 @@
 [window]
-dimensions = { columns = 80, lines = 25 }
-position = { x = 349, y = 169 }
+dimensions = { columns = 90, lines = 25 }
+position = "None"
 padding = { x = 20, y = 20 }
 dynamic_padding = true
 decorations = "Full"
 opacity = 1
 blur = true
 startup_mode = "Windowed"
-title = "Alacritty"
+title = "Terminal"
 dynamic_title = false
 decorations_theme_variant = "Dark"
 
@@ -55,11 +55,6 @@ magenta = '#D3D3D3'
 cyan = '#DCDCDC'
 white = '#D4D4D4'
 
-[bell]
-animation = "EaseOut"
-duration = 100
-color = '#f56464'
-
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 save_to_clipboard = true
@@ -67,12 +62,12 @@ save_to_clipboard = true
 [cursor]
 style = { shape = "Underline", blinking = "On" }
 vi_mode_style = { shape = "Underline", blinking = "On" }
-blink_interval = 550
+blink_interval = 750
 blink_timeout = 0
 unfocused_hollow = false
 
 [terminal]
-shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-i"] }
+shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-i", "-c", "tmux new -A -s main || { echo 'tmux failed'; exec bash; }"] }
 osc52 = "OnlyCopy"
 
 [mouse]
