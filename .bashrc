@@ -24,7 +24,7 @@ case $- in
         fi
         git_info=" ${GIT_PREFIX_COLOR}git:${PARENTHESES_COLOR}(${color}${branch}${PARENTHESES_COLOR})"
       fi
-      PS1="${DIR_COLOR}\W${git_info} ${PROMPT_SYMBOL_COLOR}➔ ${C_RESET}"
+      PS1="${DIR_COLOR}\w${git_info} ${PROMPT_SYMBOL_COLOR}❯ ${C_RESET}"
     }
     PROMPT_COMMAND=update_prompt
 
