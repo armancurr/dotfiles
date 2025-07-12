@@ -1,4 +1,3 @@
-# Only run this in interactive shells
 case $- in
   *i*)
     export NVM_DIR="$HOME/.nvm"
@@ -7,12 +6,12 @@ case $- in
     unset HISTFILE
 
     function update_prompt {
-      local DIR_COLOR="\[\033[38;2;212;212;212m\]"
-      local GIT_PREFIX_COLOR="\[\033[38;2;99;99;99m\]"
-      local GIT_BRANCH_CLEAN_COLOR="\[\033[38;2;240;240;240m\]"
-      local GIT_BRANCH_DIRTY_COLOR="\[\033[38;2;169;169;169m\]"
-      local PROMPT_SYMBOL_COLOR="\[\033[38;2;212;212;212m\]"
-      local PARENTHESES_COLOR="\[\033[38;2;99;99;99m\]"
+      local DIR_COLOR="\[\033[38;2;166;172;205m\]"
+      local GIT_PREFIX_COLOR="\[\033[38;2;118;124;157m\]"
+      local GIT_BRANCH_CLEAN_COLOR="\[\033[38;2;228;240;251m\]"
+      local GIT_BRANCH_DIRTY_COLOR="\[\033[38;2;118;124;157m\]"
+      local PROMPT_SYMBOL_COLOR="\[\033[38;2;228;240;251m\]"
+      local PARENTHESES_COLOR="\[\033[38;2;118;124;157m\]"
       local C_RESET="\[\033[0m\]"
 
       local git_info=""

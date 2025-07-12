@@ -1,7 +1,7 @@
 [window]
 dimensions = { columns = 90, lines = 25 }
 position = "None"
-padding = { x = 20, y = 20 }
+padding = { x = 50, y = 50 }
 dynamic_padding = true
 decorations = "Full"
 opacity = 1
@@ -24,36 +24,36 @@ offset = { x = 0, y = 0 }
 builtin_box_drawing = true
 
 [colors.primary]
-background = '#0a0a0a'
-foreground = '#f0f0f0'
+background = '#0f1017'
+foreground = '#a6accd'
 
 [colors.cursor]
-cursor = '#FFFFFF'
-text = '#0a0a0a'
+cursor = '#a6accd'
+text = '#0f1017'
 
 [colors.selection]
-text = '#f0f0f0'
-background = '#262626'
+text = '#a6accd'
+background = '#717cb4'
 
 [colors.normal]
-black = '#424242'
-red = '#F44747'
-green = '#999999'
-yellow = '#E2C08D'
-blue = '#A9A9A9'
-magenta = '#D3D3D3'
-cyan = '#DCDCDC'
-white = '#D4D4D4'
+black = '#0f1017'
+red = '#d0679d'
+green = '#5DE4c7'
+yellow = '#fffac2'
+blue = '#89ddff'
+magenta = '#f087bd'
+cyan = '#ADD7FF'
+white = '#ffffff'
 
 [colors.bright]
-black = '#424242'
-red = '#F44747'
-green = '#999999'
-yellow = '#E2C08D'
-blue = '#A9A9A9'
-magenta = '#D3D3D3'
-cyan = '#DCDCDC'
-white = '#D4D4D4'
+black = '#a6accd'
+red = '#d0679d'
+green = '#5DE4c7'
+yellow = '#fffac2'
+blue = '#ADD7FF'
+magenta = '#f087bd'
+cyan = '#ADD7FF'
+white = '#ffffff'
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
@@ -67,7 +67,7 @@ blink_timeout = 0
 unfocused_hollow = false
 
 [terminal]
-shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-i", "-c", "tmux new -A -s main || { echo 'tmux failed'; exec bash; }"] }
+shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login"] }
 osc52 = "OnlyCopy"
 
 [mouse]

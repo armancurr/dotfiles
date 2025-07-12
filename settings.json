@@ -1,9 +1,6 @@
 {
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
-  "cursor.cpp.disabledLanguages": [
-    "markdown",
-    "scminput"
-  ],
+  "cursor.cpp.disabledLanguages": ["markdown", "scminput"],
   "custom-ui-style.font.sansSerif": "'Funnel Sans', 'Geist', sans-serif",
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.maxComputationTime": 0,
@@ -18,7 +15,7 @@
   "editor.hover.enabled": false,
   "editor.insertSpaces": true,
   "editor.lightbulb.enabled": "off",
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "editor.links": false,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
@@ -37,6 +34,7 @@
   "git.openRepositoryInParentFolders": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "scm.diffDecorations": "none",
+  "symbols.hidesExplorerArrows": false,
   "terminal.integrated.accessibleViewPreserveCursorPosition": true,
   "terminal.integrated.allowedLinkSchemes": [
     "file",
@@ -60,9 +58,11 @@
   "window.title": " ",
   "window.zoomLevel": 1,
   "workbench.activityBar.location": "bottom",
-  "workbench.colorTheme": "Corinthians All Black",
+  "workbench.colorTheme": "Noir Poimandres Darker",
+  "workbench.iconTheme": "symbols",
   "workbench.layoutControl.enabled": false,
   "workbench.panel.showLabels": false,
   "workbench.productIconTheme": "fluent-icons",
+  "workbench.statusBar.visible": false,
   "workbench.tree.renderIndentGuides": "none"
 }
