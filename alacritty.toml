@@ -1,7 +1,7 @@
 [window]
-dimensions = { columns = 90, lines = 25 }
-position = "None"
-padding = { x = 50, y = 50 }
+dimensions = { columns = 80, lines = 25 }
+position = { x = 100, y = 100 }
+padding = { x = 45, y = 45 }
 dynamic_padding = true
 decorations = "Full"
 opacity = 1
@@ -24,36 +24,36 @@ offset = { x = 0, y = 0 }
 builtin_box_drawing = true
 
 [colors.primary]
-background = '#0f1017'
-foreground = '#a6accd'
+background = '#101010'
+foreground = '#aaaaaa'
 
 [colors.cursor]
-cursor = '#a6accd'
-text = '#0f1017'
+cursor = '#aaaaaa'
+text = '#101010'
 
 [colors.selection]
-text = '#a6accd'
-background = '#717cb4'
+text = '#aaaaaa'
+background = '#1d1d1d'
 
 [colors.normal]
-black = '#0f1017'
-red = '#d0679d'
-green = '#5DE4c7'
-yellow = '#fffac2'
-blue = '#89ddff'
-magenta = '#f087bd'
-cyan = '#ADD7FF'
-white = '#ffffff'
+black = '#101010'
+red = '#8d8d8d'
+green = '#8d8d8d'
+yellow = '#b4b4b4'
+blue = '#8d8d8d'
+magenta = '#8d8d8d'
+cyan = '#8d8d8d'
+white = '#b4b4b4'
 
 [colors.bright]
-black = '#a6accd'
-red = '#d0679d'
-green = '#5DE4c7'
-yellow = '#fffac2'
-blue = '#ADD7FF'
-magenta = '#f087bd'
-cyan = '#ADD7FF'
-white = '#ffffff'
+black = '#262626'
+red = '#8d8d8d'
+green = '#8d8d8d'
+yellow = '#b4b4b4'
+blue = '#8d8d8d'
+magenta = '#8d8d8d'
+cyan = '#8d8d8d'
+white = '#ebebeb'
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
