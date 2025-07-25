@@ -1,0 +1,9 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[character]
+error_symbol = '[✜](bold red) '
+
+[package]
+disabled = true
