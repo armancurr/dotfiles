@@ -15,7 +15,7 @@ decorations_theme_variant = "Dark"
 history = 10000
 
 [font]
-normal = { family = "GeistMono NF", style = "Medium" }
+normal = { family = "GeistMono NF", style = "Regular" }
 bold = { family = "GeistMono NF", style = "Bold" }
 italic = { family = "GeistMono NF", style = "Italic" }
 bold_italic = { family = "GeistMono NF", style = "Bold Italic" }
@@ -24,36 +24,36 @@ offset = { x = 0, y = 0 }
 builtin_box_drawing = true
 
 [colors.primary]
-background = '#101010'
-foreground = '#aaaaaa'
+background = '#0f1017'
+foreground = '#a6accd'
 
 [colors.cursor]
-cursor = '#aaaaaa'
-text = '#101010'
+cursor = '#a6accd'
+text = '#0f1017'
 
 [colors.selection]
-text = '#aaaaaa'
-background = '#1d1d1d'
+text = '#e4f0fb'
+background = '#303340'
 
 [colors.normal]
-black = '#101010'
-red = '#8d8d8d'
-green = '#8d8d8d'
-yellow = '#b4b4b4'
-blue = '#8d8d8d'
-magenta = '#8d8d8d'
-cyan = '#8d8d8d'
-white = '#b4b4b4'
+black = '#0f1017'
+red = '#d0679d'
+green = '#5DE4c7'
+yellow = '#fffac2'
+blue = '#89ddff'
+magenta = '#f087bd'
+cyan = '#89ddff'
+white = '#a6accd'
 
 [colors.bright]
-black = '#262626'
-red = '#8d8d8d'
-green = '#8d8d8d'
-yellow = '#b4b4b4'
-blue = '#8d8d8d'
-magenta = '#8d8d8d'
-cyan = '#8d8d8d'
-white = '#ebebeb'
+black = '#a6accd'
+red = '#d0679d'
+green = '#5DE4c7'
+yellow = '#fffac2'
+blue = '#ADD7FF'
+magenta = '#f087bd'
+cyan = '#ADD7FF'
+white = '#ffffff'
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
