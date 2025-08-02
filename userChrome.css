@@ -3,3 +3,30 @@
 * {
     font-family: "Funnel Sans" !important;
 }
+
+/* Target only textual parts of UI, not icons */
+:root, 
+#navigator-toolbox, 
+#TabsToolbar, 
+#nav-bar, 
+#urlbar-container, 
+#urlbar-input-container, 
+#urlbar, 
+#urlbar-input, 
+#PersonalToolbar, 
+#toolbar-menubar, 
+#titlebar, 
+#main-window, 
+.findbar-textbox,
+.bookmark-item,
+tree,
+.tab-text,
+.tab-label {
+    font-family: "Funnel Sans", sans-serif !important;
+}
+
+/* Hide status bar */
+#statuspanel,
+#statuspanel-box {
+    display: none !important;
+}
