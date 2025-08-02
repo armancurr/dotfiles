@@ -1,11 +1,8 @@
-body,
-html {
+body, html {
   font-family: "Funnel Sans", sans-serif !important;
 }
 
-code,
-pre,
-.monospace {
+code, pre, .monospace {
   font-family: "Geist Mono", monospace !important;
 }
 
@@ -13,8 +10,6 @@ pre,
   font-family: "Funnel Sans", sans-serif !important;
 }
 
-.markdown-body code,
-.markdown-body pre,
-.markdown-body .monospace {
+.markdown-body code, .markdown-body pre, .markdown-body .monospace {
   font-family: "Geist Mono", monospace !important;
 }

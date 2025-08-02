@@ -4,7 +4,6 @@
     font-family: "Funnel Sans" !important;
 }
 
-/* Target only textual parts of UI, not icons */
 :root, 
 #navigator-toolbox, 
 #TabsToolbar, 
@@ -25,7 +24,6 @@ tree,
     font-family: "Funnel Sans", sans-serif !important;
 }
 
-/* Hide status bar */
 #statuspanel,
 #statuspanel-box {
     display: none !important;
