@@ -1,9 +1,57 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
 add_newline = true
 
-[character]
-error_symbol = '[✜](bold red) '
+format = """
+$directory\
+[](bg:#89ddff fg:#303340)\
+$git_branch\
+[](bg:#5DE4c7 fg:#89ddff)\
+$git_status\
+[](fg:#5DE4c7)\
+$character"""
 
-[package]
-disabled = true
+[directory]
+style = "bg:#303340 fg:#ffffff"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "~ "
+
+[git_branch]
+symbol = ""
+style = "bg:#89ddff fg:#0f1017"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#5DE4c7 fg:#0f1017"
+format = "[ $all_status$ahead_behind ]($style)"
+conflicted = "=${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+# format = """
+# $directory\
+# $git_branch\
+# $git_status\
+# """
+# add_newline = true
+
+# [directory]
+# style = "#a6accd"
+# format = "[ $path ]($style)"
+# truncation_length = 1
+# truncation_symbol = "~ "
+
+# [git_branch]
+# symbol = ""
+# style = "#89ddff"
+# format = '[$symbol $branch]($style)'
+
+# [git_status]
+# style = "#fffac2"
+# format = ' [$all_status$ahead_behind]($style) '
