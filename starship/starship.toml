@@ -1,21 +1,52 @@
-format = """
-$directory\
-$git_branch\
-$git_status\
-"""
+palette = "namra"
 add_newline = true
 
+format = "[](fg:blue)$directory[](fg:blue bg:blue_bright)$git_branch$git_status[](fg:blue_bright) "
+
 [directory]
-style = "#a6accd"
+style = "fg:base bg:blue"
 format = "[ $path ]($style)"
 truncation_length = 1
-truncation_symbol = "~ "
+truncate_to_repo = false
+truncation_symbol = ""
+read_only = " "
+read_only_style = "fg:base bg:blue"
 
 [git_branch]
 symbol = ""
-style = "#89ddff"
-format = '[$symbol $branch]($style)'
+style = "fg:base bg:blue_bright"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
-style = "#fffac2"
-format = ' [$all_status$ahead_behind]($style) '
+style = "fg:base bg:blue_bright"
+format = "[ $all_status$ahead_behind ]($style)"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕${count}"
+staged = "+${count}"
+modified = "~${count}"
+renamed = "»${count}"
+deleted = "×${count}"
+untracked = "?${count}"
+conflicted = "${count}"
+
+[package]
+disabled = true
+[nodejs]
+disabled = true
+[python]
+disabled = true
+[golang]
+disabled = true
+
+[palettes.namra]
+base = "#0f1017"
+text = "#a6accd"
+blue = "#89ddff"
+blue_bright = "#ADD7FF"
+green = "#5DE4c7"
+yellow = "#fffac2"
+magenta = "#d0679d"
+pink = "#f087bd"
+white = "#ffffff"
+sel = "#303340"
