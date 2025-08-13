@@ -1,52 +1,55 @@
-palette = "namra"
 add_newline = true
+palette = "namra"
 
 format = "[](fg:blue)$directory[](fg:blue bg:blue_bright)$git_branch$git_status[](fg:blue_bright) "
 
 [directory]
-style = "fg:base bg:blue"
 format = "[ $path ]($style)"
-truncation_length = 1
-truncate_to_repo = false
-truncation_symbol = ""
 read_only = " "
 read_only_style = "fg:base bg:blue"
+style = "fg:base bg:blue"
+truncate_to_repo = false
+truncation_length = 1
+truncation_symbol = ""
 
 [git_branch]
-symbol = ""
-style = "fg:base bg:blue_bright"
 format = "[ $symbol $branch ]($style)"
+style = "fg:base bg:blue_bright"
+symbol = ""
 
 [git_status]
-style = "fg:base bg:blue_bright"
-format = "[ $all_status$ahead_behind ]($style)"
 ahead = "⇡${count}"
 behind = "⇣${count}"
+conflicted = "${count}"
+deleted = "×${count}"
 diverged = "⇕${count}"
-staged = "+${count}"
+format = "[ $all_status$ahead_behind ]($style)"
 modified = "~${count}"
 renamed = "»${count}"
-deleted = "×${count}"
+staged = "+${count}"
+style = "fg:base bg:blue_bright"
 untracked = "?${count}"
-conflicted = "${count}"
+
+[golang]
+disabled = true
+
+[nodejs]
+disabled = true
 
 [package]
 disabled = true
-[nodejs]
-disabled = true
+
 [python]
-disabled = true
-[golang]
 disabled = true
 
 [palettes.namra]
 base = "#0f1017"
-text = "#a6accd"
 blue = "#89ddff"
 blue_bright = "#ADD7FF"
 green = "#5DE4c7"
-yellow = "#fffac2"
 magenta = "#d0679d"
 pink = "#f087bd"
-white = "#ffffff"
 sel = "#303340"
+text = "#a6accd"
+white = "#ffffff"
+yellow = "#fffac2"

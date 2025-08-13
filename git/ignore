@@ -1,0 +1,7 @@
+[init]
+    defaultBranch = core
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all

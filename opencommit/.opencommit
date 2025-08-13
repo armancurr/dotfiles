@@ -1,6 +1,6 @@
 OCO_AI_PROVIDER=gemini
 OCO_API_KEY=
-OCO_MODEL=gemini-1.5-flash-8b
+OCO_MODEL=gemini-2.0-flash
 OCO_API_URL=undefined
 OCO_API_CUSTOM_HEADERS=undefined
 OCO_TOKENS_MAX_INPUT=4096

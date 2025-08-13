@@ -37,26 +37,28 @@ case $- in
         alias nxs="npx shadcn@latest add";
 
         alias gs="git status --short";
-        alias gd="git diff";
+        alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '";
         alias ga="git add";
         alias gc="git commit -m";
         alias gp="git push";
         alias gu="git pull";
-        alias gl="git log --oneline --graph --decorate --all";
+        alias gl="git log --all --graph";
         alias gb="git branch";
-        alias gco="git checkout";
         alias gi="git init";
         alias gcl="git clone";
+        alias gco="git checkout";
 
-        alias cl="clear";
-        alias .="cd ..";
-        alias ..="cd ../..";
-        alias pr="bunx prettier --write .";
         alias tx="tmux";
         alias ta="tmux attach";
         alias td="tmux detach";
         alias tk="tmux kill-session";
         alias tl="tmux ls";
+
+        alias cl="clear";
+        alias .="cd ..";
+        alias ..="cd ../..";
+        alias pr="bunx prettier --write .";
+        alias ac="ai-commit-message -c"
 
         eval "$(starship init bash)";
         eval "$(zoxide init bash)";

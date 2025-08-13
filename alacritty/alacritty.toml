@@ -70,6 +70,10 @@ unfocused_hollow = false
 shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login"] }
 osc52 = "OnlyCopy"
 
+# [terminal]
+# shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-c", "tmux attach || tmux new-session"] }
+# osc52 = "OnlyCopy"
+
 [mouse]
 hide_when_typing = true
 
