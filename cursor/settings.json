@@ -24,7 +24,7 @@
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "none",
   "editor.roundedSelection": false,
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
@@ -40,13 +40,13 @@
   "scm.diffDecorations": "none",
   "terminal.integrated.accessibleViewPreserveCursorPosition": true,
   "terminal.integrated.allowedLinkSchemes": [
-      "file",
-      "http",
-      "https",
-      "mailto",
-      "vscode",
-      "vscode-insiders",
-      "ms-settings"
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "ms-settings"
   ],
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
@@ -70,5 +70,5 @@
   "window.menuBarVisibility": "compact",
   "workbench.colorTheme": "Noir Poimandres Darker",
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
-  "biome.suggestInstallingGlobally": false,
+  "biome.suggestInstallingGlobally": false
 }
