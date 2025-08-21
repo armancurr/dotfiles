@@ -24,36 +24,36 @@ offset = { x = 0, y = 0 }
 builtin_box_drawing = true
 
 [colors.primary]
-background = '#0f1017'
-foreground = '#a6accd'
+background = '#0a0a0a'
+foreground = '#ededed'
 
 [colors.cursor]
-cursor = '#a6accd'
-text = '#0f1017'
+cursor = '#ededed'
+text = '#0a0a0a'
 
 [colors.selection]
-text = '#e4f0fb'
-background = '#303340'
+text = '#ededed'
+background = '#333333'
 
 [colors.normal]
-black = '#0f1017'
-red = '#d0679d'
-green = '#5DE4c7'
-yellow = '#fffac2'
-blue = '#89ddff'
-magenta = '#f087bd'
-cyan = '#89ddff'
-white = '#a6accd'
+black = '#000000'
+red = '#f56464'
+green = '#58c760'
+yellow = '#f99902'
+blue = '#62a6ff'
+magenta = '#b675f1'
+cyan = '#14cbb7'
+white = '#a1a1a1'
 
 [colors.bright]
-black = '#a6accd'
-red = '#d0679d'
-green = '#5DE4c7'
-yellow = '#fffac2'
-blue = '#ADD7FF'
-magenta = '#f087bd'
-cyan = '#ADD7FF'
-white = '#ffffff'
+black = '#676767'
+red = '#f56464'
+green = '#58c760'
+yellow = '#f99902'
+blue = '#62a6ff'
+magenta = '#b675f1'
+cyan = '#14cbb7'
+white = '#ededed'
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"

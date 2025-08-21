@@ -43,13 +43,13 @@ disabled = true
 disabled = true
 
 [palettes.namra]
-base = "#0f1017"
-blue = "#89ddff"
-blue_bright = "#ADD7FF"
-green = "#5DE4c7"
-magenta = "#d0679d"
-pink = "#f087bd"
-sel = "#303340"
-text = "#a6accd"
-white = "#ffffff"
-yellow = "#fffac2"
+base = "#0a0a0a"
+blue = "#62a6ff"
+blue_bright = "#62a6ff"
+green = "#58c760"
+magenta = "#b675f1"
+pink = "#f56464"
+sel = "#333333"
+text = "#ededed"
+white = "#ededed"
+yellow = "#f99902"
