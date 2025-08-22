@@ -15,7 +15,7 @@
   "editor.cursorStyle"                                      : "underline",
   "editor.detectIndentation"                                : false,
   "editor.find.addExtraSpaceOnTop"                          : false,
-  "editor.fontFamily"                                       : "'Geist Mono', 'JetBrains Mono', monospace",
+  "editor.fontFamily"                                       : "'GeistMono NF', 'JetBrains Mono', monospace",
   "editor.fontLigatures"                                    : true,
   "editor.fontSize"                                         : 16,
   "editor.guides.indentation"                               : false,
