@@ -1,34 +1,34 @@
 add_newline = true
-palette = "namra"
+palette     = "vesper"
 
-format = "[](fg:blue)$directory[](fg:blue bg:blue_bright)$git_branch$git_status[](fg:blue_bright) "
+format = "[](fg:orange)$directory[](fg:orange bg:grey)$git_branch$git_status[](fg:grey) "
 
 [directory]
-format = "[ $path ]($style)"
-read_only = " "
-read_only_style = "fg:base bg:blue"
-style = "fg:base bg:blue"
-truncate_to_repo = false
+format            = "[ $path ]($style)"
+read_only         = " "
+read_only_style   = "fg:base bg:red"
+style             = "fg:base bg:orange"
+truncate_to_repo  = false
 truncation_length = 1
 truncation_symbol = ""
 
 [git_branch]
 format = "[ $symbol $branch ]($style)"
-style = "fg:base bg:blue_bright"
+style  = "fg:base bg:grey"
 symbol = ""
 
 [git_status]
-ahead = "⇡${count}"
-behind = "⇣${count}"
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
 conflicted = "${count}"
-deleted = "×${count}"
-diverged = "⇕${count}"
-format = "[ $all_status$ahead_behind ]($style)"
-modified = "~${count}"
-renamed = "»${count}"
-staged = "+${count}"
-style = "fg:base bg:blue_bright"
-untracked = "?${count}"
+deleted    = "×${count}"
+diverged   = "⇕${count}"
+format     = "[ $all_status$ahead_behind ]($style)"
+modified   = "~${count}"
+renamed    = "»${count}"
+staged     = "+${count}"
+style      = "fg:base bg:grey"
+untracked  = "?${count}"
 
 [golang]
 disabled = true
@@ -42,14 +42,11 @@ disabled = true
 [python]
 disabled = true
 
-[palettes.namra]
-base = "#0a0a0a"
-blue = "#62a6ff"
-blue_bright = "#62a6ff"
-green = "#58c760"
-magenta = "#b675f1"
-pink = "#f56464"
-sel = "#333333"
-text = "#ededed"
-white = "#ededed"
-yellow = "#f99902"
+[palettes.vesper]
+base      = "#101010"
+text      = "#FFFFFF"
+selection = "#232323"
+orange    = "#FFC799"
+grey      = "#A0A0A0"
+red       = "#FF8080"
+green     = "#99FFE4"

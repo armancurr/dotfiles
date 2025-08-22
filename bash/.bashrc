@@ -27,15 +27,6 @@ case $- in
         alias bunx="bun x";
         alias bxs="bun x shadcn@latest";
 
-        alias nn="npm init";
-        alias ni="npm install";
-        alias na="npm install";
-        alias nu="npm uninstall";
-        alias ns="npm start";
-        alias nd="npm run dev";
-        alias nb="npm run build";
-        alias nxs="npx shadcn@latest add";
-
         alias gs="git status --short";
         alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '";
         alias ga="git add";

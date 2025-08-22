@@ -1,67 +1,67 @@
 [user]
-    email = "armancurr@proton.me"
-    name = "Arman Kar"
-    signingkey = "X1F3D7C9B25E4A68"
+    email        = "armancurr@proton.me"
+    name         = "Arman Karim"
+    signingkey   = "4792E16FD7182AB0"
 
 [core]
-    compression = 9
+    compression  = 9
     preloadindex = true
-    whitespace = error
+    whitespace   = error
 
 [advice]
-    addEmptyPathspec = false
+    addEmptyPathspec   = false
     pushNonFastForward = false
-    statusHints = false
+    statusHints        = false
 
 [branch]
     sort = -committerdate
 
 [color "diff"]
-    commit = yellow
-    context = white
-    frag = magenta bold
-    meta = blue bold
-    new = green
-    old = red
+    commit     = yellow
+    context    = white
+    frag       = magenta bold
+    meta       = blue bold
+    new        = green
+    old        = red
     whitespace = red reverse
 
 [color "diff-highlight"]
     newHighlight = "#5de4c7 #303340"
-    newNormal = "#5de4c7"
+    newNormal    = "#5de4c7"
     oldHighlight = "#d0679d #303340"
-    oldNormal = "#d0679d"
+    oldNormal    = "#d0679d"
 
 [commit]
     gpgsign = true
 
 [diff]
-    context = 3
+    context          = 3
     interHunkContext = 10
-    renames = copies
+    renames          = copies
 
 [diff-so-fancy]
     markEmptyLines = false
 
 [interactive]
     diffFilter = diff-so-fancy --patch
-    singlekey = true
+    singlekey  = true
 
 [pager]
     branch = false
-    diff = diff-so-fancy | $PAGER
-    tag = false
+    diff   = diff-so-fancy | $PAGER
+    tag    = false
 
 [pull]
     default = current
-    rebase = true
+    rebase  = true
 
 [push]
     autoSetupRemote = true
-    default = current
-    followTags = true
+    default         = current
+    followTags      = true
 
 [rebase]
-    autoStash = true
+    autoStash           = true
     missingCommitsCheck = warn
 
 [tag]

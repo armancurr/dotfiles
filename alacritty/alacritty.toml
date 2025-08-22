@@ -1,103 +1,74 @@
 [window]
-dimensions = { columns = 80, lines = 25 }
-position = { x = 100, y = 100 }
-padding = { x = 45, y = 45 }
-dynamic_padding = true
-decorations = "Full"
-opacity = 1
-blur = true
-startup_mode = "Windowed"
-title = "Terminal"
-dynamic_title = false
+dimensions                = { columns = 80, lines = 25 }
+position                  = { x = 100, y = 100 }
+padding                   = { x = 45, y = 45 }
+dynamic_padding           = true
+decorations               = "Full"
+opacity                   = 1
+blur                      = true
+startup_mode              = "Windowed"
+title                     = "Terminal"
+dynamic_title             = false
 decorations_theme_variant = "Dark"
 
 [scrolling]
 history = 10000
 
 [font]
-normal = { family = "GeistMono NF", style = "Regular" }
-bold = { family = "GeistMono NF", style = "Bold" }
-italic = { family = "GeistMono NF", style = "Italic" }
-bold_italic = { family = "GeistMono NF", style = "Bold Italic" }
-size = 14.0
-offset = { x = 0, y = 0 }
+normal              = { family = "GeistMono NF", style = "Regular" }
+bold                = { family = "GeistMono NF", style = "Bold" }
+italic              = { family = "GeistMono NF", style = "Italic" }
+bold_italic         = { family = "GeistMono NF", style = "Bold Italic" }
+size                = 14.0
+offset              = { x = 0, y = 0 }
 builtin_box_drawing = true
 
 [colors.primary]
-background = '#0a0a0a'
-foreground = '#ededed'
+background = "#101010"
+foreground = "#FFFFFF"
 
 [colors.cursor]
-cursor = '#ededed'
-text = '#0a0a0a'
+text   = "#101010"
+cursor = "#FFFFFF"
 
 [colors.selection]
-text = '#ededed'
-background = '#333333'
+text       = "#FFFFFF"
+background = "#232323"
 
 [colors.normal]
-black = '#000000'
-red = '#f56464'
-green = '#58c760'
-yellow = '#f99902'
-blue = '#62a6ff'
-magenta = '#b675f1'
-cyan = '#14cbb7'
-white = '#a1a1a1'
+black   = "#161616"
+red     = "#FF8080"
+green   = "#99FFE4"
+yellow  = "#FFC799"
+blue    = "#A0A0A0"
+magenta = "#FFC799"
+cyan    = "#99FFE4"
+white   = "#A0A0A0"
 
 [colors.bright]
-black = '#676767'
-red = '#f56464'
-green = '#58c760'
-yellow = '#f99902'
-blue = '#62a6ff'
-magenta = '#b675f1'
-cyan = '#14cbb7'
-white = '#ededed'
+black   = "#505050"
+red     = "#FF8080"
+green   = "#99FFE4"
+yellow  = "#FFC799"
+blue    = "#A0A0A0"
+magenta = "#FFC799"
+cyan    = "#99FFE4"
+white   = "#FFFFFF"
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
-save_to_clipboard = true
+save_to_clipboard     = true
 
 [cursor]
-style = { shape = "Underline", blinking = "On" }
-vi_mode_style = { shape = "Underline", blinking = "On" }
-blink_interval = 750
-blink_timeout = 0
+style            = { shape = "Underline", blinking = "On" }
+vi_mode_style    = { shape = "Underline", blinking = "On" }
+blink_interval   = 750
+blink_timeout    = 0
 unfocused_hollow = false
 
 [terminal]
 shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login"] }
 osc52 = "OnlyCopy"
 
-# [terminal]
-# shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login", "-c", "tmux attach || tmux new-session"] }
-# osc52 = "OnlyCopy"
-
 [mouse]
 hide_when_typing = true
-
-[keyboard]
-bindings = [
-    { key = "C", mods = "Alt", action = "Copy" },
-    { key = "V", mods = "Alt", action = "Paste" },
-    { key = "Plus", mods = "Alt", action = "IncreaseFontSize" },
-    { key = "Minus", mods = "Alt", action = "DecreaseFontSize" },
-    { key = "0", mods = "Alt", action = "ResetFontSize" },
-    { key = "F11", action = "ToggleFullscreen" },
-    { key = "M", mods = "Alt", action = "ToggleMaximized" },
-    { key = "H", mods = "Alt", action = "Hide" },
-    { key = "Q", mods = "Alt", action = "Quit" },
-    { key = "PageUp", mods = "Alt", action = "ScrollHalfPageUp" },
-    { key = "PageDown", mods = "Alt", action = "ScrollHalfPageDown" },
-    { key = "K", mods = "Alt", action = "ScrollLineUp" },
-    { key = "J", mods = "Alt", action = "ScrollLineDown" },
-    { key = "F", mods = "Alt", action = "SearchForward" },
-    { key = "B", mods = "Alt", action = "SearchBackward" },
-    { key = "T", mods = "Alt", action = "SpawnNewInstance" },
-    { key = "N", mods = "Alt", action = "CreateNewWindow" },
-    { key = "E", mods = "Alt", command = { program = "C:\\Users\\arman\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe", args = ["."] } },
-    { key = "U", mods = "Alt", command = { program = "C:\\Users\\arman\\AppData\\Local\\Programs\\cursor\\Cursor.exe", args = ["."] } },
-    { key = "Z", mods = "Alt", command = { program = "C:\\Program Files\\Zen Browser\\zen.exe" } },
-    { key = "R", mods = "Alt", command = { program = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" } },
-]
