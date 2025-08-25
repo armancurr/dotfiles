@@ -1,45 +1,32 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
 add_newline = true
 palette     = "vesper"
 
-format = "[](fg:orange)$directory[](fg:orange bg:grey)$git_branch$git_status[](fg:grey) "
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character\
+"""
+
+[character]
+success_symbol = " [❯](fg:text)"
+error_symbol   = " [❯](fg:red)"
+vimcmd_symbol  = " [❯](fg:orange)"
 
 [directory]
-format            = "[ $path ]($style)"
-read_only         = " "
-read_only_style   = "fg:base bg:red"
-style             = "fg:base bg:orange"
-truncate_to_repo  = false
+format            = "[$path]($style)"
+style             = "fg:text"
 truncation_length = 1
 truncation_symbol = ""
 
 [git_branch]
-format = "[ $symbol $branch ]($style)"
-style  = "fg:base bg:grey"
 symbol = ""
+format = "[ $symbol $branch]($style)"
+style  = "fg:green"
 
 [git_status]
-ahead      = "⇡${count}"
-behind     = "⇣${count}"
-conflicted = "${count}"
-deleted    = "×${count}"
-diverged   = "⇕${count}"
-format     = "[ $all_status$ahead_behind ]($style)"
-modified   = "~${count}"
-renamed    = "»${count}"
-staged     = "+${count}"
-style      = "fg:base bg:grey"
-untracked  = "?${count}"
-
-[golang]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[package]
-disabled = true
-
-[python]
 disabled = true
 
 [palettes.vesper]
