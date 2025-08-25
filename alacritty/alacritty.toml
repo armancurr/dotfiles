@@ -4,12 +4,10 @@ position                  = { x = 100, y = 100 }
 padding                   = { x = 45, y = 45 }
 dynamic_padding           = true
 decorations               = "Full"
-opacity                   = 0.9
 startup_mode              = "Windowed"
 title                     = "Terminal"
 dynamic_title             = false
 decorations_theme_variant = "Dark"
-level                     = "AlwaysOnTop"
 
 [scrolling]
 history    = 10000
