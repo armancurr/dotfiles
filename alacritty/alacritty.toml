@@ -1,7 +1,7 @@
 [window]
 dimensions                = { columns = 80, lines = 25 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 45, y = 45 }
+padding                   = { x = 30, y = 30 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -11,7 +11,6 @@ decorations_theme_variant = "Dark"
 
 [scrolling]
 history    = 10000
-multiplier = 3
 
 [font]
 normal      = { family = "GeistMono NF", style = "Regular" }
