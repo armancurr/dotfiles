@@ -1,7 +1,7 @@
 [window]
 dimensions                = { columns = 80, lines = 25 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 30, y = 30 }
+padding                   = { x = 45, y = 45 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -10,7 +10,7 @@ dynamic_title             = false
 decorations_theme_variant = "Dark"
 
 [scrolling]
-history    = 10000
+history = 10000
 
 [font]
 normal      = { family = "GeistMono NF", style = "Regular" }
@@ -20,51 +20,46 @@ bold_italic = { family = "GeistMono NF", style = "Bold Italic" }
 size        = 16.0
 offset      = { x = 0, y = 0 }
 
-[colors]
-
 [colors.primary]
-foreground        = "#FFFFFF"
-background        = "#101010"
-dim_foreground    = "#A0A0A0"
-bright_foreground = "#FFFFFF"
+background = '#191724'
+foreground = '#e0def4'
 
-[colors.search]
-matches       = { foreground = "#101010", background = "#8B8B8B" }
-focused_match = { foreground = "#101010", background = "#FFC799" }
+[colors.cursor]
+text   = '#e0def4'
+cursor = '#524f67'
+
+[colors.vi_mode_cursor]
+text   = '#e0def4'
+cursor = '#524f67'
+
+[colors.selection]
+text       = '#e0def4'
+background = '#403d52'
 
 [colors.hints]
-start = { foreground = "#101010", background = "#99FFE4" }
-end   = { foreground = "#101010", background = "#FF8080" }
+start = { foreground = '#908caa', background = '#1f1d2e' }
+end   = { foreground = '#6e6a86', background = '#1f1d2e' }
 
 [colors.normal]
-black   = "#161616"
-red     = "#FF8080"
-green   = "#99FFE4"
-yellow  = "#FFC799"
-blue    = "#A0A0A0"
-magenta = "#FFC799"
-cyan    = "#99FFE4"
-white   = "#A0A0A0"
+black   = '#26233a'
+red     = '#eb6f92'
+green   = '#31748f'
+yellow  = '#f6c177'
+blue    = '#9ccfd8'
+magenta = '#c4a7e7'
+cyan    = '#ebbcba'
+white   = '#e0def4'
+
 
 [colors.bright]
-black   = "#505050"
-red     = "#FF8080"
-green   = "#99FFE4"
-yellow  = "#FFC799"
-blue    = "#A0A0A0"
-magenta = "#FFC799"
-cyan    = "#99FFE4"
-white   = "#FFFFFF"
-
-[colors.dim]
-black   = "#161616"
-red     = "#FF8080"
-green   = "#99FFE4"
-yellow  = "#FFC799"
-blue    = "#A0A0A0"
-magenta = "#FFC799"
-cyan    = "#99FFE4"
-white   = "#A0A0A0"
+black   = '#6e6a86'
+red     = '#eb6f92'
+green   = '#31748f'
+yellow  = '#f6c177'
+blue    = '#9ccfd8'
+magenta = '#c4a7e7'
+cyan    = '#ebbcba'
+white   = '#e0def4'
 
 [selection]
 save_to_clipboard = true
