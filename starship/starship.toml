@@ -4,7 +4,7 @@ add_newline = true
 
 palette = "rose_pine"
 
-format = " $directory$git_branch$git_status$character"
+format = "$directory$git_branch$git_status$golang$nodejs$python$character"
 
 [palettes.rose_pine]
 base           = "#191724"
@@ -38,6 +38,4 @@ symbol = ""
 format = "[$symbol $branch](bold fg:iris) "
 
 [git_status]
-disabled = false
-style    = "bold fg:rose"
-format   = "[$all_status]($style) "
+disabled = true
