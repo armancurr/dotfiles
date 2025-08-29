@@ -59,12 +59,7 @@
       {
           "key": "CPU         ",
           "keyColor": "green",
-          "typex": "cpu"
-      },
-      {
-          "key": "GPU         ",
-          "keyColor": "blue",
-          "type": "gpu"
+          "type": "cpu"
       },
       {
           "key": "Memory      ",

@@ -4,8 +4,8 @@
   "window.menuBarVisibility"                                : "compact",
   "window.newWindowProfile"                                 : "Default",
   "window.commandCenter"                                    : false,
-  "workbench.colorTheme"                                    : "Vesper",
-  "workbench.iconTheme"                                     : "catppuccin noctis icons",
+  "workbench.colorTheme"                                    : "Rosé Pine",
+  "workbench.iconTheme"                                     : "rose-pine-icons",
   "workbench.productIconTheme"                              : "fluent-icons",
   "workbench.activityBar.location"                          : "bottom",
   "workbench.panel.showLabels"                              : false,
@@ -63,5 +63,6 @@
   "catppuccin-noctis-icons.hidesExplorerArrows"             : false,
   "biome.suggestInstallingGlobally"                         : false,
   "breadcrumbs.enabled"                                     : false,
-  "breadcrumbs.icons"                                       : false
+  "breadcrumbs.icons"                                       : false,
+  "svelte.enable-ts-plugin"                                 : true
 }
