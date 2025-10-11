@@ -1,0 +1,53 @@
+{
+  "agent_buffer_font_size": 16.0,
+  "icon_theme": "Symbols Icon Theme",
+  "agent": {
+    "default_profile": "minimal",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5"
+    },
+    "model_parameters": []
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "soft_wrap": "editor_width",
+  "tab_size": 2,
+  "toolbar": {
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "scrollbar": {
+    "axes": {
+      "vertical": false,
+      "horizontal": false
+    }
+  },
+  "gutter": {
+    "breakpoints": false,
+    "folds": false
+  },
+  "show_wrap_guides": false,
+  "indent_guides": {
+    "enabled": false
+  },
+  "project_panel": {
+    "indent_size": 20
+  },
+  "cursor_shape": "underline",
+  "cursor_blink": true,
+  "ui_font_family": "Funnel Sans",
+  "buffer_font_family": "GeistMono Nerd Font Mono",
+  "restore_on_startup": "last_session",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 18.0,
+  "theme": {
+    "mode": "system",
+    "light": "Sequoia Monochrome",
+    "dark": "Sequoia Monochrome"
+  }
+}

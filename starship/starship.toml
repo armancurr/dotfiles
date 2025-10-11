@@ -2,40 +2,40 @@
 
 add_newline = true
 
-palette = "rose_pine"
+palette = "sequoia_monochrome"
 
 format = "$directory$git_branch$git_status$golang$nodejs$python$character"
 
-[palettes.rose_pine]
-base           = "#191724"
-surface        = "#1f1d2e"
-overlay        = "#26233a"
-muted          = "#6e6a86"
-subtle         = "#908caa"
-text           = "#e0def4"
-love           = "#eb6f92"
-gold           = "#f6c177"
-rose           = "#ebbcba"
-pine           = "#31748f"
-foam           = "#9ccfd8"
-iris           = "#c4a7e7"
-highlight_low  = "#21202e"
-highlight_med  = "#403d52"
-highlight_high = "#524f67"
+[palettes.sequoia_monochrome]
+base           = "#0F1014"
+surface        = "#111216"
+overlay        = "#131317"
+muted          = "#575861"
+subtle         = "#43444D"
+text           = "#868690"
+error          = "#999EB2"
+success        = "#626983"
+warning        = "#D3D5DE"
+blue           = "#7C829D"
+magenta        = "#E2E4ED"
+cyan           = "#B6BAC8"
+highlight_low  = "#817c9c26"
+highlight_med  = "#817c9c4d"
+highlight_high = "#817c9c4d"
 
 [character]
-success_symbol = "[❯](bold fg:pine)"
-error_symbol   = "[❯](bold fg:love)"
-vimcmd_symbol  = "[❯](bold fg:iris)"
+success_symbol = "[❯](bold fg:success)"
+error_symbol   = "[❯](bold fg:error)"
+vimcmd_symbol  = "[❯](bold fg:blue)"
 
 [directory]
-format            = "[$path ](bold fg:foam)"
+format            = "[$path ](bold fg:cyan)"
 truncation_length = 1
 truncation_symbol = ""
 
 [git_branch]
 symbol = ""
-format = "[$symbol $branch](bold fg:iris) "
+format = "[$symbol $branch](bold fg:blue) "
 
 [git_status]
 disabled = true
