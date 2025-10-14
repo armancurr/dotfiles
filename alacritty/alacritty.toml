@@ -14,10 +14,10 @@ history    = 10000
 multiplier = 2
 
 [font]
-normal      = { family = "GeistMono NF", style = "Regular" }
-bold        = { family = "GeistMono NF", style = "Bold" }
-italic      = { family = "GeistMono NF", style = "Italic" }
-bold_italic = { family = "GeistMono NF", style = "Bold Italic" }
+normal      = { family = "GeistMono NFM", style = "Regular" }
+bold        = { family = "GeistMono NFM", style = "Bold" }
+italic      = { family = "GeistMono NFM", style = "Italic" }
+bold_italic = { family = "GeistMono NFM", style = "Bold Italic" }
 size        = 14
 offset      = { x = 0, y = 0 }
 
