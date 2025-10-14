@@ -19,7 +19,7 @@ case $- in
         alias bn="bun init";
         alias bi="bun install";
         alias ba="bun add";
-        alias bd="bun dev";
+        alias bdsm="bun dev";
         alias bb="bun run build";
         alias bunx="bun x";
         alias bxs="bun x shadcn@latest";
@@ -34,12 +34,10 @@ case $- in
 
         alias .="cd ..";
         alias ..="cd ../..";
-        alias pr="bunx prettier --write .";
-        alias ac="ai-commit-message -c"
 
         eval "$(starship init bash)";
         eval "$(zoxide init bash)";
-        
+
         ;;
     *) return;;
 esac

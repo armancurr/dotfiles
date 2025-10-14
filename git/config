@@ -1,7 +1,6 @@
 [user]
     email        = "armancurr@proton.me"
     name         = "arman"
-    signingkey   = "4792E16FD7182AB0"
 
 [core]
     compression  = 9
@@ -30,9 +29,6 @@
     newNormal    = "#5de4c7"
     oldHighlight = "#d0679d #303340"
     oldNormal    = "#d0679d"
-
-[commit]
-    gpgsign = true
 
 [diff]
     context          = 3

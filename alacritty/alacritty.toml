@@ -22,45 +22,44 @@ size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
-background = '#191724'
-foreground = '#e0def4'
+background = '#0F1014'
+foreground = '#868690'
 
 [colors.cursor]
-text   = '#e0def4'
-cursor = '#524f67'
+text   = '#0F1014'
+cursor = '#7C829D'
 
 [colors.vi_mode_cursor]
-text   = '#e0def4'
-cursor = '#524f67'
+text   = '#0F1014'
+cursor = '#7C829D'
 
 [colors.selection]
-text       = '#e0def4'
-background = '#403d52'
+text       = '#E2E4ED'
+background = '#575861'
 
 [colors.hints]
-start = { foreground = '#908caa', background = '#1f1d2e' }
-end   = { foreground = '#6e6a86', background = '#1f1d2e' }
+start = { foreground = '#0F1014', background = '#B6BAC8' }
+end   = { foreground = '#0F1014', background = '#575861' }
 
 [colors.normal]
-black   = '#26233a'
-red     = '#eb6f92'
-green   = '#31748f'
-yellow  = '#f6c177'
-blue    = '#9ccfd8'
-magenta = '#c4a7e7'
-cyan    = '#ebbcba'
-white   = '#e0def4'
-
+black   = '#131317'
+red     = '#999EB2'
+green   = '#626983'
+yellow  = '#D3D5DE'
+blue    = '#7C829D'
+magenta = '#E2E4ED'
+cyan    = '#B6BAC8'
+white   = '#868690'
 
 [colors.bright]
-black   = '#6e6a86'
-red     = '#eb6f92'
-green   = '#31748f'
-yellow  = '#f6c177'
-blue    = '#9ccfd8'
-magenta = '#c4a7e7'
-cyan    = '#ebbcba'
-white   = '#e0def4'
+black   = '#575861'
+red     = '#999EB2'
+green   = '#626983'
+yellow  = '#D3D5DE'
+blue    = '#7C829D'
+magenta = '#E2E4ED'
+cyan    = '#B6BAC8'
+white   = '#868690'
 
 [selection]
 save_to_clipboard = true

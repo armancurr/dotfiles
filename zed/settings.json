@@ -1,11 +1,62 @@
 {
+  "always_treat_brackets_as_autoclosed": true,
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "auto_fold_dirs": true,
+    "file_icons": true,
+    "button": false
+  },
+  "bottom_dock_layout": "contained",
+  "file_finder": {
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_sign_in": false,
+    "show_user_picture": false,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+    "show_branch_icon": false
+  },
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "diagnostics": {
+    "button": false
+  },
+  "terminal": {
+    "dock": "bottom",
+    "button": true,
+    "shell": {
+      "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe"
+    },
+    "cursor_shape": "underline"
+  },
+  "status_bar": {
+    "cursor_position_button": false,
+    "active_language_button": false
+  },
   "agent_buffer_font_size": 16.0,
-  "icon_theme": "Symbols Icon Theme",
   "agent": {
+    "always_allow_tool_actions": false,
     "default_profile": "minimal",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5"
+      "model": "gpt-5-mini"
     },
     "model_parameters": []
   },
@@ -28,14 +79,26 @@
   },
   "gutter": {
     "breakpoints": false,
-    "folds": false
+    "folds": false,
+    "line_numbers": false
   },
   "show_wrap_guides": false,
   "indent_guides": {
     "enabled": false
   },
   "project_panel": {
-    "indent_size": 20
+    "scrollbar": {
+      "show": "never"
+    },
+    "auto_fold_dirs": true,
+    "auto_reveal_entries": true,
+    "git_status": true,
+    "folder_icons": true,
+    "file_icons": true,
+    "entry_spacing": "comfortable",
+    "hide_gitignore": false,
+    "default_width": 250.0,
+    "button": false
   },
   "cursor_shape": "underline",
   "cursor_blink": true,
@@ -49,5 +112,13 @@
     "mode": "system",
     "light": "Sequoia Monochrome",
     "dark": "Sequoia Monochrome"
-  }
+  },
+  "auto_indent": true,
+  "auto_indent_on_paste": true,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "autoscroll_on_clicks": true
 }
