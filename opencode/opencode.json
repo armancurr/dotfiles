@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "noir-poimandres",
+  "instructions": ["AGENTS.md", ".cursor/rules/*.md"]
+}

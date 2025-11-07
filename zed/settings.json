@@ -39,6 +39,17 @@
     "button": false
   },
   "terminal": {
+    "scrollbar": {
+      "show": "never"
+    },
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "default_width": 280.0,
+    "copy_on_select": true,
+    "minimum_contrast": 0.0,
+    "blinking": "on",
+    "font_size": 18.0,
     "dock": "bottom",
     "button": true,
     "shell": {
@@ -53,15 +64,15 @@
   "agent_buffer_font_size": 16.0,
   "agent": {
     "always_allow_tool_actions": false,
-    "default_profile": "minimal",
+    "default_profile": "write",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini"
+      "provider": "ollama",
+      "model": "glm-4.6:cloud"
     },
     "model_parameters": []
   },
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "none"
   },
   "soft_wrap": "editor_width",
   "tab_size": 2,
@@ -97,27 +108,27 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 250.0,
+    "default_width": 280.0,
     "button": false
   },
   "cursor_shape": "underline",
   "cursor_blink": true,
   "ui_font_family": "Funnel Sans",
   "buffer_font_family": "GeistMono Nerd Font Mono",
-  "restore_on_startup": "last_session",
+  "restore_on_startup": "none",
   "base_keymap": "VSCode",
   "ui_font_size": 16.0,
   "buffer_font_size": 18.0,
   "theme": {
     "mode": "system",
     "light": "Sequoia Monochrome",
-    "dark": "Sequoia Monochrome"
+    "dark": "Nord Dark"
   },
   "auto_indent": true,
   "auto_indent_on_paste": true,
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
+      "milliseconds": 100
     }
   },
   "autoscroll_on_clicks": true

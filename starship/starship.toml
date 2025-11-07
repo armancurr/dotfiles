@@ -2,26 +2,26 @@
 
 add_newline = true
 
-palette = "sequoia_monochrome"
+palette = "noir_poimandres"
 
 format = "$directory$git_branch$git_status$golang$nodejs$python$character"
 
-[palettes.sequoia_monochrome]
-base           = "#0F1014"
-surface        = "#111216"
-overlay        = "#131317"
-muted          = "#575861"
-subtle         = "#43444D"
-text           = "#868690"
-error          = "#999EB2"
-success        = "#626983"
-warning        = "#D3D5DE"
-blue           = "#7C829D"
-magenta        = "#E2E4ED"
-cyan           = "#B6BAC8"
-highlight_low  = "#817c9c26"
-highlight_med  = "#817c9c4d"
-highlight_high = "#817c9c4d"
+[palettes.noir_poimandres]
+base           = "#0f1017"
+surface        = "#303340"
+overlay        = "#202430"
+muted          = "#767c9d"
+subtle         = "#303340"
+text           = "#a6accd"
+error          = "#d0679d"
+success        = "#5DE4c7"
+warning        = "#fffac2"
+blue           = "#ADD7FF"
+magenta        = "#f087bd"
+cyan           = "#89ddff"
+highlight_low  = "#ADD7FF20"
+highlight_med  = "#ADD7FF40"
+highlight_high = "#ADD7FF40"
 
 [character]
 success_symbol = "[❯](bold fg:success)"

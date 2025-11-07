@@ -1,7 +1,7 @@
 [window]
 dimensions                = { columns = 60, lines = 20 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 40, y = 40 }
+padding                   = { x = 35, y = 5 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -22,44 +22,36 @@ size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
-background = '#0F1014'
-foreground = '#868690'
-
-[colors.cursor]
-text   = '#0F1014'
-cursor = '#7C829D'
-
-[colors.vi_mode_cursor]
-text   = '#0F1014'
-cursor = '#7C829D'
-
-[colors.selection]
-text       = '#E2E4ED'
-background = '#575861'
-
-[colors.hints]
-start = { foreground = '#0F1014', background = '#B6BAC8' }
-end   = { foreground = '#0F1014', background = '#575861' }
+background = '#0f1017'
+foreground = '#a6accd'
 
 [colors.normal]
-black   = '#131317'
-red     = '#999EB2'
-green   = '#626983'
-yellow  = '#D3D5DE'
-blue    = '#7C829D'
-magenta = '#E2E4ED'
-cyan    = '#B6BAC8'
-white   = '#868690'
+black   = '#0f1017'
+red     = '#d0679d'
+green   = '#5DE4c7'
+yellow  = '#fffac2'
+blue    = '#89ddff'
+magenta = '#f087bd'
+cyan    = '#89ddff'
+white   = '#ffffff'
 
 [colors.bright]
-black   = '#575861'
-red     = '#999EB2'
-green   = '#626983'
-yellow  = '#D3D5DE'
-blue    = '#7C829D'
-magenta = '#E2E4ED'
-cyan    = '#B6BAC8'
-white   = '#868690'
+black   = '#a6accd'
+red     = '#d0679d'
+green   = '#5DE4c7'
+yellow  = '#fffac2'
+blue    = '#ADD7FF'
+magenta = '#f087bd'
+cyan    = '#ADD7FF'
+white   = '#ffffff'
+
+[colors.cursor]
+text   = '#0f1017'
+cursor = '#a6accd'
+
+[colors.selection]
+text       = '#0f1017'
+background = '#717cb4'
 
 [selection]
 save_to_clipboard = true
