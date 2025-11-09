@@ -6,6 +6,7 @@ case $- in
         alias .="cd ..";
         alias ..="cd ../..";
         alias ls='eza'
+        alias killport='lsof -ti:$1 | xargs kill -9'
 
         eval "$(starship init bash)"
         eval "$(zoxide init bash)";
