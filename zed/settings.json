@@ -45,7 +45,7 @@
     "toolbar": {
       "breadcrumbs": false
     },
-    "default_width": 280.0,
+    "default_width": 300.0,
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "on",
@@ -61,10 +61,10 @@
     "cursor_position_button": false,
     "active_language_button": false
   },
-  "agent_buffer_font_size": 16.0,
+  "agent_buffer_font_size": 18.0,
   "agent": {
     "always_allow_tool_actions": false,
-    "default_profile": "write",
+    "default_profile": "minimal",
     "default_model": {
       "provider": "ollama",
       "model": "glm-4.6:cloud"
@@ -108,7 +108,7 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 280.0,
+    "default_width": 300.0,
     "button": false
   },
   "cursor_shape": "underline",
@@ -121,8 +121,8 @@
   "buffer_font_size": 18.0,
   "theme": {
     "mode": "system",
-    "light": "Sequoia Monochrome",
-    "dark": "Nord Dark"
+    "light": "mode",
+    "dark": "mode"
   },
   "auto_indent": true,
   "auto_indent_on_paste": true,

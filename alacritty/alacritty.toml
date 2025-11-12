@@ -1,7 +1,7 @@
 [window]
-dimensions                = { columns = 60, lines = 20 }
+dimensions                = { columns = 80, lines = 25 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 35, y = 5 }
+padding                   = { x = 30, y = 30 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -22,36 +22,36 @@ size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
-background = '#0f1017'
-foreground = '#a6accd'
+background = '#151515'
+foreground = '#c3c9c2'
 
 [colors.normal]
-black   = '#0f1017'
-red     = '#d0679d'
-green   = '#5DE4c7'
-yellow  = '#fffac2'
-blue    = '#89ddff'
-magenta = '#f087bd'
-cyan    = '#89ddff'
-white   = '#ffffff'
+black   = '#151515'
+red     = '#78535D'
+green   = '#737a6f'
+yellow  = '#a59e8a'
+blue    = '#807c82'
+magenta = '#e0c6cd'
+cyan    = '#6A5E5E'
+white   = '#c3c9c2'
 
 [colors.bright]
-black   = '#a6accd'
-red     = '#d0679d'
-green   = '#5DE4c7'
-yellow  = '#fffac2'
-blue    = '#ADD7FF'
-magenta = '#f087bd'
-cyan    = '#ADD7FF'
-white   = '#ffffff'
+black   = '#4a4a4a'
+red     = '#78535D'
+green   = '#737a6f'
+yellow  = '#a59e8a'
+blue    = '#807c82'
+magenta = '#e0c6cd'
+cyan    = '#6A5E5E'
+white   = '#e7e7e7'
 
 [colors.cursor]
-text   = '#0f1017'
-cursor = '#a6accd'
+text   = '#151515'
+cursor = '#c3c9c2'
 
 [colors.selection]
-text       = '#0f1017'
-background = '#717cb4'
+text       = '#e7e7e7'
+background = '#252525'
 
 [selection]
 save_to_clipboard = true
@@ -69,3 +69,12 @@ osc52 = "OnlyCopy"
 
 [mouse]
 hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "M",    mods = "Alt", action = "ToggleMaximized" },
+  { key = "W",    mods = "Alt", action = "Minimize" },
+  { key = "Q",    mods = "Alt", action = "Quit" },
+  { key = "Up",   mods = "Alt", action = "ScrollLineUp" },
+  { key = "Down", mods = "Alt", action = "ScrollLineDown" }
+]

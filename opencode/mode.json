@@ -1,22 +1,22 @@
 {
   "$schema": "https://opencode.ai/theme.json",
-  "name": "noir-poimandres",
+  "name": "mode",
   "type": "dark",
   "defs": {
-    "np_bg": "#0f1017",
-    "np_bg_panel": "#0f1017",
-    "np_bg_accent": "#303340",
-    "np_text": "#a6accd",
-    "np_text_bright": "#e4f0fb",
-    "np_text_muted": "#767c9d",
-    "np_blue_primary": "#ADD7FF",
-    "np_blue_secondary": "#89ddff",
-    "np_blue_operator": "#91B4D5",
-    "np_teal": "#5DE4c7",
-    "np_teal_alt": "#5fb3a1",
-    "np_red": "#d0679d",
-    "np_yellow": "#fffac2",
-    "np_magenta": "#f087bd",
+    "mode_bg": "#151515",
+    "mode_bg_panel": "#151515",
+    "mode_bg_accent": "#252525",
+    "mode_text": "#c3c9c2",
+    "mode_text_bright": "#e7e7e7",
+    "mode_text_muted": "#4a4a4a",
+    "mode_blue_primary": "#807c82",
+    "mode_blue_secondary": "#807c82",
+    "mode_blue_operator": "#807c82",
+    "mode_teal": "#737a6f",
+    "mode_teal_alt": "#737a6f",
+    "mode_red": "#78535D",
+    "mode_yellow": "#a59e8a",
+    "mode_magenta": "#e0c6cd",
 
     "l_bg": "#F5F7FA",
     "l_bg_panel": "#FFFFFF",
@@ -35,203 +35,203 @@
   },
   "theme": {
     "primary": {
-      "dark": "np_blue_primary",
+      "dark": "mode_blue_primary",
       "light": "l_blue_primary"
     },
     "secondary": {
-      "dark": "np_magenta",
+      "dark": "mode_magenta",
       "light": "l_magenta"
     },
     "accent": {
-      "dark": "np_teal",
+      "dark": "mode_teal",
       "light": "l_teal"
     },
     "error": {
-      "dark": "np_red",
+      "dark": "mode_red",
       "light": "l_red"
     },
     "warning": {
-      "dark": "np_yellow",
+      "dark": "mode_yellow",
       "light": "l_yellow"
     },
     "success": {
-      "dark": "np_teal_alt",
+      "dark": "mode_teal_alt",
       "light": "l_teal_alt"
     },
     "info": {
-      "dark": "np_blue_secondary",
+      "dark": "mode_blue_secondary",
       "light": "l_blue_secondary"
     },
     "text": {
-      "dark": "np_text",
+      "dark": "mode_text",
       "light": "l_text"
     },
     "textMuted": {
-      "dark": "np_text_muted",
+      "dark": "mode_text_muted",
       "light": "l_text_muted"
     },
     "background": {
-      "dark": "np_bg",
+      "dark": "mode_bg",
       "light": "l_bg"
     },
     "backgroundPanel": {
-      "dark": "np_bg_panel",
+      "dark": "mode_bg_panel",
       "light": "l_bg_panel"
     },
     "backgroundElement": {
-      "dark": "np_bg_accent",
+      "dark": "mode_bg_accent",
       "light": "l_bg_accent"
     },
     "border": {
-      "dark": "np_bg_accent",
+      "dark": "mode_bg_accent",
       "light": "l_bg_accent"
     },
     "borderActive": {
-      "dark": "np_text_muted",
+      "dark": "mode_text_muted",
       "light": "l_text_muted"
     },
     "borderSubtle": {
-      "dark": "np_bg_accent",
+      "dark": "mode_bg_accent",
       "light": "l_bg_accent"
     },
     "diffAdded": {
-      "dark": "np_teal_alt",
+      "dark": "mode_teal_alt",
       "light": "l_teal_alt"
     },
     "diffRemoved": {
-      "dark": "np_red",
+      "dark": "mode_red",
       "light": "l_red"
     },
     "diffContext": {
-      "dark": "np_text_muted",
+      "dark": "mode_text_muted",
       "light": "l_text_muted"
     },
     "diffHunkHeader": {
-      "dark": "np_text_muted",
+      "dark": "mode_text_muted",
       "light": "l_text_muted"
     },
     "diffHighlightAdded": {
-      "dark": "np_teal_alt",
+      "dark": "mode_teal_alt",
       "light": "l_teal_alt"
     },
     "diffHighlightRemoved": {
-      "dark": "np_red",
+      "dark": "mode_red",
       "light": "l_red"
     },
     "diffAddedBg": {
-      "dark": "np_bg_panel",
+      "dark": "mode_bg_panel",
       "light": "l_bg_panel"
     },
     "diffRemovedBg": {
-      "dark": "np_bg_panel",
+      "dark": "mode_bg_panel",
       "light": "l_bg_panel"
     },
     "diffContextBg": {
-      "dark": "np_bg",
+      "dark": "mode_bg",
       "light": "l_bg"
     },
     "diffLineNumber": {
-      "dark": "np_text_muted",
+      "dark": "mode_text_muted",
       "light": "l_text_muted"
     },
     "diffAddedLineNumberBg": {
-      "dark": "np_bg_panel",
+      "dark": "mode_bg_panel",
       "light": "l_bg_panel"
     },
     "diffRemovedLineNumberBg": {
-      "dark": "np_bg_panel",
+      "dark": "mode_bg_panel",
       "light": "l_bg_panel"
     },
     "markdownText": {
-      "dark": "np_text",
+      "dark": "mode_text",
       "light": "l_text"
     },
     "markdownHeading": {
-      "dark": "np_text_bright",
+      "dark": "mode_text_bright",
       "light": "l_text_bright"
     },
     "markdownLink": {
-      "dark": "np_blue_primary",
+      "dark": "mode_blue_primary",
       "light": "l_blue_primary"
     },
     "markdownLinkText": {
-      "dark": "np_blue_primary",
+      "dark": "mode_blue_primary",
       "light": "l_blue_primary"
     },
     "markdownCode": {
-      "dark": "np_blue_operator",
+      "dark": "mode_blue_operator",
       "light": "l_blue_operator"
     },
     "markdownBlockQuote": {
-      "dark": "np_bg_accent",
+      "dark": "mode_bg_accent",
       "light": "l_bg_accent"
     },
     "markdownEmph": {
-      "dark": "np_magenta",
+      "dark": "mode_magenta",
       "light": "l_magenta"
     },
     "markdownStrong": {
-      "dark": "np_text_bright",
+      "dark": "mode_text_bright",
       "light": "l_text_bright"
     },
     "markdownHorizontalRule": {
-      "dark": "np_bg_accent",
+      "dark": "mode_bg_accent",
       "light": "l_bg_accent"
     },
     "markdownListItem": {
-      "dark": "np_text",
+      "dark": "mode_text",
       "light": "l_text"
     },
     "markdownListEnumeration": {
-      "dark": "np_blue_primary",
+      "dark": "mode_blue_primary",
       "light": "l_blue_primary"
     },
     "markdownImage": {
-      "dark": "np_blue_secondary",
+      "dark": "mode_blue_secondary",
       "light": "l_blue_secondary"
     },
     "markdownImageText": {
-      "dark": "np_blue_secondary",
+      "dark": "mode_blue_secondary",
       "light": "l_blue_secondary"
     },
     "markdownCodeBlock": {
-      "dark": "np_text",
+      "dark": "mode_text",
       "light": "l_text"
     },
     "syntaxComment": {
-      "dark": "np_text_muted",
+      "dark": "mode_text_muted",
       "light": "l_text_muted"
     },
     "syntaxKeyword": {
-      "dark": "np_teal",
+      "dark": "mode_teal",
       "light": "l_teal"
     },
     "syntaxFunction": {
-      "dark": "np_blue_primary",
+      "dark": "mode_blue_primary",
       "light": "l_blue_primary"
     },
     "syntaxVariable": {
-      "dark": "np_text_bright",
+      "dark": "mode_text_bright",
       "light": "l_text_bright"
     },
     "syntaxString": {
-      "dark": "np_teal",
+      "dark": "mode_teal",
       "light": "l_teal"
     },
     "syntaxNumber": {
-      "dark": "np_teal",
+      "dark": "mode_teal",
       "light": "l_teal"
     },
     "syntaxType": {
-      "dark": "np_text",
+      "dark": "mode_text",
       "light": "l_text"
     },
     "syntaxOperator": {
-      "dark": "np_blue_operator",
+      "dark": "mode_blue_operator",
       "light": "l_blue_operator"
     },
     "syntaxPunctuation": {
-      "dark": "np_text",
+      "dark": "mode_text",
       "light": "l_text"
     }
   }

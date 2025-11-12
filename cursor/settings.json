@@ -1,7 +1,6 @@
 {
     "window.title": " ",
     "window.zoomLevel": 1,
-    "window.menuBarVisibility": "compact",
     "window.newWindowProfile": "Default",
     "window.commandCenter": false,
     "workbench.iconTheme": "catppuccin noctis icons",
@@ -63,6 +62,7 @@
     "workbench.secondarySideBar.showLabels": false,
     "symbols.hidesExplorerArrows": false,
     "workbench.layoutControl.enabled": false,
-    "workbench.colorTheme": "Sequoia Moonlight",
-    "catppuccin-noctis-icons.hidesExplorerArrows": false
+    "catppuccin-noctis-icons.hidesExplorerArrows": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Sequoia Moonlight"
 }

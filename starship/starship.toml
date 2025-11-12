@@ -2,26 +2,26 @@
 
 add_newline = true
 
-palette = "noir_poimandres"
+palette = "mode"
 
 format = "$directory$git_branch$git_status$golang$nodejs$python$character"
 
-[palettes.noir_poimandres]
-base           = "#0f1017"
-surface        = "#303340"
-overlay        = "#202430"
-muted          = "#767c9d"
-subtle         = "#303340"
-text           = "#a6accd"
-error          = "#d0679d"
-success        = "#5DE4c7"
-warning        = "#fffac2"
-blue           = "#ADD7FF"
-magenta        = "#f087bd"
-cyan           = "#89ddff"
-highlight_low  = "#ADD7FF20"
-highlight_med  = "#ADD7FF40"
-highlight_high = "#ADD7FF40"
+[palettes.mode]
+base           = "#151515"
+surface        = "#1d1d1d"
+overlay        = "#252525"
+muted          = "#4a4a4a"
+subtle         = "#4a4a4a"
+text           = "#c3c9c2"
+error          = "#78535D"
+success        = "#737a6f"
+warning        = "#a59e8a"
+blue           = "#807c82"
+magenta        = "#e0c6cd"
+cyan           = "#a59e8a"
+highlight_low  = "#a59e8a20"
+highlight_med  = "#a59e8a40"
+highlight_high = "#a59e8a40"
 
 [character]
 success_symbol = "[❯](bold fg:success)"
