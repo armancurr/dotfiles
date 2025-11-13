@@ -1,0 +1,26 @@
+:root {
+  font-family: "Funnel Sans", sans-serif !important;
+}
+
+#navigator-toolbox,
+#TabsToolbar,
+#urlbar,
+#urlbar-input,
+.urlbar-input-box,
+menubar,
+toolbar,
+menupopup,
+menu,
+menuitem,
+#context-menu,
+.panel-arrowcontent,
+#appMenu-popup,
+.sidebar-panel,
+tree,
+description,
+textbox,
+button,
+.tab-text,
+.tab-label {
+  font-family: "Funnel Sans", sans-serif !important;
+}
