@@ -1,14 +1,7 @@
 local wezterm = require "wezterm"
-local config = {}
+local config = wezterm.config_builder()
 
-config.window_padding = {
-  left   = 40,
-  right  = 40,
-  top    = 5,
-  bottom = 40,
-}
-
-config.enable_tab_bar = false
+config.front_end = "WebGpu"
 
 config.font_size = 14.0
 config.font = wezterm.font {
@@ -16,14 +9,6 @@ config.font = wezterm.font {
   weight            = "Regular",
   harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
 }
-
-config.freetype_load_target   = "HorizontalLcd"
-config.freetype_render_target = "HorizontalLcd"
-
-config.default_cursor_style  = "BlinkingUnderline"
-config.cursor_blink_rate     = 500
-config.cursor_blink_ease_in  = "Constant"
-config.cursor_blink_ease_out = "Constant"
 
 config.colors = {
   foreground      = "#c3c9c2",
@@ -57,6 +42,24 @@ config.colors = {
     "#e7e7e7",
   },
 }
+
+config.window_background_opacity = 0.80
+config.win32_system_backdrop     = "Mica"
+
+config.window_padding = {
+  left   = 30,
+  right  = 30,
+  top    = 30,
+  bottom = 30,
+}
+
+config.default_cursor_style  = "BlinkingUnderline"
+config.cursor_blink_rate     = 500
+config.cursor_blink_ease_in  = "Constant"
+config.cursor_blink_ease_out = "Constant"
+
+config.enable_tab_bar            = false
+config.window_close_confirmation = "NeverPrompt"
 
 config.default_prog = { "C:/Program Files/Git/bin/bash.exe", "-l" }
 
