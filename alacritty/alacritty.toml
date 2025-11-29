@@ -1,5 +1,5 @@
 [window]
-dimensions                = { columns = 80, lines = 25 }
+dimensions                = { columns = 95, lines = 30 }
 position                  = { x = 100, y = 100 }
 padding                   = { x = 30, y = 30 }
 dynamic_padding           = true
@@ -22,36 +22,36 @@ size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
-background = '#151515'
-foreground = '#c3c9c2'
-
-[colors.normal]
-black   = '#151515'
-red     = '#78535D'
-green   = '#737a6f'
-yellow  = '#a59e8a'
-blue    = '#807c82'
-magenta = '#e0c6cd'
-cyan    = '#6A5E5E'
-white   = '#c3c9c2'
-
-[colors.bright]
-black   = '#4a4a4a'
-red     = '#78535D'
-green   = '#737a6f'
-yellow  = '#a59e8a'
-blue    = '#807c82'
-magenta = '#e0c6cd'
-cyan    = '#6A5E5E'
-white   = '#e7e7e7'
+background = '#101010'
+foreground = '#FFFFFF'
 
 [colors.cursor]
-text   = '#151515'
-cursor = '#c3c9c2'
+text   = '#101010'
+cursor = '#FFC799'
 
 [colors.selection]
-text       = '#e7e7e7'
-background = '#252525'
+text       = '#FFFFFF'
+background = '#343434'
+
+[colors.normal]
+black   = '#101010'
+red     = '#FF8080'
+green   = '#99FFE4'
+yellow  = '#FFC799'
+blue    = '#A0A0A0'
+magenta = '#FFC799'
+cyan    = '#99FFE4'
+white   = '#A0A0A0'
+
+[colors.bright]
+black   = '#505050'
+red     = '#FF8080'
+green   = '#99FFE4'
+yellow  = '#FFCFA8'
+blue    = '#FFFFFF'
+magenta = '#FFCFA8'
+cyan    = '#99FFE4'
+white   = '#FFFFFF'
 
 [selection]
 save_to_clipboard = true

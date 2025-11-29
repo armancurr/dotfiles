@@ -1,18 +1,26 @@
 {
+  "icon_theme": "Symbols Icon Theme",
+  "rounded_selection": true,
   "always_treat_brackets_as_autoclosed": true,
   "edit_predictions": {
     "mode": "subtle"
   },
   "collaboration_panel": {
+    "default_width": 320,
     "button": false
   },
   "notification_panel": {
     "button": false
   },
   "git_panel": {
+    "default_width": 320,
     "button": false
   },
   "outline_panel": {
+    "default_width": 320,
+    "indent_guides": {
+      "show": "never"
+    },
     "auto_fold_dirs": true,
     "file_icons": true,
     "button": false
@@ -45,11 +53,11 @@
     "toolbar": {
       "breadcrumbs": false
     },
-    "default_width": 300.0,
+    "default_width": 320.0,
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "on",
-    "font_size": 18.0,
+    "font_size": 20.0,
     "dock": "bottom",
     "button": true,
     "shell": {
@@ -61,13 +69,13 @@
     "cursor_position_button": false,
     "active_language_button": false
   },
-  "agent_buffer_font_size": 18.0,
+  "agent_buffer_font_size": 20.0,
   "agent": {
-    "always_allow_tool_actions": false,
-    "default_profile": "minimal",
+    "always_allow_tool_actions": true,
+    "default_profile": "write",
     "default_model": {
-      "provider": "ollama",
-      "model": "glm-4.6:cloud"
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.5"
     },
     "model_parameters": []
   },
@@ -91,13 +99,16 @@
   "gutter": {
     "breakpoints": false,
     "folds": false,
-    "line_numbers": false
+    "line_numbers": true
   },
   "show_wrap_guides": false,
   "indent_guides": {
     "enabled": false
   },
   "project_panel": {
+    "indent_guides": {
+      "show": "never"
+    },
     "scrollbar": {
       "show": "never"
     },
@@ -108,21 +119,21 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 300.0,
+    "default_width": 320.0,
     "button": false
   },
   "cursor_shape": "underline",
   "cursor_blink": true,
-  "ui_font_family": "Funnel Sans",
+  "ui_font_family": "Public Sans",
   "buffer_font_family": "GeistMono Nerd Font Mono",
   "restore_on_startup": "none",
   "base_keymap": "VSCode",
-  "ui_font_size": 16.0,
-  "buffer_font_size": 18.0,
+  "ui_font_size": 18.0,
+  "buffer_font_size": 20.0,
   "theme": {
     "mode": "system",
-    "light": "mode",
-    "dark": "mode"
+    "light": "poimandres (darker)",
+    "dark": "Vesper"
   },
   "auto_indent": true,
   "auto_indent_on_paste": true,

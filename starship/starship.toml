@@ -2,31 +2,33 @@
 
 add_newline = true
 
-palette = "mode"
+palette = "vesper"
 
 format = "$directory$git_branch$git_status$golang$nodejs$python$character"
 
-[palettes.mode]
-base           = "#151515"
-surface        = "#1d1d1d"
-overlay        = "#252525"
-muted          = "#4a4a4a"
-subtle         = "#4a4a4a"
-text           = "#c3c9c2"
-error          = "#78535D"
-success        = "#737a6f"
-warning        = "#a59e8a"
-blue           = "#807c82"
-magenta        = "#e0c6cd"
-cyan           = "#a59e8a"
-highlight_low  = "#a59e8a20"
-highlight_med  = "#a59e8a40"
-highlight_high = "#a59e8a40"
+[palettes.vesper]
+base           = "#101010"
+surface        = "#161616"
+overlay        = "#232323"
+muted          = "#505050"
+subtle         = "#A0A0A0"
+text           = "#FFFFFF"
+error          = "#FF8080"
+success        = "#99FFE4"
+warning        = "#FFC799"
+blue           = "#FFC799"
+cyan           = "#99FFE4"
+green          = "#A0A0A0"
+yellow         = "#FFFFFF"
+magenta        = "#FFCFA8"
+highlight_low  = "#FFFFFF25"
+highlight_med  = "#343434"
+highlight_high = "#666666"
 
 [character]
 success_symbol = "[❯](bold fg:success)"
 error_symbol   = "[❯](bold fg:error)"
-vimcmd_symbol  = "[❯](bold fg:blue)"
+vimcmd_symbol  = "[❯](bold fg:subtle)"
 
 [directory]
 format            = "[$path ](bold fg:cyan)"
@@ -38,4 +40,38 @@ symbol = ""
 format = "[$symbol $branch](bold fg:blue) "
 
 [git_status]
-disabled = true
+disabled   = true
+conflicted = "=[$count](bold fg:error) "
+ahead      = "⇡[$count](bold fg:success) "
+behind     = "⇣[$count](bold fg:warning) "
+diverged   = "⇕⇡[$ahead_count](bold fg:success)⇣[$behind_count](bold fg:warning) "
+untracked  = "?[$count](bold fg:subtle) "
+stashed    = "$[$count](bold fg:subtle) "
+modified   = "![$count](bold fg:warning) "
+staged     = "+[$count](bold fg:success) "
+renamed    = "»[$count](bold fg:warning) "
+deleted    = "⨯[$count](bold fg:error) "
+
+[bun]
+symbol = " "
+format = "[$symbol($version )](bold fg:subtle) "
+
+[golang]
+symbol = " "
+format = "[$symbol($version )](bold fg:cyan) "
+
+[lua]
+symbol = " "
+format = "[$symbol($version )](bold fg:blue) "
+
+[nodejs]
+symbol = " "
+format = "[$symbol($version )](bold fg:green) "
+
+[python]
+symbol = " "
+format = "[$symbol($version )](bold fg:yellow) "
+
+[zig]
+symbol = " "
+format = "[$symbol($version )](bold fg:yellow) "

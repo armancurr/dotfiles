@@ -11,35 +11,35 @@ config.font                      = wezterm.font {
 }
 
 config.colors                    = {
-  foreground      = "#c3c9c2",
-  background      = "#151515",
-  cursor_bg       = "#c3c9c2",
-  cursor_fg       = "#151515",
-  cursor_border   = "#c3c9c2",
-  selection_fg    = "#e7e7e7",
-  selection_bg    = "#252525",
-  scrollbar_thumb = "#4a4a4a",
+  foreground      = "#FFFFFF",
+  background      = "#101010",
+  cursor_bg       = "#FFC799",
+  cursor_fg       = "#101010",
+  cursor_border   = "#FFC799",
+  selection_fg    = "#FFFFFF",
+  selection_bg    = "#343434",
+  scrollbar_thumb = "#343434",
 
   ansi            = {
-    "#151515",
-    "#78535D",
-    "#737a6f",
-    "#a59e8a",
-    "#807c82",
-    "#e0c6cd",
-    "#6A5E5E",
-    "#c3c9c2",
+    "#101010",
+    "#FF8080",
+    "#99FFE4",
+    "#FFC799",
+    "#A0A0A0",
+    "#FFC799",
+    "#99FFE4",
+    "#A0A0A0",
   },
 
   brights         = {
-    "#4a4a4a",
-    "#78535D",
-    "#737a6f",
-    "#a59e8a",
-    "#807c82",
-    "#e0c6cd",
-    "#6A5E5E",
-    "#e7e7e7",
+    "#505050",
+    "#FF8080",
+    "#99FFE4",
+    "#FFCFA8",
+    "#FFFFFF",
+    "#FFCFA8",
+    "#99FFE4",
+    "#FFFFFF",
   },
 }
 
@@ -59,7 +59,6 @@ config.cursor_blink_ease_in      = "Constant"
 config.cursor_blink_ease_out     = "Constant"
 
 config.enable_tab_bar            = false
-config.window_title              = "Terminal"
 config.window_close_confirmation = "NeverPrompt"
 
 config.default_prog              = { "C:/Program Files/Git/bin/bash.exe", "-l" }

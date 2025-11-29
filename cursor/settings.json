@@ -55,14 +55,13 @@
   "cursor.composer.queueMessageDefaultBehavior": "queue",
   "cursor.composer.usageSummaryDisplay": "always",
   "cursor.cpp.disabledLanguages": [],
-  "custom-ui-style.font.sansSerif": "'Funnel Sans', sans-serif",
+  "custom-ui-style.font.sansSerif": "'Public Sans', sans-serif",
   "biome.suggestInstallingGlobally": false,
   "breadcrumbs.enabled": false,
   "breadcrumbs.icons": false,
   "workbench.secondarySideBar.showLabels": false,
-  "symbols.hidesExplorerArrows": false,
   "workbench.layoutControl.enabled": false,
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
   "window.menuBarVisibility": "compact",
-  "workbench.colorTheme": "Sequoia Moonlight"
+  "workbench.colorTheme": "Vesper"
 }
