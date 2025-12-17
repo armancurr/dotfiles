@@ -6,18 +6,18 @@
     "mode": "subtle"
   },
   "collaboration_panel": {
-    "default_width": 320,
-    "button": false
+    "default_width": 280,
+    "button": true
   },
   "notification_panel": {
     "button": false
   },
   "git_panel": {
-    "default_width": 320,
+    "default_width": 280,
     "button": false
   },
   "outline_panel": {
-    "default_width": 320,
+    "default_width": 280,
     "indent_guides": {
       "show": "never"
     },
@@ -53,7 +53,7 @@
     "toolbar": {
       "breadcrumbs": false
     },
-    "default_width": 320.0,
+    "default_width": 280.0,
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "on",
@@ -71,12 +71,12 @@
   },
   "agent_buffer_font_size": 20.0,
   "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-opus-4.5"
+      "model": "gpt-5.1-codex-max"
     },
+    "always_allow_tool_actions": true,
+    "default_profile": "minimal",
     "model_parameters": []
   },
   "features": {
@@ -119,7 +119,7 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 320.0,
+    "default_width": 280.0,
     "button": false
   },
   "cursor_shape": "underline",
@@ -132,7 +132,7 @@
   "buffer_font_size": 20.0,
   "theme": {
     "mode": "system",
-    "light": "poimandres (darker)",
+    "light": "Vesper",
     "dark": "Vesper"
   },
   "auto_indent": true,

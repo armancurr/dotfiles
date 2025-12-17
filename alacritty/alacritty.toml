@@ -1,7 +1,7 @@
 [window]
-dimensions                = { columns = 95, lines = 30 }
+dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 30, y = 30 }
+padding                   = { x = 10, y = 10 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -18,7 +18,7 @@ normal      = { family = "GeistMono NFM", style = "Regular" }
 bold        = { family = "GeistMono NFM", style = "Bold" }
 italic      = { family = "GeistMono NFM", style = "Italic" }
 bold_italic = { family = "GeistMono NFM", style = "Bold Italic" }
-size        = 14
+size        = 16
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
@@ -69,12 +69,3 @@ osc52 = "OnlyCopy"
 
 [mouse]
 hide_when_typing = true
-
-[keyboard]
-bindings = [
-  { key = "M",    mods = "Alt", action = "ToggleMaximized" },
-  { key = "W",    mods = "Alt", action = "Minimize" },
-  { key = "Q",    mods = "Alt", action = "Quit" },
-  { key = "Up",   mods = "Alt", action = "ScrollLineUp" },
-  { key = "Down", mods = "Alt", action = "ScrollLineDown" }
-]
