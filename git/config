@@ -39,12 +39,10 @@
     markEmptyLines = false
 
 [interactive]
-    diffFilter = diff-so-fancy --patch
     singlekey  = true
 
 [pager]
     branch = false
-    diff   = diff-so-fancy | $PAGER
     tag    = false
 
 [pull]

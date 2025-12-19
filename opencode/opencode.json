@@ -8,7 +8,7 @@
     }
   },
   "tui": {
-    "scroll_speed": 3,
+    "scroll_speed": 10,
     "scroll_acceleration": {
       "enabled": true
     }

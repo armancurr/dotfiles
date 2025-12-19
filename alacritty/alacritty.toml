@@ -18,7 +18,7 @@ normal      = { family = "GeistMono NFM", style = "Regular" }
 bold        = { family = "GeistMono NFM", style = "Bold" }
 italic      = { family = "GeistMono NFM", style = "Italic" }
 bold_italic = { family = "GeistMono NFM", style = "Bold Italic" }
-size        = 16
+size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
