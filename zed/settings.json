@@ -3,31 +3,31 @@
   "rounded_selection": true,
   "always_treat_brackets_as_autoclosed": true,
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
   "collaboration_panel": {
     "default_width": 280,
-    "button": true
+    "button": true,
   },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "git_panel": {
     "default_width": 280,
-    "button": false
+    "button": false,
   },
   "outline_panel": {
     "default_width": 280,
     "indent_guides": {
-      "show": "never"
+      "show": "never",
     },
     "auto_fold_dirs": true,
     "file_icons": true,
-    "button": false
+    "button": false,
   },
   "bottom_dock_layout": "contained",
   "file_finder": {
-    "file_icons": true
+    "file_icons": true,
   },
   "title_bar": {
     "show_sign_in": false,
@@ -35,52 +35,52 @@
     "show_onboarding_banner": false,
     "show_project_items": false,
     "show_branch_name": false,
-    "show_branch_icon": false
+    "show_branch_icon": false,
   },
   "debugger": {
-    "button": false
+    "button": false,
   },
   "search": {
-    "button": false
+    "button": false,
   },
   "diagnostics": {
-    "button": false
+    "button": false,
   },
   "terminal": {
     "scrollbar": {
-      "show": "never"
+      "show": "never",
     },
     "toolbar": {
-      "breadcrumbs": false
+      "breadcrumbs": false,
     },
     "default_width": 280.0,
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "on",
-    "font_size": 20.0,
+    "font_size": 18.0,
     "dock": "bottom",
     "button": true,
     "shell": {
-      "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe"
+      "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe",
     },
-    "cursor_shape": "underline"
+    "cursor_shape": "underline",
   },
   "status_bar": {
     "cursor_position_button": false,
-    "active_language_button": false
+    "active_language_button": false,
   },
   "agent_buffer_font_size": 20.0,
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5.1-codex-max"
+      "model": "gpt-5.2",
     },
     "always_allow_tool_actions": true,
-    "default_profile": "minimal",
-    "model_parameters": []
+    "default_profile": "write",
+    "model_parameters": [],
   },
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "none",
   },
   "soft_wrap": "editor_width",
   "tab_size": 2,
@@ -88,29 +88,29 @@
     "agent_review": false,
     "selections_menu": false,
     "quick_actions": false,
-    "breadcrumbs": false
+    "breadcrumbs": false,
   },
   "scrollbar": {
     "axes": {
       "vertical": false,
-      "horizontal": false
-    }
+      "horizontal": false,
+    },
   },
   "gutter": {
     "breakpoints": false,
     "folds": false,
-    "line_numbers": true
+    "line_numbers": true,
   },
   "show_wrap_guides": false,
   "indent_guides": {
-    "enabled": false
+    "enabled": false,
   },
   "project_panel": {
     "indent_guides": {
-      "show": "never"
+      "show": "never",
     },
     "scrollbar": {
-      "show": "never"
+      "show": "never",
     },
     "auto_fold_dirs": true,
     "auto_reveal_entries": true,
@@ -120,7 +120,7 @@
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
     "default_width": 280.0,
-    "button": false
+    "button": false,
   },
   "cursor_shape": "underline",
   "cursor_blink": true,
@@ -131,16 +131,16 @@
   "ui_font_size": 18.0,
   "buffer_font_size": 20.0,
   "theme": {
-    "mode": "system",
-    "light": "Vesper",
-    "dark": "Vesper"
+    "mode": "dark",
+    "light": "orng Light",
+    "dark": "Cursor Dark",
   },
   "auto_indent": true,
   "auto_indent_on_paste": true,
   "autosave": {
     "after_delay": {
-      "milliseconds": 100
-    }
+      "milliseconds": 100,
+    },
   },
-  "autoscroll_on_clicks": true
+  "autoscroll_on_clicks": true,
 }

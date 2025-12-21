@@ -1,12 +1,11 @@
 {
-  "window.title": " ",
+  "window.title": "",
   "window.zoomLevel": 1,
   "window.newWindowProfile": "Default",
   "window.commandCenter": false,
-  "workbench.iconTheme": "catppuccin noctis icons",
+  "workbench.iconTheme": "symbols",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.activityBar.location": "bottom",
-  "workbench.panel.showLabels": false,
   "workbench.tree.indent": 22,
   "workbench.tree.renderIndentGuides": "none",
   "editor.fontFamily": "'GeistMono NFM', 'JetBrains Mono', monospace",
@@ -63,5 +62,5 @@
   "workbench.layoutControl.enabled": false,
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
   "window.menuBarVisibility": "compact",
-  "workbench.colorTheme": "Vesper"
+  "symbols.hidesExplorerArrows": false
 }
