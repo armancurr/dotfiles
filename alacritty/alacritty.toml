@@ -1,6 +1,7 @@
 [window]
 dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
+padding                   = { x = 10, y = 10 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -21,36 +22,28 @@ size        = 16
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
-background = '#181818'
-foreground = '#e4e4e4'
-
-[colors.cursor]
-text   = '#181818'
-cursor = '#88c0d0'
-
-[colors.selection]
-text       = '#e4e4e4'
-background = '#262626'
+background = '#101010'
+foreground = '#ffffff'
 
 [colors.normal]
-black   = '#141414'
-red     = '#e34671'
-green   = '#3fa266'
-yellow  = '#f1b467'
-blue    = '#81a1c1'
-magenta = '#AAA0FA'
-cyan    = '#88c0d0'
-white   = '#e4e4e4'
+black   = '#101010'
+red     = '#f5a191'
+green   = '#90b99f'
+yellow  = '#e6b99d'
+blue    = '#aca1cf'
+magenta = '#e29eca'
+cyan    = '#ea83a5'
+white   = '#a0a0a0'
 
 [colors.bright]
-black   = '#262626'
-red     = '#fc6b83'
-green   = '#70b489'
-yellow  = '#d2943e'
-blue    = '#87C3FF'
-magenta = '#E394DC'
-cyan    = '#82D2CE'
-white   = '#fcfcfc'
+black   = '#7e7e7e'
+red     = '#ff8080'
+green   = '#99ffe4'
+yellow  = '#ffc799'
+blue    = '#b9aeda'
+magenta = '#ecaad6'
+cyan    = '#f591b2'
+white   = '#ffffff'
 
 [selection]
 save_to_clipboard = true

@@ -6,18 +6,18 @@
     "mode": "subtle",
   },
   "collaboration_panel": {
-    "default_width": 280,
-    "button": true,
+    "default_width": 300,
+    "button": false,
   },
   "notification_panel": {
     "button": false,
   },
   "git_panel": {
-    "default_width": 280,
+    "default_width": 300,
     "button": false,
   },
   "outline_panel": {
-    "default_width": 280,
+    "default_width": 300,
     "indent_guides": {
       "show": "never",
     },
@@ -41,7 +41,7 @@
     "button": false,
   },
   "search": {
-    "button": false,
+    "button": true,
   },
   "diagnostics": {
     "button": false,
@@ -73,7 +73,7 @@
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5.2",
+      "model": "claude-opus-4.5",
     },
     "always_allow_tool_actions": true,
     "default_profile": "write",
@@ -132,8 +132,8 @@
   "buffer_font_size": 20.0,
   "theme": {
     "mode": "dark",
-    "light": "orng Light",
-    "dark": "Cursor Dark",
+    "light": "Vesper",
+    "dark": "Vesper",
   },
   "auto_indent": true,
   "auto_indent_on_paste": true,
