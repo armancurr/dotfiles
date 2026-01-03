@@ -1,4 +1,18 @@
 {
+  "zoomed_padding": true,
+  "tabs": {
+    "show_close_button": "hover",
+    "close_position": "right",
+    "git_status": false,
+    "file_icons": true,
+  },
+  "tab_bar": {
+    "show_tab_bar_buttons": true,
+    "show_nav_history_buttons": false,
+    "show": true,
+  },
+  "disable_ai": true,
+  "show_edit_predictions": false,
   "icon_theme": "Symbols Icon Theme",
   "rounded_selection": true,
   "always_treat_brackets_as_autoclosed": true,
@@ -30,6 +44,7 @@
     "file_icons": true,
   },
   "title_bar": {
+    "show_menus": false,
     "show_sign_in": false,
     "show_user_picture": false,
     "show_onboarding_banner": false,
@@ -57,7 +72,7 @@
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "on",
-    "font_size": 18.0,
+    "font_size": 20.0,
     "dock": "bottom",
     "button": true,
     "shell": {
@@ -69,11 +84,11 @@
     "cursor_position_button": false,
     "active_language_button": false,
   },
-  "agent_buffer_font_size": 20.0,
+  "agent_buffer_font_size": 16.0,
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-opus-4.5",
+      "model": "gpt-5.2",
     },
     "always_allow_tool_actions": true,
     "default_profile": "write",
@@ -106,6 +121,8 @@
     "enabled": false,
   },
   "project_panel": {
+    "hide_hidden": false,
+    "hide_root": false,
     "indent_guides": {
       "show": "never",
     },

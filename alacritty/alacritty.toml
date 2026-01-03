@@ -1,7 +1,7 @@
 [window]
 dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 10, y = 10 }
+padding                   = { x = 0, y = 0 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -14,36 +14,44 @@ history    = 10000
 multiplier = 2
 
 [font]
-normal      = { family = "GeistMono NFM", style = "Regular" }
-bold        = { family = "GeistMono NFM", style = "Bold" }
-italic      = { family = "GeistMono NFM", style = "Italic" }
-bold_italic = { family = "GeistMono NFM", style = "Bold Italic" }
+normal      = { family = "GeistMono Nerd Font Mono", style = "Regular" }
+bold        = { family = "GeistMono Nerd Font Mono", style = "Bold" }
+italic      = { family = "GeistMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "GeistMono Nerd Font Mono", style = "Bold Italic" }
 size        = 16
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
 background = '#101010'
-foreground = '#ffffff'
+foreground = '#FFFFFF'
+
+[colors.cursor]
+text   = '#101010'
+cursor = '#FFC799'
+
+[colors.selection]
+text       = 'CellForeground'
+background = '#505050'
 
 [colors.normal]
 black   = '#101010'
-red     = '#f5a191'
-green   = '#90b99f'
-yellow  = '#e6b99d'
-blue    = '#aca1cf'
-magenta = '#e29eca'
-cyan    = '#ea83a5'
-white   = '#a0a0a0'
+red     = '#FF8080'
+green   = '#99FFE4'
+yellow  = '#FFC799'
+blue    = '#A0A0A0'
+magenta = '#FF7300'
+cyan    = '#99FFE4'
+white   = '#FFFFFF'
 
 [colors.bright]
-black   = '#7e7e7e'
-red     = '#ff8080'
-green   = '#99ffe4'
-yellow  = '#ffc799'
-blue    = '#b9aeda'
-magenta = '#ecaad6'
-cyan    = '#f591b2'
-white   = '#ffffff'
+black   = '#505050'
+red     = '#FF8080'
+green   = '#99FFE4'
+yellow  = '#FFCFA8'
+blue    = '#A0A0A0'
+magenta = '#FF8080'
+cyan    = '#99FFE4'
+white   = '#FFFFFF'
 
 [selection]
 save_to_clipboard = true

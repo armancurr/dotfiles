@@ -1,5 +1,5 @@
 {
-  "window.title": "",
+  "window.title": " ",
   "window.zoomLevel": 1,
   "window.newWindowProfile": "Default",
   "window.commandCenter": false,
@@ -62,5 +62,6 @@
   "workbench.layoutControl.enabled": false,
   "catppuccin-noctis-icons.hidesExplorerArrows": false,
   "window.menuBarVisibility": "compact",
-  "symbols.hidesExplorerArrows": false
+  "symbols.hidesExplorerArrows": false,
+  "workbench.colorTheme": "Vesper"
 }
