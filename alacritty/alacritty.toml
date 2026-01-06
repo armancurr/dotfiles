@@ -1,7 +1,7 @@
 [window]
 dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
-padding                   = { x = 0, y = 0 }
+padding                   = { x = 20, y = 20 }
 dynamic_padding           = true
 decorations               = "Full"
 startup_mode              = "Windowed"
@@ -57,8 +57,8 @@ white   = '#FFFFFF'
 save_to_clipboard = true
 
 [cursor]
-style            = { shape = "Underline", blinking = "On" }
-vi_mode_style    = { shape = "Underline", blinking = "On" }
+style            = { shape = "block", blinking = "On" }
+vi_mode_style    = { shape = "block", blinking = "On" }
 blink_interval   = 500
 blink_timeout    = 0
 unfocused_hollow = false

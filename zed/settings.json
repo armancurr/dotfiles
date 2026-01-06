@@ -78,7 +78,7 @@
     "shell": {
       "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe",
     },
-    "cursor_shape": "underline",
+    "cursor_shape": "block",
   },
   "status_bar": {
     "cursor_position_button": false,
@@ -139,7 +139,7 @@
     "default_width": 280.0,
     "button": false,
   },
-  "cursor_shape": "underline",
+  "cursor_shape": "block",
   "cursor_blink": true,
   "ui_font_family": "Public Sans",
   "buffer_font_family": "GeistMono Nerd Font Mono",
