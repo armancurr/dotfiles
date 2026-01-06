@@ -12,10 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- Vesper theme
   {
     "datsfilipe/vesper.nvim",
-    priority = 1000, -- Load theme first
+    priority = 1000,
     config = function()
       require("vesper").setup({
         transparent = false,
