@@ -12,5 +12,6 @@
     "scroll_acceleration": {
       "enabled": true
     }
-  }
+  },
+  "plugin": ["opencode-gemini-auth@latest"]
 }
