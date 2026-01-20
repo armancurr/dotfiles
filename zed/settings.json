@@ -84,7 +84,7 @@
     "cursor_position_button": false,
     "active_language_button": false,
   },
-  "agent_buffer_font_size": 16.0,
+  "agent_buffer_font_size": 18.0,
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
@@ -143,7 +143,7 @@
   "cursor_blink": true,
   "ui_font_family": "Public Sans",
   "buffer_font_family": "GeistMono Nerd Font Mono",
-  "restore_on_startup": "none",
+  "restore_on_startup": "launchpad",
   "base_keymap": "VSCode",
   "ui_font_size": 18.0,
   "buffer_font_size": 20.0,
