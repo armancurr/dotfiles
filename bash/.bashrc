@@ -1,21 +1,22 @@
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="/c/Users/arman/.opencode/bin:$PATH"
-export PATH="/c/Users/arman/.amp/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=/home/armancurr/.opencode/bin:$PATH
 
-PEACH='\033[38;2;255;199;153m'
-MINT='\033[38;2;153;255;228m'
-RED='\033[38;2;255;128;128m'
-RESET='\033[0m'
-GIT_ICON=''
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
 
-git_prompt() {
-    local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-    if [ -n "$branch" ]; then
-        printf " ${GIT_ICON} ${PEACH}git(%s${PEACH})${RESET}" "$branch"
-    fi
-}
+eval "$(zoxide init bash)"
 
-PS1="\[${MINT}\]\W\[${RESET}\]\$(git_prompt) ❯ "
-
-eval "$(zoxide init bash)";
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        [ -f "$rc" ] && . "$rc"
+    done
+    unset rc
+fi

@@ -1,0 +1,34 @@
+font-family = GeistMono Nerd Font Mono
+font-family-bold = GeistMono Nerd Font Mono
+font-family-italic = GeistMono Nerd Font Mono
+font-family-bold-italic = GeistMono Nerd Font Mono
+font-size = 14
+
+window-show-tab-bar = auto
+maximize = true
+
+theme = Vesper
+
+cursor-opacity = 1.0
+cursor-style = block
+cursor-style-blink = true
+
+mouse-hide-while-typing = true
+click-repeat-interval = 500
+
+clipboard-read = allow
+clipboard-write = allow
+
+quick-terminal-position = center
+
+copy-on-select = true
+
+confirm-close-surface = false
+
+auto-update = check
+auto-update-channel = stable
+
+gtk-titlebar-hide-when-maximized = false
+gtk-toolbar-style = flat
+gtk-titlebar-style = tabs
+gtk-wide-tabs = true

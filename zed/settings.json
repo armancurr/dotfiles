@@ -1,4 +1,5 @@
 {
+  "theme": "Rich Vesper",
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -20,18 +21,18 @@
     "mode": "subtle",
   },
   "collaboration_panel": {
-    "default_width": 300,
+    "default_width": 320,
     "button": false,
   },
   "notification_panel": {
     "button": false,
   },
   "git_panel": {
-    "default_width": 300,
+    "default_width": 320,
     "button": false,
   },
   "outline_panel": {
-    "default_width": 300,
+    "default_width": 320,
     "indent_guides": {
       "show": "never",
     },
@@ -68,23 +69,20 @@
     "toolbar": {
       "breadcrumbs": false,
     },
-    "default_width": 280.0,
+    "default_width": 320.0,
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "on",
-    "font_size": 20.0,
+    "font_size": 18.0,
     "dock": "bottom",
     "button": true,
-    "shell": {
-      "program": "C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe",
-    },
     "cursor_shape": "block",
   },
   "status_bar": {
     "cursor_position_button": false,
     "active_language_button": false,
   },
-  "agent_buffer_font_size": 18.0,
+  "agent_buffer_font_size": 16.0,
   "agent": {
     "default_model": {
       "provider": "copilot_chat",
@@ -136,22 +134,16 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 280.0,
+    "default_width": 320.0,
     "button": false,
   },
   "cursor_shape": "block",
   "cursor_blink": true,
-  "ui_font_family": "Public Sans",
   "buffer_font_family": "GeistMono Nerd Font Mono",
   "restore_on_startup": "launchpad",
   "base_keymap": "VSCode",
   "ui_font_size": 18.0,
-  "buffer_font_size": 20.0,
-  "theme": {
-    "mode": "dark",
-    "light": "Vesper",
-    "dark": "Vesper",
-  },
+  "buffer_font_size": 18.0,
   "auto_indent": true,
   "auto_indent_on_paste": true,
   "autosave": {
