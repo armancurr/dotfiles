@@ -2,31 +2,8 @@
 dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
 dynamic_padding           = true
-decorations               = "None"
-startup_mode              = "Maximized"
-title                     = "Terminal"
-dynamic_title             = false
-decorations_theme_variant = "Dark"
-
-[scrolling]
-history    = 10000
-multiplier = 2
-
-[font]
-normal      = { family = "GeistMono NFM", style = "Regular" }
-bold        = { family = "GeistMono NFM", style = "Bold" }
-italic      = { family = "GeistMono NFM", style = "Italic" }
-bold_italic = { family = "GeistMono NFM", style = "Bold Italic" }
-size        = 14
-offset      = { x = 0, y = 0 }
-
-[window]
-dimensions                = { columns = 85, lines = 25 }
-position                  = { x = 100, y = 100 }
-padding                   = { x = 20, y = 20 }
-dynamic_padding           = true
 decorations               = "Full"
-startup_mode              = "Windowed"
+startup_mode              = "Maximized"
 title                     = "Terminal"
 dynamic_title             = false
 decorations_theme_variant = "Dark"
@@ -40,52 +17,44 @@ normal      = { family = "GeistMono Nerd Font Mono", style = "Regular" }
 bold        = { family = "GeistMono Nerd Font Mono", style = "Bold" }
 italic      = { family = "GeistMono Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "GeistMono Nerd Font Mono", style = "Bold Italic" }
-size        = 16
+size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
-background = '#101010'
-foreground = '#ffffff'
+background = '#000000'
+foreground = '#c1c1c1'
+
+[colors.cursor]
+cursor = '#c1c1c1'
+text   = '#000000'
 
 [colors.normal]
-black   = '#101010'
-red     = '#f5a191'
-green   = '#90b99f'
-yellow  = '#e6b99d'
-blue    = '#aca1cf'
-magenta = '#e29eca'
-cyan    = '#ea83a5'
-white   = '#a0a0a0'
+black   = '#3E2018'
+red     = '#5f8787'
+green   = '#c1c1c1'
+yellow  = '#888888'
+blue    = '#aaaaaa'
+magenta = '#999999'
+cyan    = '#fbcb97'
+white   = '#c1c1c1'
 
 [colors.bright]
-black   = '#7e7e7e'
-red     = '#ff8080'
-green   = '#99ffe4'
-yellow  = '#ffc799'
-blue    = '#b9aeda'
-magenta = '#ecaad6'
-cyan    = '#f591b2'
-white   = '#ffffff'
+black   = '#505050'
+red     = '#5f8787'
+green   = '#c1c1c1'
+yellow  = '#888888'
+blue    = '#aaaaaa'
+magenta = '#e78a43'
+cyan    = '#fbcb97'
+white   = '#c1c1c1'
 
-[selection]
-save_to_clipboard = true
+[[colors.indexed_colors]]
+index = 16
+color = '#aaaaaa'
 
-[cursor]
-style            = { shape = "block", blinking = "On" }
-vi_mode_style    = { shape = "block", blinking = "On" }
-blink_interval   = 500
-blink_timeout    = 0
-unfocused_hollow = false
-
-[terminal]
-shell = { program = "C:\\Program Files\\Git\\bin\\bash.exe", args = ["--login"] }
-osc52 = "OnlyCopy"
-
-[mouse]
-hide_when_typing = true
-
-[selection]
-save_to_clipboard = true
+[[colors.indexed_colors]]
+index = 17
+color = '#5f8787'
 
 [cursor]
 style            = { shape = "block", blinking = "On" }
@@ -93,6 +62,9 @@ vi_mode_style    = { shape = "block", blinking = "On" }
 blink_interval   = 500
 blink_timeout    = 0
 unfocused_hollow = false
+
+[selection]
+save_to_clipboard = true
 
 [terminal]
 shell = { program = "/bin/bash", args = ["--login"] }
@@ -100,3 +72,4 @@ osc52 = "OnlyCopy"
 
 [mouse]
 hide_when_typing = true
+#dd9999

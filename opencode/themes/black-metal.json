@@ -1,0 +1,225 @@
+{
+  "$schema": "https://opencode.ai/theme.json",
+  "defs": {
+    "metalBg": "#000000",
+    "metalPanelBg": "#000000",
+    "metalElementBg": "#121212",
+    "metalFg": "#c1c1c1",
+    "metalComment": "#333333",
+    "metalSelection": "#222222",
+    "metalBorder": "#222222",
+    "metalKeyword": "#999999",
+    "metalFunction": "#888888",
+    "metalString": "#5f8787",
+    "metalNumber": "#aaaaaa",
+    "metalVariable": "#dd9999",
+    "metalType": "#a06666",
+    "metalError": "#dd9999",
+    "metalWarning": "#a06666",
+    "metalSuccess": "#5f8787",
+    "metalInfo": "#aaaaaa",
+    "metalMuted": "#999999"
+  },
+  "theme": {
+    "primary": {
+      "dark": "metalFg",
+      "light": "metalFg"
+    },
+    "secondary": {
+      "dark": "metalVariable",
+      "light": "metalVariable"
+    },
+    "accent": {
+      "dark": "metalString",
+      "light": "metalString"
+    },
+    "error": {
+      "dark": "metalError",
+      "light": "metalError"
+    },
+    "warning": {
+      "dark": "metalWarning",
+      "light": "metalWarning"
+    },
+    "success": {
+      "dark": "metalSuccess",
+      "light": "metalSuccess"
+    },
+    "info": {
+      "dark": "metalInfo",
+      "light": "metalInfo"
+    },
+    "text": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "textMuted": {
+      "dark": "metalMuted",
+      "light": "#666666"
+    },
+    "background": {
+      "dark": "metalBg",
+      "light": "#ffffff"
+    },
+    "backgroundPanel": {
+      "dark": "metalPanelBg",
+      "light": "#f0f0f0"
+    },
+    "backgroundElement": {
+      "dark": "metalElementBg",
+      "light": "#e0e0e0"
+    },
+    "border": {
+      "dark": "metalBorder",
+      "light": "#d0d0d0"
+    },
+    "borderActive": {
+      "dark": "#333333",
+      "light": "#999999"
+    },
+    "borderSubtle": {
+      "dark": "#1a1a1a",
+      "light": "#e8e8e8"
+    },
+    "diffAdded": {
+      "dark": "metalSuccess",
+      "light": "metalSuccess"
+    },
+    "diffRemoved": {
+      "dark": "metalError",
+      "light": "metalError"
+    },
+    "diffContext": {
+      "dark": "metalComment",
+      "light": "#999999"
+    },
+    "diffHunkHeader": {
+      "dark": "metalMuted",
+      "light": "#666666"
+    },
+    "diffHighlightAdded": {
+      "dark": "metalSuccess",
+      "light": "metalSuccess"
+    },
+    "diffHighlightRemoved": {
+      "dark": "metalError",
+      "light": "metalError"
+    },
+    "diffAddedBg": {
+      "dark": "#0f1515",
+      "light": "#e8f5e8"
+    },
+    "diffRemovedBg": {
+      "dark": "#1a0f0f",
+      "light": "#f5e8e8"
+    },
+    "diffContextBg": {
+      "dark": "metalBg",
+      "light": "#f8f8f8"
+    },
+    "diffLineNumber": {
+      "dark": "#333333",
+      "light": "#808080"
+    },
+    "diffAddedLineNumberBg": {
+      "dark": "#0f1515",
+      "light": "#e8f5e8"
+    },
+    "diffRemovedLineNumberBg": {
+      "dark": "#1a0f0f",
+      "light": "#f5e8e8"
+    },
+    "markdownText": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "markdownHeading": {
+      "dark": "metalType",
+      "light": "metalType"
+    },
+    "markdownLink": {
+      "dark": "metalVariable",
+      "light": "metalVariable"
+    },
+    "markdownLinkText": {
+      "dark": "metalVariable",
+      "light": "metalVariable"
+    },
+    "markdownCode": {
+      "dark": "metalString",
+      "light": "metalString"
+    },
+    "markdownBlockQuote": {
+      "dark": "metalComment",
+      "light": "#666666"
+    },
+    "markdownEmph": {
+      "dark": "metalVariable",
+      "light": "#000000"
+    },
+    "markdownStrong": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "markdownHorizontalRule": {
+      "dark": "metalBorder",
+      "light": "#d0d0d0"
+    },
+    "markdownListItem": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "markdownListEnumeration": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "markdownImage": {
+      "dark": "metalString",
+      "light": "metalString"
+    },
+    "markdownImageText": {
+      "dark": "metalComment",
+      "light": "#666666"
+    },
+    "markdownCodeBlock": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "syntaxComment": {
+      "dark": "metalComment",
+      "light": "#8b8b8b"
+    },
+    "syntaxKeyword": {
+      "dark": "metalKeyword",
+      "light": "#a0a0a0"
+    },
+    "syntaxFunction": {
+      "dark": "metalFunction",
+      "light": "#000000"
+    },
+    "syntaxVariable": {
+      "dark": "metalVariable",
+      "light": "#000000"
+    },
+    "syntaxString": {
+      "dark": "metalString",
+      "light": "#008800"
+    },
+    "syntaxNumber": {
+      "dark": "metalNumber",
+      "light": "#0000ff"
+    },
+    "syntaxType": {
+      "dark": "metalType",
+      "light": "#a06666"
+    },
+    "syntaxOperator": {
+      "dark": "metalFg",
+      "light": "#000000"
+    },
+    "syntaxPunctuation": {
+      "dark": "metalFg",
+      "light": "#000000"
+    }
+  }
+}
