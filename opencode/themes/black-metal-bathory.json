@@ -5,20 +5,20 @@
     "metalPanelBg": "#000000",
     "metalElementBg": "#121212",
     "metalFg": "#c1c1c1",
-    "metalComment": "#333333",
+    "metalComment": "#5c5c5c",
     "metalSelection": "#222222",
     "metalBorder": "#222222",
     "metalKeyword": "#999999",
     "metalFunction": "#888888",
-    "metalString": "#5f8787",
+    "metalString": "#fbcb97",
     "metalNumber": "#aaaaaa",
-    "metalVariable": "#dd9999",
-    "metalType": "#a06666",
-    "metalError": "#dd9999",
-    "metalWarning": "#a06666",
-    "metalSuccess": "#5f8787",
+    "metalVariable": "#5f8787",
+    "metalType": "#e78a53",
+    "metalError": "#e78a53",
+    "metalWarning": "#e78a53",
+    "metalSuccess": "#fbcb97",
     "metalInfo": "#aaaaaa",
-    "metalMuted": "#999999"
+    "metalMuted": "#555555"
   },
   "theme": {
     "primary": {
@@ -86,8 +86,8 @@
       "light": "metalSuccess"
     },
     "diffRemoved": {
-      "dark": "metalError",
-      "light": "metalError"
+      "dark": "metalVariable",
+      "light": "metalVariable"
     },
     "diffContext": {
       "dark": "metalComment",
@@ -102,15 +102,15 @@
       "light": "metalSuccess"
     },
     "diffHighlightRemoved": {
-      "dark": "metalError",
-      "light": "metalError"
+      "dark": "metalVariable",
+      "light": "metalVariable"
     },
     "diffAddedBg": {
-      "dark": "#0f1515",
+      "dark": "#1a150d",
       "light": "#e8f5e8"
     },
     "diffRemovedBg": {
-      "dark": "#1a0f0f",
+      "dark": "#0f1515",
       "light": "#f5e8e8"
     },
     "diffContextBg": {
@@ -122,11 +122,11 @@
       "light": "#808080"
     },
     "diffAddedLineNumberBg": {
-      "dark": "#0f1515",
+      "dark": "#1a150d",
       "light": "#e8f5e8"
     },
     "diffRemovedLineNumberBg": {
-      "dark": "#1a0f0f",
+      "dark": "#0f1515",
       "light": "#f5e8e8"
     },
     "markdownText": {

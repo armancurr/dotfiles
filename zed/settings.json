@@ -1,6 +1,6 @@
 {
-  "ui_font_family": "Public Sans",
-  "theme": "Base16 Black Metal",
+  "ui_font_family": "Geist",
+  "theme": "Base16 Black Metal (Bathory) Dark",
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -73,7 +73,7 @@
     "default_width": 320.0,
     "copy_on_select": true,
     "minimum_contrast": 0.0,
-    "blinking": "on",
+    "blinking": "off",
     "font_size": 18.0,
     "dock": "bottom",
     "button": true,
@@ -139,12 +139,12 @@
     "button": false,
   },
   "cursor_shape": "block",
-  "cursor_blink": true,
-  "buffer_font_family": "GeistMono Nerd Font Mono",
+  "cursor_blink": false,
+  "buffer_font_family": "Geist Mono",
   "restore_on_startup": "launchpad",
   "base_keymap": "VSCode",
-  "ui_font_size": 18.0,
-  "buffer_font_size": 18.0,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 16.0,
   "auto_indent": true,
   "auto_indent_on_paste": true,
   "autosave": {
@@ -153,4 +153,5 @@
     },
   },
   "autoscroll_on_clicks": true,
+  "text_rendering_mode": "platform_default",
 }

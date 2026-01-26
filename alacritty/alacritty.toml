@@ -2,7 +2,7 @@
 dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
 dynamic_padding           = true
-decorations               = "Full"
+decorations               = "None"
 startup_mode              = "Maximized"
 title                     = "Terminal"
 dynamic_title             = false
@@ -14,10 +14,10 @@ multiplier = 2
 
 [font]
 normal      = { family = "GeistMono Nerd Font Mono", style = "Regular" }
-bold        = { family = "GeistMono Nerd Font Mono", style = "Bold" }
+bold        = { family = "GeistMono Nerd Font Mono", style = "Medium" }
 italic      = { family = "GeistMono Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "GeistMono Nerd Font Mono", style = "Bold Italic" }
-size        = 14
+bold_italic = { family = "GeistMono Nerd Font Mono", style = "Medium Italic" }
+size        = 12
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
@@ -29,36 +29,27 @@ cursor = '#c1c1c1'
 text   = '#000000'
 
 [colors.normal]
-black   = '#3E2018'
+black   = '#000000'
 red     = '#5f8787'
-green   = '#c1c1c1'
-yellow  = '#888888'
-blue    = '#aaaaaa'
+green   = '#fbcb97'
+yellow  = '#e78a53'
+blue    = '#888888'
 magenta = '#999999'
-cyan    = '#fbcb97'
+cyan    = '#aaaaaa'
 white   = '#c1c1c1'
 
 [colors.bright]
-black   = '#505050'
+black   = '#333333'
 red     = '#5f8787'
-green   = '#c1c1c1'
-yellow  = '#888888'
-blue    = '#aaaaaa'
-magenta = '#e78a43'
-cyan    = '#fbcb97'
+green   = '#fbcb97'
+yellow  = '#e78a53'
+blue    = '#888888'
+magenta = '#999999'
+cyan    = '#aaaaaa'
 white   = '#c1c1c1'
 
-[[colors.indexed_colors]]
-index = 16
-color = '#aaaaaa'
-
-[[colors.indexed_colors]]
-index = 17
-color = '#5f8787'
-
 [cursor]
-style            = { shape = "block", blinking = "On" }
-vi_mode_style    = { shape = "block", blinking = "On" }
+style            = { shape = "block", blinking = "Off" }
 blink_interval   = 500
 blink_timeout    = 0
 unfocused_hollow = false
@@ -72,4 +63,3 @@ osc52 = "OnlyCopy"
 
 [mouse]
 hide_when_typing = true
-#dd9999
