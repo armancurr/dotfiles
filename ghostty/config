@@ -7,7 +7,7 @@ font-size               = 14
 theme = Black Metal (Bathory)
 
 cursor-style         = block
-cursor-style-blink   = true
+cursor-style-blink   = false
 cursor-click-to-move = true
 
 mouse-hide-while-typing = true
@@ -19,7 +19,6 @@ maximize = true
 window-vsync                     = true
 window-inherit-working-directory = true
 window-inherit-font-size         = true
-window-title-font-family         = GeistMono Nerd Font Mono
 window-subtitle                  = false
 window-theme                     = ghostty
 window-save-state                = never

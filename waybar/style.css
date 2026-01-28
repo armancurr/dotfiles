@@ -1,0 +1,39 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "GeistMono Nerd Font Mono";
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  background-color: #000000;
+  color: #888888;
+}
+
+#workspaces button.focused {
+  color: #ffffff;
+}
+
+#clock,
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#bluetooth {
+  padding: 0 10px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Remove all color indicators */
+#battery.warning,
+#battery.critical {
+  color: #ffffff;
+}
