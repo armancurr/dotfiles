@@ -1,6 +1,6 @@
 {
   "ui_font_family": "Geist",
-  "theme": "Base16 Black Metal (Bathory) Dark",
+  "theme": "black-metal-bathory",
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
