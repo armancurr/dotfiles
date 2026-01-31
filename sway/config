@@ -1,18 +1,19 @@
 set $mod Mod4
+input * xkb_options caps:super
 set $left h
 set $down j
 set $up k
 set $right l
-set $term ghostty
-set $menu fuzzel
+set $term alacritty
+set $menu rofi -show drun -theme custom
 
 font pango:Geist Sans 10
 
 exec systemctl --user import-environment PATH
 exec hash -r
 
-output * scale 1.10
-output * bg #000000 solid_color
+output * scale 1
+output * bg ~/Downloads/regos-kornyei-udAW9bAg9Fg-unsplash.jpg fill
 
 exec swayidle -w \
     timeout 300 'swaylock -f -c 000000' \

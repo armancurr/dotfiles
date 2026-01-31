@@ -1,0 +1,33 @@
+* {
+    background-color: #000000;
+    text-color: #ffffff;
+    font: "Geist 14";
+}
+
+window {
+    width: 800px;
+    padding: 20px;
+    border-radius: 24px;
+}
+
+mainbox {
+    spacing: 10px;
+}
+
+inputbar {
+    padding: 10px 14px;
+    spacing: 10px;
+}
+
+entry {
+    placeholder: "";
+}
+
+listview {
+    lines: 10;
+    spacing: 2px;
+}
+
+element {
+    padding: 8px 14px;
+}

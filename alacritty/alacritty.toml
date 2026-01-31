@@ -14,10 +14,10 @@ multiplier = 2
 
 [font]
 normal      = { family = "GeistMono Nerd Font Mono", style = "Regular" }
-bold        = { family = "GeistMono Nerd Font Mono", style = "Medium" }
+bold        = { family = "GeistMono Nerd Font Mono", style = "Bold" }
 italic      = { family = "GeistMono Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "GeistMono Nerd Font Mono", style = "Medium Italic" }
-size        = 12
+size        = 14
 offset      = { x = 0, y = 0 }
 
 [colors.primary]
