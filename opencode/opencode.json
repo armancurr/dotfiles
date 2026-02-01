@@ -1,12 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "black-metal-bathory",
-  "formatter": {
-    "biome": {
-      "command": ["bun", "run", "biome", "format", "--write", "$FILE"],
-      "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".css"]
-    }
-  },
   "tui": {
     "scroll_speed": 10,
     "scroll_acceleration": {

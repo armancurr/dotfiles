@@ -6,8 +6,10 @@
 
 window {
     width: 800px;
-    padding: 20px;
-    border-radius: 24px;
+    padding: 16px;
+    border: 2px solid;
+    border-color: #171717;
+    border-radius: 16px;
 }
 
 mainbox {
@@ -19,15 +21,52 @@ inputbar {
     spacing: 10px;
 }
 
+prompt {
+    enabled: false;
+}
+
 entry {
     placeholder: "";
+    cursor-width: 10px;
+    blink: false;
 }
 
 listview {
-    lines: 10;
+    lines: 8;
     spacing: 2px;
+}
+
+configuration {
+    icon-theme: "WhiteSur";
+    show-icons: true;
 }
 
 element {
     padding: 8px 14px;
+    border-radius: 4px;
+    children: [ element-icon, element-text ];
+    spacing: 10px;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 20px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: #171717;
+}
+
+element selected element-icon {
+    background-color: #171717;
+}
+
+element selected element-text {
+    background-color: #171717;
 }

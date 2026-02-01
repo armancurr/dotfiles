@@ -120,4 +120,11 @@ bar {
     swaybar_command waybar
 }
 
+# clipboard
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+bindsym $mod+p exec cliphist list | rofi -dmenu -display-columns 2 -theme custom | cliphist decode | wl-copy
+bindsym $mod+Shift+p exec cliphist list | rofi -dmenu -display-columns 2 -theme custom | cliphist delete
+bindsym $mod+Shift+Alt+p exec cliphist wipe
+
 include /etc/sway/config.d/*
