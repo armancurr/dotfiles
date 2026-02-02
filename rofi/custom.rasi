@@ -6,10 +6,10 @@
 
 window {
     width: 800px;
-    padding: 16px;
+    padding: 8px;
     border: 2px solid;
     border-color: #171717;
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 mainbox {
@@ -34,6 +34,7 @@ entry {
 listview {
     lines: 8;
     spacing: 2px;
+    columns: 2;
 }
 
 configuration {
@@ -46,6 +47,7 @@ element {
     border-radius: 4px;
     children: [ element-icon, element-text ];
     spacing: 10px;
+    text-color: #ffffff;
 }
 
 element-icon {
@@ -56,7 +58,7 @@ element-icon {
 
 element-text {
     background-color: inherit;
-    text-color: inherit;
+    text-color: #ffffff;
 }
 
 element selected {

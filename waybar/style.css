@@ -31,9 +31,3 @@ window#waybar {
   color: #ffffff;
   background-color: #000000;
 }
-
-/* Remove all color indicators */
-#battery.warning,
-#battery.critical {
-  color: #ffffff;
-}

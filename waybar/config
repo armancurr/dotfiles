@@ -3,37 +3,19 @@
     "position": "top",
     "height": 30,
     "modules-left": ["sway/workspaces"],
-    "modules-right": ["pulseaudio", "network", "bluetooth", "battery", "clock"],
-    "clock": {
-        "format": "TIME-{:%H:%M}",
-        "tooltip": true
-    },
+    "modules-right": ["pulseaudio", "network", "battery"],
     "battery": {
-        "format": "BAT-{capacity}%",
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
+        "format": "<span size='12000' >󰁹</span> {capacity}%",
         "tooltip": true
     },
     "pulseaudio": {
-        "format": "VOL-{volume}%",
-        "format-muted": "MUTE-{volume}%",
-        "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+        "format": "<span size='18000' rise='-2500'>󰕾</span> {volume}%",
+        "format-muted": "<span size='18000' rise='-2500'>󰖁</span> {volume}%",
         "tooltip": true
     },
     "network": {
-        "format-wifi": "WIFI-{signalStrength}%",
-        "format-ethernet": "ETH-",
-        "format-disconnected": "NO-WIFI",
-        "tooltip": true,
-        "on-click": "nm-connection-editor"
+        "format-wifi": "<span size='18000' rise='-2500'>󰤨</span> {signalStrength}%",
+        "format-disconnected": "<span size='18000' rise='-2500'>󰤭</span>",
+        "tooltip": true
     },
-    "bluetooth": {
-        "format": "BLUE",
-        "format-disabled": "NO-BLUE",
-        "format-off": "BLUE-OFF",
-        "tooltip": true,
-        "on-click": "ghostty -e bluetoothctl"
-    }
 }
