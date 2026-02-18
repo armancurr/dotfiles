@@ -2,10 +2,10 @@
 dimensions                = { columns = 85, lines = 25 }
 position                  = { x = 100, y = 100 }
 dynamic_padding           = true
-decorations               = "None"
-startup_mode              = "Maximized"
+decorations               = "Full"
+startup_mode              = "Windowed"
 title                     = "Terminal"
-dynamic_title             = false
+dynamic_title             = true
 decorations_theme_variant = "Dark"
 
 [scrolling]
@@ -49,17 +49,10 @@ cyan    = '#aaaaaa'
 white   = '#c1c1c1'
 
 [cursor]
-style            = { shape = "block", blinking = "Off" }
+style            = { shape = "beam", blinking = "Off" }
 blink_interval   = 500
 blink_timeout    = 0
 unfocused_hollow = false
 
 [selection]
 save_to_clipboard = true
-
-[terminal]
-shell = { program = "/bin/bash", args = ["--login"] }
-osc52 = "OnlyCopy"
-
-[mouse]
-hide_when_typing = true

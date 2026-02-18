@@ -4,13 +4,10 @@ font-family-italic      = GeistMono Nerd Font Mono
 font-family-bold-italic = GeistMono Nerd Font Mono
 font-size               = 14
 
-theme = Black Metal (Bathory)
+theme = Black Metal
 
-cursor-style         = block
 cursor-style-blink   = false
-cursor-click-to-move = true
 
-mouse-hide-while-typing = true
 mouse-shift-capture     = true
 mouse-scroll-multiplier = 5
 

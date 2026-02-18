@@ -1,6 +1,24 @@
 {
-  "ui_font_family": "Geist",
-  "theme": "black-metal-bathory",
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "lsp_document_colors": "none",
+  "ui_font_family": "Public Sans",
+  "theme": "black-metal-bathory-base16",
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -19,6 +37,7 @@
   "rounded_selection": true,
   "always_treat_brackets_as_autoclosed": true,
   "edit_predictions": {
+    "provider": "none",
     "mode": "subtle",
   },
   "collaboration_panel": {
@@ -77,7 +96,7 @@
     "font_size": 18.0,
     "dock": "bottom",
     "button": true,
-    "cursor_shape": "block",
+    "cursor_shape": "bar",
   },
   "status_bar": {
     "cursor_position_button": false,
@@ -92,9 +111,6 @@
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "model_parameters": [],
-  },
-  "features": {
-    "edit_prediction_provider": "none",
   },
   "soft_wrap": "editor_width",
   "tab_size": 2,
@@ -138,7 +154,7 @@
     "default_width": 320.0,
     "button": false,
   },
-  "cursor_shape": "block",
+  "cursor_shape": "bar",
   "cursor_blink": false,
   "buffer_font_family": "GeistMono Nerd Font Mono",
   "restore_on_startup": "launchpad",

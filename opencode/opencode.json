@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "black-metal-bathory",
+  "theme": "black-metal",
   "tui": {
     "scroll_speed": 10,
     "scroll_acceleration": {
