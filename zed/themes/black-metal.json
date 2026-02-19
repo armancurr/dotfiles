@@ -4,7 +4,7 @@
   "author": "@armancurr (port)",
   "themes": [
     {
-      "name": "black-metal-bathory-base16",
+      "name": "black-metal",
       "appearance": "dark",
       "style": {
         "border": "#222222",

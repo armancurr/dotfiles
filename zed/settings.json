@@ -4,21 +4,21 @@
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
+            "enabled": "always",
+          },
         },
         "javascript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        }
+            "enabled": "always",
+          },
+        },
       },
-      "enable_lsp_tasks": true
-    }
+      "enable_lsp_tasks": true,
+    },
   },
   "lsp_document_colors": "none",
-  "ui_font_family": "Public Sans",
-  "theme": "black-metal-bathory-base16",
+  "ui_font_family": "Geist",
+  "theme": "black-metal-bathory",
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -104,11 +104,13 @@
   },
   "agent_buffer_font_size": 16.0,
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-5.2",
     },
-    "always_allow_tool_actions": true,
     "default_profile": "write",
     "model_parameters": [],
   },
