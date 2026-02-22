@@ -18,8 +18,9 @@ unset rc
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH=/home/armancurr/.opencode/bin:$PATH
 export PATH="/home/armancurr/.bun/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/home/arman/.opencode/bin:$PATH"
 
+eval "$(starship init bash)"
 eval "$(zoxide init bash)"

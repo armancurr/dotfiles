@@ -154,7 +154,7 @@
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
     "default_width": 320.0,
-    "button": false,
+    "button": true,
   },
   "cursor_shape": "bar",
   "cursor_blink": false,

@@ -6,6 +6,7 @@ font-size               = 14
 
 theme = Black Metal (Bathory)
 
+cursor-style         = bar
 cursor-style-blink   = false
 
 mouse-shift-capture     = true
