@@ -124,7 +124,7 @@
   },
   "scrollbar": {
     "axes": {
-      "vertical": false,
+      "vertical": true,
       "horizontal": false,
     },
   },
