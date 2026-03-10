@@ -24,3 +24,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+
+export PNPM_HOME="/home/arman/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac

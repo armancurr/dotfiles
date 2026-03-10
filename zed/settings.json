@@ -1,4 +1,9 @@
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "lsp": {
     "vtsls": {
       "settings": {
@@ -31,7 +36,7 @@
     "show_nav_history_buttons": false,
     "show": true,
   },
-  "disable_ai": true,
+  "disable_ai": false,
   "show_edit_predictions": false,
   "icon_theme": "Zed (Default)",
   "rounded_selection": true,
