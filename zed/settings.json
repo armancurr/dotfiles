@@ -23,7 +23,7 @@
   },
   "lsp_document_colors": "none",
   "ui_font_family": "Geist",
-  "theme": "black-metal-bathory",
+  "theme": "Cursor Dark",
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -168,7 +168,7 @@
   "base_keymap": "VSCode",
   "ui_font_size": 18.0,
   "buffer_font_size": 18.0,
-  "auto_indent": true,
+  "auto_indent": "syntax_aware",
   "auto_indent_on_paste": true,
   "autosave": {
     "after_delay": {
