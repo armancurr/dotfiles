@@ -1,0 +1,45 @@
+# Name: orng-dark
+# Based on the Orng Opencode theme
+
+background = #0a0a0a
+foreground = #eeeeee
+
+# Primary Orange for cursor, matching 'markdownHeading' / 'syntaxKeyword'
+cursor-color = #EC5B2B
+cursor-text = #0a0a0a
+
+# Background Element / Subtle Borders for selections
+selection-background = #323232
+selection-foreground = #eeeeee
+
+# Black (darkStep3 / darkStep8)
+palette = 0=#1e1e1e
+palette = 8=#606060
+
+# Red (darkRed)
+palette = 1=#e06c75
+palette = 9=#e06c75
+
+# Green (Mapped to darkBlue to match your 'success' and 'diffAdded' values)
+palette = 2=#6ba1e6
+palette = 10=#6ba1e6
+
+# Yellow (darkYellow)
+palette = 3=#e5c07b
+palette = 11=#e5c07b
+
+# Blue (darkBlue)
+palette = 4=#6ba1e6
+palette = 12=#6ba1e6
+
+# Magenta (Mapped to Secondary Orange to maintain the warm 'orng' signature)
+palette = 5=#EE7948
+palette = 13=#EE7948
+
+# Cyan (darkCyan)
+palette = 6=#56b6c2
+palette = 14=#56b6c2
+
+# White (textMuted / darkStep12)
+palette = 7=#808080
+palette = 15=#eeeeee

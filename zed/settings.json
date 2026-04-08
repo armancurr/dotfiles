@@ -1,8 +1,8 @@
 {
   "agent_servers": {
     "opencode": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
   "lsp": {
     "vtsls": {
@@ -23,7 +23,11 @@
   },
   "lsp_document_colors": "none",
   "ui_font_family": "Geist",
-  "theme": "Cursor Dark",
+  "theme": {
+    "mode": "dark",
+    "light": "orng-dark",
+    "dark": "orng-dark",
+  },
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -38,7 +42,11 @@
   },
   "disable_ai": false,
   "show_edit_predictions": false,
-  "icon_theme": "Zed (Default)",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
   "rounded_selection": true,
   "always_treat_brackets_as_autoclosed": true,
   "edit_predictions": {
