@@ -1,6 +1,27 @@
 {
+  "cli_default_open_behavior": "existing_window",
   "agent_servers": {
+    "gemini": {
+      "favorite_models": [
+        "gemini-3-pro-preview",
+        "gemini-3-flash-preview"
+      ],
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    },
     "opencode": {
+      "favorite_config_option_values": {
+        "model": [
+          "ollama-cloud/minimax-m2.7",
+          "ollama-cloud/kimi-k2.5",
+          "ollama-cloud/glm-5.1",
+          "openai/gpt-5.4-mini",
+          "openai/gpt-5.4",
+          "opencode/ling-2.6-flash-free"
+        ]
+      },
       "type": "registry",
     },
   },
@@ -23,7 +44,11 @@
   },
   "lsp_document_colors": "none",
   "ui_font_family": "Geist",
-  "theme": "Cursor Dark",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Cursor Dark"
+  },
   "zoomed_padding": true,
   "tabs": {
     "show_close_button": "hover",
@@ -36,7 +61,7 @@
     "show_nav_history_buttons": false,
     "show": true,
   },
-  "disable_ai": false,
+  "disable_ai": true,
   "show_edit_predictions": false,
   "icon_theme": {
     "mode": "light",
@@ -50,6 +75,7 @@
     "mode": "subtle",
   },
   "collaboration_panel": {
+    "dock": "right",
     "default_width": 320,
     "button": false,
   },
@@ -57,10 +83,12 @@
     "button": false,
   },
   "git_panel": {
+    "dock": "right",
     "default_width": 320,
     "button": false,
   },
   "outline_panel": {
+    "dock": "right",
     "default_width": 320,
     "indent_guides": {
       "show": "never",
@@ -80,7 +108,6 @@
     "show_onboarding_banner": false,
     "show_project_items": false,
     "show_branch_name": false,
-    "show_branch_icon": false,
   },
   "debugger": {
     "button": false,
@@ -114,13 +141,15 @@
   },
   "agent_buffer_font_size": 16.0,
   "agent": {
+    "dock": "left",
     "tool_permissions": {
       "default": "allow",
     },
     "default_model": {
-      "enable_thinking": true,
-      "provider": "ollama",
-      "model": "minimax-m2.7:cloud",
+      "effort": "low",
+      "enable_thinking": false,
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6",
     },
     "default_profile": "write",
     "model_parameters": [],
@@ -149,6 +178,7 @@
     "enabled": false,
   },
   "project_panel": {
+    "dock": "left",
     "hide_hidden": false,
     "hide_root": false,
     "indent_guides": {
