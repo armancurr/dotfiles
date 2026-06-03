@@ -5,3 +5,5 @@
     branch             = true
     showStash          = true
     showUntrackedFiles = all
+
+**/.claude/settings.local.json
