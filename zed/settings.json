@@ -1,15 +1,8 @@
 {
   "cli_default_open_behavior": "existing_window",
   "agent_servers": {
-    "gemini": {
-      "favorite_models": [
-        "gemini-3-pro-preview",
-        "gemini-3-flash-preview"
-      ],
-      "type": "registry"
-    },
     "codex-acp": {
-      "type": "registry"
+      "type": "registry",
     },
     "opencode": {
       "favorite_config_option_values": {
@@ -19,8 +12,8 @@
           "ollama-cloud/glm-5.1",
           "openai/gpt-5.4-mini",
           "openai/gpt-5.4",
-          "opencode/ling-2.6-flash-free"
-        ]
+          "opencode/ling-2.6-flash-free",
+        ],
       },
       "type": "registry",
     },
@@ -46,8 +39,8 @@
   "ui_font_family": "Geist",
   "theme": {
     "mode": "dark",
-    "light": "One Light",
-    "dark": "Cursor Dark"
+    "light": "Cursor Dark",
+    "dark": "Cursor Dark",
   },
   "zoomed_padding": true,
   "tabs": {
@@ -64,7 +57,7 @@
   "disable_ai": true,
   "show_edit_predictions": false,
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Zed (Default)",
     "dark": "Zed (Default)",
   },
@@ -77,7 +70,7 @@
   "collaboration_panel": {
     "dock": "right",
     "default_width": 320,
-    "button": false,
+    "button": true,
   },
   "notification_panel": {
     "button": false,
@@ -178,6 +171,8 @@
     "enabled": false,
   },
   "project_panel": {
+    "git_status_indicator": false,
+    "bold_folder_labels": false,
     "dock": "left",
     "hide_hidden": false,
     "hide_root": false,
@@ -194,7 +189,7 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 320.0,
+    "default_width": 340.0,
     "button": true,
   },
   "cursor_shape": "bar",
