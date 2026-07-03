@@ -69,7 +69,7 @@
   },
   "collaboration_panel": {
     "dock": "right",
-    "default_width": 320,
+    "default_width": 400.0,
     "button": true,
   },
   "notification_panel": {
@@ -77,12 +77,12 @@
   },
   "git_panel": {
     "dock": "right",
-    "default_width": 320,
+    "default_width": 400.0,
     "button": false,
   },
   "outline_panel": {
     "dock": "right",
-    "default_width": 320,
+    "default_width": 400.0,
     "indent_guides": {
       "show": "never",
     },
@@ -112,6 +112,7 @@
     "button": false,
   },
   "terminal": {
+    "show_count_badge": false,
     "flexible": true,
     "scrollbar": {
       "show": "never",
@@ -134,6 +135,8 @@
   },
   "agent_buffer_font_size": 16.0,
   "agent": {
+    "default_height": 400.0,
+    "default_width": 400.0,
     "dock": "left",
     "tool_permissions": {
       "default": "allow",
@@ -189,7 +192,7 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 340.0,
+    "default_width": 400.0,
     "button": true,
   },
   "cursor_shape": "bar",

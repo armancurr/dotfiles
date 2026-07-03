@@ -1,16 +1,24 @@
-model = "gpt-5.4"
+model = "gpt-5.5"
 model_reasoning_effort = "medium"
 personality = "pragmatic"
+approvals_reviewer = "user"
+plan_mode_reasoning_effort = "medium"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
 
-[projects."*"]
+[projects."/home/arman/Code"]
 trust_level = "trusted"
 
 [tui]
 theme = "ansi"
+pet = "disabled"
 
 [tui.model_availability_nux]
-"gpt-5.5" = 1
+"gpt-5.5" = 4
 
-[mcp_servers.chrome-devtools]
-command = "npx"
-args = ["chrome-devtools-mcp@latest"]
+[notice]
+hide_full_access_warning = true
+hide_rate_limit_model_nudge = true
+
+[notice.model_migrations]
+"gpt-5.4" = "gpt-5.5"
