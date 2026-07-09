@@ -6,5 +6,6 @@ disabled = true
 [git_status]
 disabled = true
 
-[bun]
-disabled = true
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "

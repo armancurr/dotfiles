@@ -1,4 +1,6 @@
 {
+  "ui_font_family": ".SystemUIFont",
+  "buffer_font_family": "GeistMono Nerd Font Mono",
   "cli_default_open_behavior": "existing_window",
   "agent_servers": {
     "codex-acp": {
@@ -36,11 +38,10 @@
     },
   },
   "lsp_document_colors": "none",
-  "ui_font_family": "Geist",
   "theme": {
     "mode": "dark",
     "light": "Cursor Dark",
-    "dark": "Cursor Dark",
+    "dark": "Flexoki Dark",
   },
   "zoomed_padding": true,
   "tabs": {
@@ -69,7 +70,7 @@
   },
   "collaboration_panel": {
     "dock": "right",
-    "default_width": 400.0,
+    "default_width": 300.0,
     "button": true,
   },
   "notification_panel": {
@@ -124,7 +125,7 @@
     "copy_on_select": true,
     "minimum_contrast": 0.0,
     "blinking": "off",
-    "font_size": 18.0,
+    "font_size": 16.0,
     "dock": "bottom",
     "button": true,
     "cursor_shape": "bar",
@@ -135,8 +136,8 @@
   },
   "agent_buffer_font_size": 16.0,
   "agent": {
-    "default_height": 400.0,
-    "default_width": 400.0,
+    "default_height": 300.0,
+    "default_width": 300.0,
     "dock": "left",
     "tool_permissions": {
       "default": "allow",
@@ -192,16 +193,15 @@
     "file_icons": true,
     "entry_spacing": "comfortable",
     "hide_gitignore": false,
-    "default_width": 400.0,
+    "default_width": 300.0,
     "button": true,
   },
   "cursor_shape": "bar",
   "cursor_blink": false,
-  "buffer_font_family": "GeistMono Nerd Font Mono",
   "restore_on_startup": "launchpad",
   "base_keymap": "VSCode",
-  "ui_font_size": 18.0,
-  "buffer_font_size": 18.0,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 16.0,
   "auto_indent": "syntax_aware",
   "auto_indent_on_paste": true,
   "autosave": {

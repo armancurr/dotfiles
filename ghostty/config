@@ -2,12 +2,12 @@ font-family             = GeistMono Nerd Font Mono
 font-family-bold        = GeistMono Nerd Font Mono
 font-family-italic      = GeistMono Nerd Font Mono
 font-family-bold-italic = GeistMono Nerd Font Mono
-font-size               = 14
+font-size = 16
 
-theme = Cursor Dark
+theme = Flexoki Dark
 
-cursor-style         = bar
-cursor-style-blink   = false
+cursor-style       = bar
+cursor-style-blink = false
 
 mouse-shift-capture     = true
 mouse-scroll-multiplier = 5
@@ -34,14 +34,6 @@ copy-on-select = true
 right-click-action = context-menu
 
 click-repeat-interval = 300
-
-gtk-quick-terminal-layer         = overlay
-gtk-quick-terminal-namespace     = ghostty-quick
-gtk-titlebar                     = true
-gtk-titlebar-hide-when-maximized = false
-gtk-toolbar-style                = flat
-gtk-titlebar-style               = tabs
-gtk-wide-tabs                    = true
 
 auto-update         = check
 auto-update-channel = stable
